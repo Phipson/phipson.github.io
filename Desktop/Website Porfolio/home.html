@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<title>Phipson Lee: Psychology Researcher, Programmer, and Creative</title>
+<head>
+    <!-- TODO: Compile the CSS File Later -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="Port_Style/stylesheets/screen.css" />
+
+    <!-- TODO: Add Scrolling Pop-Up -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+    <!-- TODO: Update Mobile UIUX -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Phipson Lee's Projects and Portfolio">
+    <meta name="keywords" content="HTML, CSS, Java, SCSS, Javascript, UCLA, Computer Science, Phipson Lee, Lee Cheuk Yin, Portfolio">
+    <meta name="author" content="Cheuk Yin Phipson Lee (李卓彥)">
+    <meta name="viewport" content="width=1440px, initial-scale=1, user-scalable=yes">
+</head>
+
+<body>
+    <style>
+        .parallax_1{
+            z-index: -1;
+            position:relative;            
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;                
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 40%;
+            background-image: url("https://lh6.googleusercontent.com/hgWHt78DPXl1v-kQEeX7mDvJr2J8Oeuz6BE9VcfULj8n42HnBUaKccYY0TAMK-O0fVtJxcMhUMk5f4A=w1440-h732-rw");
+            /* Set a specific height */
+            min-height:1000px;
+        }
+        .parallax_2{
+            z-index: -1;
+            position:relative;            
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;                
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 40%;
+            background-image: url("https://lh3.google.com/u/0/d/0B9qC4LpFW57Gb1VieWJOc01QN00=w1440-h776-iv1");
+            min-height:1500px;
+        }
+        .parallax_3{
+            z-index: -1;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 40%;
+            background-image: url("https://lh3.google.com/u/0/d/0B9qC4LpFW57GSGRoMU1ob1gyaG8=w1440-h776-iv1");
+            min-height: 900px;
+        }
+
+        @media only screen and (max-device-width: 1024px) {
+            .parallax_2, .parallax_3, .parallax_1 {
+                background-attachment: scroll;
+            }
+        }
+    </style>    
+    <!-- Container element -->
+    <div class="parallax_1"></div>
+    <header class="nav-down" style="z-index:10">
+            <ul>
+                <li style="float:left">
+                        <button class="sideflags_white_home"><a href="home.html">Home</a>
+                                <div class="t1">
+                                    <div class="in"></div>
+                                </div>
+                                <div class="t2">
+                                    <div class="in"></div>
+                                </div>
+                            </button>
+                </li>
+                <li style="float:left">
+                <button class="sideflags_white_projects"><a href="projects.html">Projects</a>
+                    <div class="t1">
+                        <div class="in"></div>
+                    </div>
+                    <div class="t2">
+                        <div class="in"></div>
+                    </div>
+                </button>
+                </li>
+                <li style="float:left">
+                        <button class="sideflags_white_research"><a href="research.html">Research</a>
+                                <div class="t1">
+                                    <div class="in"></div>
+                                </div>
+                                <div class="t2">
+                                    <div class="in"></div>
+                                </div>
+                        </button>
+                </li>
+                <li style="float:right">
+                    <button class="sideflags_white_about"><a href="about.html">About</a>
+                        <div class="t1">
+                            <div class="in"></div>
+                        </div>
+                        <div class="t2">
+                            <div class="in"></div>
+                        </div>
+                    </button>    
+                </li>
+            </ul>
+    </header>
+    <div id="displayer">
+    <div style="top:250px" id="welcome" class="parallax-title">
+        <h1>Welcome</h1>
+        <div style="float:center">
+        <h5 class="lightgrey" style="float:center">Sit Down.&nbsp;&nbsp;Take a Deep Breath.&nbsp;&nbsp;Enjoy.</h5>
+        </div>
+        <div id="quote" class="quote">
+            <br>
+            <br>
+            <br>
+            <p class="quote">
+                "It is not the critic who counts...[or] the man who points out how the strong man stumbles...The credit belongs to the man...who comes short again and again, because there is no effort without error and shortcoming...who at the worst...fails while daring greatly."
+            </p>
+            <br>
+            <p style="float: right; font-style: italic; font-weight: 650; font-size: 1em; word-spacing: 3px">
+                -- Theodore Roosevelt (1910)
+            </p>
+        </div>
+    </div>
+    <div class="parallax_2"></div>
+    <div class="parallax-body-2" id="intro-1" style="height: 300px; top: 900px">
+            <p class="overview" style="font-size:2.5em; text-align: center; line-height:50px">Hi, I'm Phipson Lee (李卓彥) and I am a 19 year-old born in Hong Kong (currently studying at the University of California, Los Angeles)</p>
+            <br><br><h2 weight="900"><b>I am...</b></h2>
+    </div>
+    <div style="position: absolute; width: 90%; top: 1300px; float:center; margin-left: 5%">
+            <h1 class="introend" style="letter-spacing: 5px; font-size: 5.5em; float:center">
+                an Independent Psychology Researcher,
+            </h1>
+            <br><br>
+            <h2 style="font-size: 4.5em; float:center">
+                a Self-Taught Programmer,
+            </h2>
+            <br><br>
+            <h3 style="float:center">
+                And An Aspiring Creative.
+            </h3>
+    </div>
+    <div id="view-other" style="position: absolute; top: 1700px; width: 95%; margin-left: 2.5%">
+        <div class="fadeinscroll_1">
+            <img id="hoverbutton" src="img_sources/project_icon.png" class="circleicon1" style="float:left">
+        </div>
+        <div class="fadeinscroll_2">
+            <img id="hoverbutton" src="img_sources/about_icon.png" class="circleicon2" style="float:left">
+        </div>
+        <div class="fadeinscroll_3">
+            <img id="hoverbutton" src="img_sources/research_icon.png" class="circleicon3" style="float:left">
+        </div>
+    </div>
+    <div>
+        <h3 id="hovertext-1" style="position: absolute; float: left; top: 2050px; width: 20%; margin-left: 8%">
+            Discover the world beneath my thinking cap
+        </h3>
+        <h3 id="hovertext-2" style="position: absolute; float: center; top: 2050px; width: 20%; margin-left: 39.6%">
+            Witness my 'Inspirational' Research
+        </h3>
+        <h3 id="hovertext-3" style="position: absolute; float: left; top: 2050px; width: 20%; margin-left: 70.8%">
+            Dive into my journey as an innovator
+        </h3>
+    </div>
+    <div class="parallax-body" id="intro-1" style="height: 300px; top: 2300px">
+            <p class="overview" style="font-size:2.5em; text-align: center; line-height:50px">
+                The greatest thing about technology is that we can learn and connect with one another through the art of digital storytelling.
+                <br>
+                <br>
+            </p>
+            <p class="overview" style="font-size:2em; text-align: center">
+                <br>
+                I might be busy, but I'll try to share my story whenever I can.
+            </p>
+    </div>
+    <div style="position: absolute; width: 80%; top: 2800px; margin-left: 10%">
+            <h1 class="introend" style:"weight: 500">
+                WANT TO KNOW MORE?
+            </h1>
+    </div>
+    <div style="position: absolute; width: 95%; top: 3100px; float: center; margin-left: 2.5%">
+        <div class="fadeinscroll_4">
+            <img id="circleicon" src="img_sources/fb_icon.png" class="socialmedia" style="float:left">
+        </div>
+        <div class="fadeinscroll_5">
+            <img id="circleicon" src="img_sources/li_icon.png" class="socialmedia" style="float:left">
+        </div>
+        <div class="fadeinscroll_6">
+            <img id="circleicon" src="img_sources/ig_icon.png" class="socialmedia" style="float:left">
+        </div>
+        <div class="fadeinscroll_7">
+            <img id="circleicon" src="img_sources/yt_icon.png" class="socialmedia" style="float:left">
+        </div>
+        <div class="fadeinscroll_8">
+            <img id="circleicon" src="img_sources/tw_icon.png" class="socialmedia" style="float:left">
+        </div>
+        <div class="fadeinscroll_9">
+            <img id="circleicon" src="img_sources/mail_icon.png" class="socialmedia" style="float:left">
+        </div>
+    </div>
+    <div class="parallax_3"></div>
+    </div>
+</body>
+</div>
+<footer>
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 100);
+
+function hasScrolled() {
+    var st = $(window).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if ((st > lastScrollTop) && (st > navbarHeight)){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        setInterval(function(i){
+            
+            var bottom_of_object = $(".fadeinscroll_1").offset().top + $(".fadeinscroll_1").outerHeight();
+            var window_location = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it in */
+            if( window_location > bottom_of_object){
+                    $(".fadeinscroll_1").animate({"opacity": '1'}, 500);    
+                    $(".fadeinscroll_2").delay(250).animate({"opacity": '1'}, 500);  
+                    $(".fadeinscroll_3").delay(750).animate({"opacity": '1'}, 500);        
+            }
+        }); 
+    });
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        setInterval(function(i){
+            
+            var bottom_of_object = $(".fadeinscroll_9").offset().top + $(".fadeinscroll_9").outerHeight();
+            var window_location = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it in */
+            if( window_location > bottom_of_object){
+                    $(".fadeinscroll_4").animate({"opacity": '1'}, 500);    
+                    $(".fadeinscroll_5").delay(250).animate({"opacity": '1'}, 500);  
+                    $(".fadeinscroll_6").delay(750).animate({"opacity": '1'}, 500);    
+                    $(".fadeinscroll_7").delay(1250).animate({"opacity": '1'}, 500);  
+                    $(".fadeinscroll_8").delay(1750).animate({"opacity": '1'}, 500); 
+                    $(".fadeinscroll_9").delay(2250).animate({"opacity": '1'}, 500);    
+            }
+        }); 
+    });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".circleicon1").hover(function(){
+        $("#hovertext-1").animate({"opacity": '1'}, 500); 
+        }, function(){
+            $("#hovertext-1").animate({"opacity": '0'}, 500);
+    });
+    $(".circleicon2").hover(function(){
+        $("#hovertext-2").animate({"opacity": '1'}, 500); 
+        }, function(){
+            $("#hovertext-2").animate({"opacity": '0'}, 500);
+    });
+    $(".circleicon3").hover(function(){
+        $("#hovertext-3").animate({"opacity": '1'}, 500); 
+        }, function(){
+        $("#hovertext-3").animate({"opacity": '0'}, 500);
+    });
+})
+</script>
+<script type="text/javascript">
+var siteWidth = 1440;
+var scale = screen.width /siteWidth
+
+document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+</script>
+</footer>
