@@ -15,10 +15,15 @@ $citysilhouette: 'http://www.australiasbestcity.com.au/wp-content/uploads/2014/0
 
 @font-face {
     font-family: 'Dense';
-    src: url('file://dense-regular.woff2') format('woff2'),
-         url('file://dense-regular.woff') format('woff');
+    src: url('file://fonts/dense-regular-webfont.eot');
+    src: url('file://fonts/dense-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('file://fonts/dense-regular-webfont.woff2') format('woff2'),
+         url('file://fonts/dense-regular-webfont.woff') format('woff'),
+         url('file://fonts/dense-regular-webfont.ttf') format('truetype'),
+         url('file://fonts/dense-regular-webfont.svg#denseregular') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
 
 *,
