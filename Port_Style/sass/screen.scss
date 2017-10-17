@@ -565,7 +565,7 @@ button{
 	$w: 250px;
 	$h: 65px;
 	@include a($w,$h);
-	@include abstlycenter(130px,40px);
+	@include abstlycenter(140px,40px);
 	line-height: 1;
 	.in, .t1:before, .t1:after, .t2:before, .t2:after{
 		content: '';
