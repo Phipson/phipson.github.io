@@ -14,12 +14,11 @@ $output-bourbon-deprecation-warnings: false !default;
 $citysilhouette: 'http://www.australiasbestcity.com.au/wp-content/uploads/2014/02/Cityscape.png';
 
 @font-face {
-    font-family: 'denseregular';
-    src: url('dense-regular.woff2') format('woff2'),
-         url('dense-regular.woff') format('woff');
+    font-family: 'Dense';
+    src: url('file://dense-regular.woff2') format('woff2'),
+         url('file://dense-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 *,
