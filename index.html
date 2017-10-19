@@ -2,7 +2,6 @@
 <title>Phipson Lee: Psychology Researcher, Programmer, and Creative</title>
 <head>
     <!-- TODO: Compile the CSS File Later -->
-    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
     <link rel="stylesheet" type="text/css" href="Port_Style/stylesheets/screen.css" />
 
     <!-- TODO: Add Scrolling Pop-Up -->
@@ -28,7 +27,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             opacity: 40%;
-            background-image: url("https://lh3.google.com/u/0/d/0B9qC4LpFW57GQUkta1Y4eG5QRUU=w1440-h776-iv2");
+            background-image: url("img_sources/ab_bg_1.jpg");
             /* Set a specific height */
             min-height:1000px;
         }
@@ -41,7 +40,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             opacity: 40%;
-            background-image: url("https://lh3.google.com/u/0/d/0B9qC4LpFW57Gb1VieWJOc01QN00=w1440-h776-iv1");
+            background-image: url("img_sources/background_2.jpg");
             min-height:1500px;
         }
         .parallax_3{
@@ -51,7 +50,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             opacity: 40%;
-            background-image: url("https://lh3.google.com/u/0/d/0B9qC4LpFW57GSGRoMU1ob1gyaG8=w1440-h776-iv1");
+            background-image: url("img_sources/background_3.jpg");
             min-height: 900px;
         }
 
@@ -64,8 +63,10 @@
     <!-- Container element -->
     <div class="parallax_1"></div>
     <header class="nav-down" style="z-index:10">
+
             <ul>
-                <li style="float:left">
+                <div class="Calignment">
+                <li>
                         <button class="sideflags_white_home"><a href="index.html">Home</a>
                                 <div class="t1">
                                     <div class="in"></div>
@@ -75,7 +76,7 @@
                                 </div>
                             </button>
                 </li>
-                <li style="float:left">
+                <li>
                 <button class="sideflags_white_projects"><a href="projects.html">Projects</a>
                     <div class="t1">
                         <div class="in"></div>
@@ -85,7 +86,7 @@
                     </div>
                 </button>
                 </li>
-                <li style="float:left">
+                <li>
                         <button class="sideflags_white_research"><a href="research.html">Research</a>
                                 <div class="t1">
                                     <div class="in"></div>
@@ -95,7 +96,7 @@
                                 </div>
                         </button>
                 </li>
-                <li style="float:left">
+                <li>
                     <button class="sideflags_white_about"><a href="about.html">About</a>
                         <div class="t1">
                             <div class="in"></div>
@@ -105,13 +106,14 @@
                         </div>
                     </button>    
                 </li>
+                </div>
             </ul>
     </header>
     <div id="displayer">
     <div style="top:250px" id="welcome" class="parallax-title">
         <h1>Welcome</h1>
         <div style="float:center">
-        <h5 class="lightgrey" style="float:center">Sit Down.&nbsp;&nbsp;Take a Deep Breath.&nbsp;&nbsp;Enjoy.</h5>
+        <h5 class="lightgrey" style="float:center">Sit Down.&nbsp;Take a Deep Breath.&nbsp;Enjoy.</h5>
         </div>
         <div id="quote" class="quote">
             <br>
@@ -132,8 +134,8 @@
             <br><br><h2 weight="900"><b>I am...</b></h2>
     </div>
     <div style="position: absolute; width: 90%; top: 1300px; float:center; margin-left: 5%">
-            <h1 class="introend" style="letter-spacing: 5px; font-size: 5.5em; float:center">
-                an Psychology Researcher,
+            <h1 class="introend" style="letter-spacing: 5px; font-size: 5em; float:center">
+                a Psychology Researcher,
             </h1>
             <br><br>
             <h2 style="font-size: 4.5em; float:center">
@@ -144,27 +146,25 @@
                 And An Aspiring Creative.
             </h3>
     </div>
-    <div id="view-other" style="position: absolute; top: 1700px; width: 95%; margin-left: 2.5%">
+    <div id="view-other" class="Calignment" style="position: absolute; top: 1700px; width: 100%; text-align: center">
         <div class="fadeinscroll_1">
-            <a href="projects.html"><img id="hoverbutton" src="img_sources/project_icon.png" class="circleicon1" style="float:left"></a>
+            <a href="projects.html"><img id="hoverbutton" src="img_sources/project_icon.png" class="circleicon1"></a>
         </div>
         <div class="fadeinscroll_2">
-            <a href="research.html"><img id="hoverbutton" src="img_sources/about_icon.png" class="circleicon2" style="float:left"></a>
-        </div>
+                <a href="research.html"><img id="hoverbutton" src="img_sources/about_icon.png" class="circleicon2"></a>
+            </div>
         <div class="fadeinscroll_3">
-            <a href="about.html"><img id="hoverbutton" src="img_sources/research_icon.png" class="circleicon3" style="float:left"></a>
+                <a href="about.html"><img id="hoverbutton" src="img_sources/research_icon.png" class="circleicon3"></a>
         </div>
-    </div>
-    <div>
-        <h3 id="hovertext-1" style="position: absolute; float: left; top: 2050px; width: 20%; margin-left: 8%">
-            Discover the world beneath my thinking cap
-        </h3>
-        <h3 id="hovertext-2" style="position: absolute; float: center; top: 2050px; width: 20%; margin-left: 39.6%">
-            Witness my 'Inspirational' Research
-        </h3>
-        <h3 id="hovertext-3" style="position: absolute; float: left; top: 2050px; width: 20%; margin-left: 70.8%">
-            Dive into my journey as an innovator
-        </h3>
+        <h3 id="hovertext-1">
+                Discover the world beneath my thinking cap
+            </h3>
+            <h3 id="hovertext-2">
+                Witness my work in inspiration
+            </h3>
+            <h3 id="hovertext-3">
+                Dive into my journey as an innovator
+            </h3>
     </div>
     <div class="parallax-body" id="intro-1" style="height: 300px; top: 2300px">
             <p class="overview" style="font-size:2.5em; text-align: center; line-height:50px">
