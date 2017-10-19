@@ -393,11 +393,11 @@ img.socialmedia {
   height: 100px;
   width: 100px;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
   position: relative;
-  margin-left: 63px;
-  margin-right: 63px;
+  margin-left: 37.5px;
+  margin-right: 37.5px;
   margin-top: 0px;
+  transition: opacity 0.5s ease-in-out;
   -webkit-transition: all 1s cubic-bezier(0.21, 1, 0.84, 1.01);
   -moz-transition: all 1s cubic-bezier(0.21, 1, 0.84, 1.01);
   transition: all 1s cubic-bezier(0.21, 1, 0.84, 1.01);

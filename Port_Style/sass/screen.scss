@@ -340,8 +340,8 @@ img{
 		height: 100px;
 		width: 100px;
 		opacity: 1;
+		@include abstlycenter(50px, 0px);
 		transition: opacity 0.5s ease-in-out;
-		@include abstlycenter(84px, 0px);
 		@include transition(all 1s cubic-bezier(.21,1,.84,1.01));
 		&:before, &:after{
 			color: #000;
