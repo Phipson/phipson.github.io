@@ -159,9 +159,6 @@ div{
 #displayer{
 	display: inline;
 }
-#navbar{
-	opacity: 1;
-}
 header{
 	background: rgba(0, 0, 0, 0.63);
 	width: 100%;
@@ -192,6 +189,43 @@ h1{
 		word-spacing: 25px;
 		size: 5em;
 		color: #fff;
+	}
+	&.citysilhouette{
+		letter-spacing: 8px;
+		word-spacing: 25px;
+		size: 5em;
+		$w: 90%;
+		$h: 125px;
+		@include a($w, $h);
+		z-index:10;
+		overflow: hidden;
+		&:before, &:after{
+			position: absolute;
+			left: 0;
+			display: block;
+			height: 150px;
+			background-size: contain;
+			opacity: 1;
+			@include transition(all .4s cubic-bezier(.17,.67,.64,1.55));
+			opacity: 0;
+			top: 50px;
+
+		}
+		&:before{
+			@include animation(linmove 30s infinite linear);
+			background-image: url($citysilhouette);
+			width: 150px;
+			z-index: -1;
+		}
+		&:hover{
+			&:before, &:after{
+				top: 0;
+				opacity: 0.5;
+			}
+			&:before{
+				transition-delay: .2s;
+			}
+		}
 	}
 }
 h2{
@@ -745,4 +779,12 @@ button{
 			}
 		}
 }
+}
+@include keyframes(linmove){
+from{
+		@include transform(translate(0px));
+}
+to{
+		@include transform(translate(-886px) );
+	}
 }
