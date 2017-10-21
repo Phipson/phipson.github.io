@@ -181,6 +181,11 @@ div.display {
 }
 
 /* line 162, ../sass/screen.scss */
+#navbar {
+  opacity: 1;
+}
+
+/* line 165, ../sass/screen.scss */
 header {
   background: rgba(0, 0, 0, 0.63);
   width: 100%;
@@ -189,12 +194,12 @@ header {
   transition: top 0.2s ease-in-out;
   height: 100px;
 }
-/* line 169, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 header.nav-up {
   top: -100px;
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 h1 {
   text-align: center;
   letter-spacing: 20px;
@@ -206,7 +211,7 @@ h1 {
   text-align: center;
   text-decoration: none;
 }
-/* line 187, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 h1.introend {
   letter-spacing: 8px;
   word-spacing: 25px;
@@ -214,7 +219,7 @@ h1.introend {
   color: #fff;
 }
 
-/* line 194, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 h2 {
   text-align: center;
   letter-spacing: 1px;
@@ -226,14 +231,14 @@ h2 {
   text-align: center;
   text-decoration: none;
 }
-/* line 208, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 h2.overview {
   text-transform: none;
   text-align: left;
   font-size: 6em;
 }
 
-/* line 214, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 h3 {
   text-align: center;
   letter-spacing: 1px;
@@ -246,7 +251,7 @@ h3 {
   text-decoration: none;
 }
 
-/* line 229, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 #hovertext-1, #hovertext-2, #hovertext-3 {
   width: 300px;
   position: relative;
@@ -266,7 +271,7 @@ h3 {
   text-decoration: none;
 }
 
-/* line 248, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 h5 {
   text-align: center;
   letter-spacing: 1px;
@@ -277,57 +282,57 @@ h5 {
   text-align: center;
   text-decoration: none;
 }
-/* line 261, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 h5.salmonred {
   color: #F35858;
 }
-/* line 264, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 h5.skyblue {
   color: #479DFF;
 }
-/* line 267, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 h5.orangeyellow {
   color: #F5A03F;
 }
-/* line 270, ../sass/screen.scss */
+/* line 273, ../sass/screen.scss */
 h5.darkgreen {
   color: #015F43;
 }
-/* line 273, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 h5.lightgrey {
   color: #9B9B9B;
 }
 
-/* line 277, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 p {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.2em;
   text-decoration: none;
   line-height: 20px;
 }
-/* line 286, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 p.quote {
   line-height: 30px;
   text-align: center;
   font-style: italic;
 }
-/* line 293, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 p.overview {
   color: #fff;
 }
 
-/* line 297, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 body {
   font-family: 'Roboto Condensed Condensed', sans-serif;
   background-color: #000;
 }
 
-/* line 304, ../sass/screen.scss */
+/* line 307, ../sass/screen.scss */
 img {
   height: 300px;
   width: 300px;
 }
-/* line 307, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 img.circleicon1, img.circleicon2, img.circleicon3 {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
@@ -339,7 +344,7 @@ img.circleicon1, img.circleicon2, img.circleicon3 {
   -moz-transition: all 1s cubic-bezier(0.21, 1, 0.84, 1.01);
   transition: all 1s cubic-bezier(0.21, 1, 0.84, 1.01);
 }
-/* line 312, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 img.circleicon1:before, img.circleicon1:after, img.circleicon2:before, img.circleicon2:after, img.circleicon3:before, img.circleicon3:after {
   color: #000;
   font-weight: 900;
@@ -350,21 +355,21 @@ img.circleicon1:before, img.circleicon1:after, img.circleicon2:before, img.circl
   -moz-transition: inherit;
   transition: inherit;
 }
-/* line 320, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 img.circleicon1:before, img.circleicon2:before, img.circleicon3:before {
   content: attr(data-bf);
   position: absolute;
   top: -45px;
   left: -5px;
 }
-/* line 327, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 img.circleicon1:after, img.circleicon2:after, img.circleicon3:after {
   content: attr(data-af);
   position: absolute;
   right: 0;
   bottom: -30px;
 }
-/* line 333, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 img.circleicon1:hover, img.circleicon2:hover, img.circleicon3:hover {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -372,7 +377,7 @@ img.circleicon1:hover, img.circleicon2:hover, img.circleicon3:hover {
   -o-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 335, ../sass/screen.scss */
+/* line 338, ../sass/screen.scss */
 img.circleicon1:hover:before, img.circleicon2:hover:before, img.circleicon3:hover:before {
   -webkit-transform: scale(1.2) translate(-25px, -15px);
   -moz-transform: scale(1.2) translate(-25px, -15px);
@@ -380,7 +385,7 @@ img.circleicon1:hover:before, img.circleicon2:hover:before, img.circleicon3:hove
   -o-transform: scale(1.2) translate(-25px, -15px);
   transform: scale(1.2) translate(-25px, -15px);
 }
-/* line 336, ../sass/screen.scss */
+/* line 339, ../sass/screen.scss */
 img.circleicon1:hover:after, img.circleicon2:hover:after, img.circleicon3:hover:after {
   -webkit-transform: scale(1.2) translate(25px, 15px);
   -moz-transform: scale(1.2) translate(25px, 15px);
@@ -388,7 +393,7 @@ img.circleicon1:hover:after, img.circleicon2:hover:after, img.circleicon3:hover:
   -o-transform: scale(1.2) translate(25px, 15px);
   transform: scale(1.2) translate(25px, 15px);
 }
-/* line 339, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 img.socialmedia {
   height: 100px;
   width: 100px;
@@ -402,7 +407,7 @@ img.socialmedia {
   -moz-transition: all 1s cubic-bezier(0.21, 1, 0.84, 1.01);
   transition: all 1s cubic-bezier(0.21, 1, 0.84, 1.01);
 }
-/* line 346, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 img.socialmedia:before, img.socialmedia:after {
   color: #000;
   font-weight: 900;
@@ -413,21 +418,21 @@ img.socialmedia:before, img.socialmedia:after {
   -moz-transition: inherit;
   transition: inherit;
 }
-/* line 354, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 img.socialmedia:before {
   content: attr(data-bf);
   position: absolute;
   top: -45px;
   left: -5px;
 }
-/* line 361, ../sass/screen.scss */
+/* line 364, ../sass/screen.scss */
 img.socialmedia:after {
   content: attr(data-af);
   position: absolute;
   right: 0;
   bottom: -30px;
 }
-/* line 367, ../sass/screen.scss */
+/* line 370, ../sass/screen.scss */
 img.socialmedia:hover {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -435,7 +440,7 @@ img.socialmedia:hover {
   -o-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 369, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 img.socialmedia:hover:before {
   -webkit-transform: scale(1.2) translate(-25px, -15px);
   -moz-transform: scale(1.2) translate(-25px, -15px);
@@ -443,7 +448,7 @@ img.socialmedia:hover:before {
   -o-transform: scale(1.2) translate(-25px, -15px);
   transform: scale(1.2) translate(-25px, -15px);
 }
-/* line 370, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 img.socialmedia:hover:after {
   -webkit-transform: scale(1.2) translate(25px, 15px);
   -moz-transform: scale(1.2) translate(25px, 15px);
@@ -452,13 +457,13 @@ img.socialmedia:hover:after {
   transform: scale(1.2) translate(25px, 15px);
 }
 
-/* line 374, ../sass/screen.scss */
+/* line 377, ../sass/screen.scss */
 a {
   text-decoration: none;
   color: #fff;
 }
 
-/* line 378, ../sass/screen.scss */
+/* line 381, ../sass/screen.scss */
 button {
   background-color: rgba(255, 255, 255, 0);
   position: relative;
@@ -472,11 +477,11 @@ button {
   font-size: 35px;
   font-weight: 900;
 }
-/* line 394, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 button:after, button:before {
   content: '';
 }
-/* line 397, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 button.sideflags_white_home {
   width: 160px;
   height: 65px;
@@ -487,7 +492,7 @@ button.sideflags_white_home {
   margin-top: 20px;
   line-height: 1;
 }
-/* line 403, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 button.sideflags_white_home .in, button.sideflags_white_home .t1:before, button.sideflags_white_home .t1:after, button.sideflags_white_home .t2:before, button.sideflags_white_home .t2:after {
   content: '';
   width: 0px;
@@ -504,7 +509,7 @@ button.sideflags_white_home .in, button.sideflags_white_home .t1:before, button.
   -moz-transition-timing-function: cubic-bezier(0.17, 0.67, 0.46, 1.45);
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.46, 1.45);
 }
-/* line 413, ../sass/screen.scss */
+/* line 416, ../sass/screen.scss */
 button.sideflags_white_home .t1 {
   height: 60px;
   width: 48px;
@@ -512,26 +517,26 @@ button.sideflags_white_home .t1 {
   left: -48px;
   position: absolute;
 }
-/* line 419, ../sass/screen.scss */
+/* line 422, ../sass/screen.scss */
 button.sideflags_white_home .t1 *, button.sideflags_white_home .t1:before, button.sideflags_white_home .t1:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
 }
-/* line 424, ../sass/screen.scss */
+/* line 427, ../sass/screen.scss */
 button.sideflags_white_home .t1:before {
   right: 0;
 }
-/* line 427, ../sass/screen.scss */
+/* line 430, ../sass/screen.scss */
 button.sideflags_white_home .t1 .in {
   right: 0;
   top: 22px;
 }
-/* line 431, ../sass/screen.scss */
+/* line 434, ../sass/screen.scss */
 button.sideflags_white_home .t1:after {
   right: 0;
   top: 45px;
 }
-/* line 436, ../sass/screen.scss */
+/* line 439, ../sass/screen.scss */
 button.sideflags_white_home .t2 {
   height: 60px;
   width: 48px;
@@ -539,66 +544,66 @@ button.sideflags_white_home .t2 {
   right: -48px;
   position: absolute;
 }
-/* line 442, ../sass/screen.scss */
+/* line 445, ../sass/screen.scss */
 button.sideflags_white_home .t2 *, button.sideflags_white_home .t2:before, button.sideflags_white_home .t2:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 }
-/* line 447, ../sass/screen.scss */
+/* line 450, ../sass/screen.scss */
 button.sideflags_white_home .t2:before {
   left: 0;
 }
-/* line 450, ../sass/screen.scss */
+/* line 453, ../sass/screen.scss */
 button.sideflags_white_home .t2 .in {
   left: 0;
   top: 22px;
 }
-/* line 454, ../sass/screen.scss */
+/* line 457, ../sass/screen.scss */
 button.sideflags_white_home .t2:after {
   left: 0;
   top: 45px;
 }
-/* line 459, ../sass/screen.scss */
+/* line 462, ../sass/screen.scss */
 button.sideflags_white_home .t1:before, button.sideflags_white_home .t2:before {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
 }
-/* line 462, ../sass/screen.scss */
+/* line 465, ../sass/screen.scss */
 button.sideflags_white_home .t1 .in, button.sideflags_white_home .t2 .in {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-/* line 465, ../sass/screen.scss */
+/* line 468, ../sass/screen.scss */
 button.sideflags_white_home .t1:after, button.sideflags_white_home .t2:after {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-/* line 469, ../sass/screen.scss */
+/* line 472, ../sass/screen.scss */
 button.sideflags_white_home:hover .in, button.sideflags_white_home:hover .t1:before, button.sideflags_white_home:hover .t1:after, button.sideflags_white_home:hover .t2:before, button.sideflags_white_home:hover .t2:after {
   width: 48px;
 }
-/* line 473, ../sass/screen.scss */
+/* line 476, ../sass/screen.scss */
 button.sideflags_white_home:hover .t1:before, button.sideflags_white_home:hover .t2:before {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-/* line 476, ../sass/screen.scss */
+/* line 479, ../sass/screen.scss */
 button.sideflags_white_home:hover .t1 .in, button.sideflags_white_home:hover .t2 .in {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-/* line 479, ../sass/screen.scss */
+/* line 482, ../sass/screen.scss */
 button.sideflags_white_home:hover .t1:after, button.sideflags_white_home:hover .t2:after {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
 }
-/* line 484, ../sass/screen.scss */
+/* line 487, ../sass/screen.scss */
 button.sideflags_white_about {
   width: 170px;
   height: 65px;
@@ -609,7 +614,7 @@ button.sideflags_white_about {
   margin-top: 20px;
   line-height: 1;
 }
-/* line 490, ../sass/screen.scss */
+/* line 493, ../sass/screen.scss */
 button.sideflags_white_about .in, button.sideflags_white_about .t1:before, button.sideflags_white_about .t1:after, button.sideflags_white_about .t2:before, button.sideflags_white_about .t2:after {
   content: '';
   width: 0px;
@@ -626,7 +631,7 @@ button.sideflags_white_about .in, button.sideflags_white_about .t1:before, butto
   -moz-transition-timing-function: cubic-bezier(0.17, 0.67, 0.46, 1.45);
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.46, 1.45);
 }
-/* line 500, ../sass/screen.scss */
+/* line 503, ../sass/screen.scss */
 button.sideflags_white_about .t1 {
   height: 60px;
   width: 48px;
@@ -634,26 +639,26 @@ button.sideflags_white_about .t1 {
   left: -48px;
   position: absolute;
 }
-/* line 506, ../sass/screen.scss */
+/* line 509, ../sass/screen.scss */
 button.sideflags_white_about .t1 *, button.sideflags_white_about .t1:before, button.sideflags_white_about .t1:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
 }
-/* line 511, ../sass/screen.scss */
+/* line 514, ../sass/screen.scss */
 button.sideflags_white_about .t1:before {
   right: 0;
 }
-/* line 514, ../sass/screen.scss */
+/* line 517, ../sass/screen.scss */
 button.sideflags_white_about .t1 .in {
   right: 0;
   top: 22px;
 }
-/* line 518, ../sass/screen.scss */
+/* line 521, ../sass/screen.scss */
 button.sideflags_white_about .t1:after {
   right: 0;
   top: 45px;
 }
-/* line 523, ../sass/screen.scss */
+/* line 526, ../sass/screen.scss */
 button.sideflags_white_about .t2 {
   height: 60px;
   width: 48px;
@@ -661,66 +666,66 @@ button.sideflags_white_about .t2 {
   right: -48px;
   position: absolute;
 }
-/* line 529, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 button.sideflags_white_about .t2 *, button.sideflags_white_about .t2:before, button.sideflags_white_about .t2:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 }
-/* line 534, ../sass/screen.scss */
+/* line 537, ../sass/screen.scss */
 button.sideflags_white_about .t2:before {
   left: 0;
 }
-/* line 537, ../sass/screen.scss */
+/* line 540, ../sass/screen.scss */
 button.sideflags_white_about .t2 .in {
   left: 0;
   top: 22px;
 }
-/* line 541, ../sass/screen.scss */
+/* line 544, ../sass/screen.scss */
 button.sideflags_white_about .t2:after {
   left: 0;
   top: 45px;
 }
-/* line 546, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 button.sideflags_white_about .t1:before, button.sideflags_white_about .t2:before {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
 }
-/* line 549, ../sass/screen.scss */
+/* line 552, ../sass/screen.scss */
 button.sideflags_white_about .t1 .in, button.sideflags_white_about .t2 .in {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-/* line 552, ../sass/screen.scss */
+/* line 555, ../sass/screen.scss */
 button.sideflags_white_about .t1:after, button.sideflags_white_about .t2:after {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-/* line 556, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 button.sideflags_white_about:hover .in, button.sideflags_white_about:hover .t1:before, button.sideflags_white_about:hover .t1:after, button.sideflags_white_about:hover .t2:before, button.sideflags_white_about:hover .t2:after {
   width: 48px;
 }
-/* line 560, ../sass/screen.scss */
+/* line 563, ../sass/screen.scss */
 button.sideflags_white_about:hover .t1:before, button.sideflags_white_about:hover .t2:before {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-/* line 563, ../sass/screen.scss */
+/* line 566, ../sass/screen.scss */
 button.sideflags_white_about:hover .t1 .in, button.sideflags_white_about:hover .t2 .in {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-/* line 566, ../sass/screen.scss */
+/* line 569, ../sass/screen.scss */
 button.sideflags_white_about:hover .t1:after, button.sideflags_white_about:hover .t2:after {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
 }
-/* line 571, ../sass/screen.scss */
+/* line 574, ../sass/screen.scss */
 button.sideflags_white_research {
   width: 250px;
   height: 65px;
@@ -731,7 +736,7 @@ button.sideflags_white_research {
   margin-top: 20px;
   line-height: 1;
 }
-/* line 577, ../sass/screen.scss */
+/* line 580, ../sass/screen.scss */
 button.sideflags_white_research .in, button.sideflags_white_research .t1:before, button.sideflags_white_research .t1:after, button.sideflags_white_research .t2:before, button.sideflags_white_research .t2:after {
   content: '';
   width: 0px;
@@ -748,7 +753,7 @@ button.sideflags_white_research .in, button.sideflags_white_research .t1:before,
   -moz-transition-timing-function: cubic-bezier(0.17, 0.67, 0.46, 1.45);
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.46, 1.45);
 }
-/* line 587, ../sass/screen.scss */
+/* line 590, ../sass/screen.scss */
 button.sideflags_white_research .t1 {
   height: 60px;
   width: 48px;
@@ -756,26 +761,26 @@ button.sideflags_white_research .t1 {
   left: -48px;
   position: absolute;
 }
-/* line 593, ../sass/screen.scss */
+/* line 596, ../sass/screen.scss */
 button.sideflags_white_research .t1 *, button.sideflags_white_research .t1:before, button.sideflags_white_research .t1:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
 }
-/* line 598, ../sass/screen.scss */
+/* line 601, ../sass/screen.scss */
 button.sideflags_white_research .t1:before {
   right: 0;
 }
-/* line 601, ../sass/screen.scss */
+/* line 604, ../sass/screen.scss */
 button.sideflags_white_research .t1 .in {
   right: 0;
   top: 22px;
 }
-/* line 605, ../sass/screen.scss */
+/* line 608, ../sass/screen.scss */
 button.sideflags_white_research .t1:after {
   right: 0;
   top: 45px;
 }
-/* line 610, ../sass/screen.scss */
+/* line 613, ../sass/screen.scss */
 button.sideflags_white_research .t2 {
   height: 60px;
   width: 48px;
@@ -783,66 +788,66 @@ button.sideflags_white_research .t2 {
   right: -48px;
   position: absolute;
 }
-/* line 616, ../sass/screen.scss */
+/* line 619, ../sass/screen.scss */
 button.sideflags_white_research .t2 *, button.sideflags_white_research .t2:before, button.sideflags_white_research .t2:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 }
-/* line 621, ../sass/screen.scss */
+/* line 624, ../sass/screen.scss */
 button.sideflags_white_research .t2:before {
   left: 0;
 }
-/* line 624, ../sass/screen.scss */
+/* line 627, ../sass/screen.scss */
 button.sideflags_white_research .t2 .in {
   left: 0;
   top: 22px;
 }
-/* line 628, ../sass/screen.scss */
+/* line 631, ../sass/screen.scss */
 button.sideflags_white_research .t2:after {
   left: 0;
   top: 45px;
 }
-/* line 633, ../sass/screen.scss */
+/* line 636, ../sass/screen.scss */
 button.sideflags_white_research .t1:before, button.sideflags_white_research .t2:before {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
 }
-/* line 636, ../sass/screen.scss */
+/* line 639, ../sass/screen.scss */
 button.sideflags_white_research .t1 .in, button.sideflags_white_research .t2 .in {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-/* line 639, ../sass/screen.scss */
+/* line 642, ../sass/screen.scss */
 button.sideflags_white_research .t1:after, button.sideflags_white_research .t2:after {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-/* line 643, ../sass/screen.scss */
+/* line 646, ../sass/screen.scss */
 button.sideflags_white_research:hover .in, button.sideflags_white_research:hover .t1:before, button.sideflags_white_research:hover .t1:after, button.sideflags_white_research:hover .t2:before, button.sideflags_white_research:hover .t2:after {
   width: 48px;
 }
-/* line 647, ../sass/screen.scss */
+/* line 650, ../sass/screen.scss */
 button.sideflags_white_research:hover .t1:before, button.sideflags_white_research:hover .t2:before {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-/* line 650, ../sass/screen.scss */
+/* line 653, ../sass/screen.scss */
 button.sideflags_white_research:hover .t1 .in, button.sideflags_white_research:hover .t2 .in {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-/* line 653, ../sass/screen.scss */
+/* line 656, ../sass/screen.scss */
 button.sideflags_white_research:hover .t1:after, button.sideflags_white_research:hover .t2:after {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
 }
-/* line 658, ../sass/screen.scss */
+/* line 661, ../sass/screen.scss */
 button.sideflags_white_projects {
   width: 230px;
   height: 65px;
@@ -853,7 +858,7 @@ button.sideflags_white_projects {
   margin-top: 20px;
   line-height: 1;
 }
-/* line 664, ../sass/screen.scss */
+/* line 667, ../sass/screen.scss */
 button.sideflags_white_projects .in, button.sideflags_white_projects .t1:before, button.sideflags_white_projects .t1:after, button.sideflags_white_projects .t2:before, button.sideflags_white_projects .t2:after {
   content: '';
   width: 0px;
@@ -870,7 +875,7 @@ button.sideflags_white_projects .in, button.sideflags_white_projects .t1:before,
   -moz-transition-timing-function: cubic-bezier(0.17, 0.67, 0.46, 1.45);
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.46, 1.45);
 }
-/* line 674, ../sass/screen.scss */
+/* line 677, ../sass/screen.scss */
 button.sideflags_white_projects .t1 {
   height: 60px;
   width: 48px;
@@ -878,26 +883,26 @@ button.sideflags_white_projects .t1 {
   left: -48px;
   position: absolute;
 }
-/* line 680, ../sass/screen.scss */
+/* line 683, ../sass/screen.scss */
 button.sideflags_white_projects .t1 *, button.sideflags_white_projects .t1:before, button.sideflags_white_projects .t1:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
 }
-/* line 685, ../sass/screen.scss */
+/* line 688, ../sass/screen.scss */
 button.sideflags_white_projects .t1:before {
   right: 0;
 }
-/* line 688, ../sass/screen.scss */
+/* line 691, ../sass/screen.scss */
 button.sideflags_white_projects .t1 .in {
   right: 0;
   top: 22px;
 }
-/* line 692, ../sass/screen.scss */
+/* line 695, ../sass/screen.scss */
 button.sideflags_white_projects .t1:after {
   right: 0;
   top: 45px;
 }
-/* line 697, ../sass/screen.scss */
+/* line 700, ../sass/screen.scss */
 button.sideflags_white_projects .t2 {
   height: 60px;
   width: 48px;
@@ -905,60 +910,60 @@ button.sideflags_white_projects .t2 {
   right: -48px;
   position: absolute;
 }
-/* line 703, ../sass/screen.scss */
+/* line 706, ../sass/screen.scss */
 button.sideflags_white_projects .t2 *, button.sideflags_white_projects .t2:before, button.sideflags_white_projects .t2:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 }
-/* line 708, ../sass/screen.scss */
+/* line 711, ../sass/screen.scss */
 button.sideflags_white_projects .t2:before {
   left: 0;
 }
-/* line 711, ../sass/screen.scss */
+/* line 714, ../sass/screen.scss */
 button.sideflags_white_projects .t2 .in {
   left: 0;
   top: 22px;
 }
-/* line 715, ../sass/screen.scss */
+/* line 718, ../sass/screen.scss */
 button.sideflags_white_projects .t2:after {
   left: 0;
   top: 45px;
 }
-/* line 720, ../sass/screen.scss */
+/* line 723, ../sass/screen.scss */
 button.sideflags_white_projects .t1:before, button.sideflags_white_projects .t2:before {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
 }
-/* line 723, ../sass/screen.scss */
+/* line 726, ../sass/screen.scss */
 button.sideflags_white_projects .t1 .in, button.sideflags_white_projects .t2 .in {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-/* line 726, ../sass/screen.scss */
+/* line 729, ../sass/screen.scss */
 button.sideflags_white_projects .t1:after, button.sideflags_white_projects .t2:after {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-/* line 730, ../sass/screen.scss */
+/* line 733, ../sass/screen.scss */
 button.sideflags_white_projects:hover .in, button.sideflags_white_projects:hover .t1:before, button.sideflags_white_projects:hover .t1:after, button.sideflags_white_projects:hover .t2:before, button.sideflags_white_projects:hover .t2:after {
   width: 48px;
 }
-/* line 734, ../sass/screen.scss */
+/* line 737, ../sass/screen.scss */
 button.sideflags_white_projects:hover .t1:before, button.sideflags_white_projects:hover .t2:before {
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-/* line 737, ../sass/screen.scss */
+/* line 740, ../sass/screen.scss */
 button.sideflags_white_projects:hover .t1 .in, button.sideflags_white_projects:hover .t2 .in {
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-/* line 740, ../sass/screen.scss */
+/* line 743, ../sass/screen.scss */
 button.sideflags_white_projects:hover .t1:after, button.sideflags_white_projects:hover .t2:after {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
