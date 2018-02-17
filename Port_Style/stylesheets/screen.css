@@ -172,7 +172,7 @@ nav {
 
 /* Navigation menu used when webpage width is too small */
 ul {
-  line-height: 100px;
+  line-height: 6em;
   height: 100px;
   list-style: none;
 }
@@ -360,6 +360,10 @@ ul a:hover:before{
 @media only screen and (max-width: 768px) {
   html {
     font-size: 10px;
+  }
+
+  .research{
+    display: block;
   }
 }
 
@@ -617,7 +621,7 @@ ul a:hover:before{
 }
 
 #software {
-  top: -30%;
+  top: -20%;
 }
 
 /* GRAPHICS */
@@ -636,7 +640,7 @@ img{
 .img_icon{
   width: 2em;
   height: auto;
-  top: -100%;
+  top: 0%;
 }
 
 /* FOR IMAGE GALLERY */
@@ -787,6 +791,10 @@ iframe {
 .showcase-title{
   text-align: left;
   line-height: 1.5em;
+}
+
+.research {
+  display: flex;
 }
 
 h1 {
