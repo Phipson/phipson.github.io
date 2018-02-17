@@ -3,11 +3,11 @@
 <head>
     <!-- TODO: Compile the CSS File Later -->
     <link rel="stylesheet" type="text/css" href="Port_Style/stylesheets/screen.css" />
-    <link rel="stylesheet" href="responsive-nav.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!-- TODO: Add Scrolling Pop-Up -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="responsive-nav.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     
     <!-- TODO: Update Mobile UIUX -->
     <meta charset="UTF-8">
@@ -18,105 +18,636 @@
     <meta property="og:image:type" content="image/png">
     <meta name="keywords" content="HTML, CSS, Java, SCSS, Javascript, UCLA, Computer Science, Phipson Lee, Lee Cheuk Yin, Portfolio">
     <meta name="author" content="Cheuk Yin Phipson Lee (李卓彥)">
-    <meta name="viewport" content="width=1440px, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 </head>
 
-<body>
-    <style>
-        .parallax_1{
-            z-index: -1;
-            position:relative;            
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;                
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: 40%;
-            background-image: url("img_sources/ab_bg_1.jpg");
-            /* Set a specific height */
-            min-height:1000px;
-        }
-        .parallax_2{
-            z-index: -1;
-            position:relative;            
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;                
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: 40%;
-            background-image: url("img_sources/background_2.jpg");
-            min-height:1500px;
-        }
-        .parallax_3{
-            z-index: -1;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: 40%;
-            background-image: url("img_sources/background_3.jpg");
-            min-height: 900px;
-        }
+<!-- Put all SVG Files Here to reduce clutter in the actual body -->
+<!-- PL LOGO -->
+<svg class="hide" version="1.1" id="pl-logo-bw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 0 100 100" preserveAspectRatio="xMidYMin slice">
+    <g><circle class="pl-bg" cx="40.1" cy="40.1" r="40"/></g>
+    <g id="L"><path class="pl-L" d="M61.1,63.9H20.3V54h2.5V25.5h-2.5v-10h15.8v10h-2.6V54h21v-6.7h6.6V63.9z"/></g>
+    <g><path class="pl-P" class="st2" d="M37.4,20.5h13.9c3.6,0.7,6.2,3.9,6,7.3c-0.2,3.1-2.5,5.8-5.7,6.5c-6.7,0-10.2,0-16.9,0"/></g>
+</svg>
 
-        @media only screen and (max-device-width: 1024px) {
-            .parallax_2, .parallax_3, .parallax_1 {
-                background-attachment: scroll;
-            }
-        }
-    </style>    
-    <!-- Container element -->
-    <div class="parallax_1"></div>
-    <header class="nav-down" style="z-index:10">
-        <div id="navbar">
-            <ul>
-                <div class="Calignment">
-                <li>
-                        <button class="sideflags_white_home"><a href="index.html">Home</a>
-                                <div class="t1">
-                                    <div class="in"></div>
-                                </div>
-                                <div class="t2">
-                                    <div class="in"></div>
-                                </div>
-                            </button>
-                </li>
-                <li>
-                <button class="sideflags_white_projects"><a href="projects.html">Projects</a>
-                    <div class="t1">
-                        <div class="in"></div>
+<body style="background-color:#A6BE5E">
+    <nav class="nav-down" style="z-index: 9999; position: fixed">
+            <div id="navigation">
+                <ul>
+                    <div class="res_layout">
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#software">Software</a></li>
+                    <li id="logo">
+                            <svg class="pl-logo" version="1.1" id="pl-logo-bw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 100 100" preserveAspectRatio="xMidYMin slice">
+                                <g><circle class="pl-bg" cx="40.1" cy="40.1" r="40"/></g>
+                                <g id="L"><path class="pl-L" d="M61.1,63.9H20.3V54h2.5V25.5h-2.5v-10h15.8v10h-2.6V54h21v-6.7h6.6V63.9z"/></g>
+                                <g><path class="pl-P" class="st2" d="M37.4,20.5h13.9c3.6,0.7,6.2,3.9,6,7.3c-0.2,3.1-2.5,5.8-5.7,6.5c-6.7,0-10.2,0-16.9,0"/></g>
+                            </svg>
+                    </li>
+                    <li><a href="#voiceup">VoiceUp</a></li>
+                    <li><a href="#gallery">Media</a></li>
                     </div>
-                    <div class="t2">
-                        <div class="in"></div>
-                    </div>
-                </button>
-                </li>
-                <li>
-                        <button class="sideflags_white_research"><a href="research.html">Research</a>
-                                <div class="t1">
-                                    <div class="in"></div>
-                                </div>
-                                <div class="t2">
-                                    <div class="in"></div>
-                                </div>
-                        </button>
-                </li>
-                <li>
-                    <button class="sideflags_white_about"><a href="about.html">About</a>
-                        <div class="t1">
-                            <div class="in"></div>
-                        </div>
-                        <div class="t2">
-                            <div class="in"></div>
-                        </div>
-                    </button>    
-                </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="responsive_bar" style="z-index: 9999">
+                <div class="icon">
+                    <div class="menu_hamburger"></div>
                 </div>
-            </ul>
+                <ul class="res-mobile">
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#software">Software</a></li>
+                    <li><a href="#voiceup">VoiceUp</a></li>
+                    <li><a href="#gallery">Video and Music</a></li>
+                </ul>
+        </div>  
+
+    <div class="parallax">
+    <!-- NAVIGATION BAR -->
+
+        <!-- OFFICIAL CONTENT -->
+            <div class="parallax__group">
+                <div class="parallax__layer parallax__layer--deep">
+                        <img src="https://drive.google.com/uc?export=view&id=1kAMGaYmarFLfYD9B17hWUk1qEz9sS6pm"/>
+                </div>
+            </div>
+
+            <div id="quote_group" class="parallax__group">
+                <div class="parallax__layer parallax__layer--base">
+                       <h1 style="transform: translate(0, -150%)">Your Journey Begins Here</h1>
+                </div>
+                <div class="parallax__layer parallax__layer--fore">
+                            <div class="text-container" style="width: 90%">
+                            <p class="overview" style="font-size:2em; line-height:50px">Welcome! My name is Phipson Lee (李卓彥) and I am currently 19 years old. I was born in Hong Kong and
+                                I moved here to California when I was 18 to study at the University of California, Los Angeles, and pursue my own dreams and ambitions.</p>
+                            <h2 id="main">I AM...</h2>
+                            </div>
+                </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                            <div style="transform: translate(0, -270%)">
+                                <ul class="res_layout">
+                                    <li style="color: black"><a href="#research"><img class="img_icon" src="https://png.icons8.com/metro/1600/book.png"/></a><br>A RESEARCHER</li>
+                                    <li style="color: black"><a href="#software"><img class="img_icon" src="https://png.icons8.com/metro/1600/computer.png"/></a><br>A PROGRAMMER</li>
+                                    <li style="color: black"><a href="#voiceup"><img class="img_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/2000px-Speaker_Icon.svg.png"/></a><br>A FOUNDER</li>
+                                    <li style="color: black"><a href="#gallery"><img class="img_icon" src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/video-24-512.png"/></a><br>A CREATIVE</li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+
+            <div id="research" class="anchor"></div>
+            <div class="parallax__group">
+              <div class="parallax__layer parallax__layer--back">
+                <div class="title">
+                    <img src="https://drive.google.com/uc?export=view&id=13YrGvR2foM6d6J5TWSbkhYgx7Q6MROeB"/>
+                </div>
+              </div>
+              <div class="parallax__layer parallax__layer--base">
+                <div style="top: 100%">
+                    <h1>Research</h1>
+                    <br><br><br><br>
+                    <div class="text-container background-col">
+                    <p class="description">Pursuing a double major in both Cognitive Science and Computer Science, I 
+                        am constantly integrating my interests in human cognition and neuroscience with
+                        programming. I strive not only to develop models that can accurately improve, predict, and 
+                        replicate psychological constructs, but also to understand technology from a user's perspective
+                        and enhance the functionality, user experience, and design of technological products. 
+                    </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="parallax__group">
+                <div class="parallax__layer parallax__layer--base">
+                    <div class="res-showcase-inv">
+                    <div class="text-showcase item-a" style="display: flex">
+                        <div>
+                            <h4 class="showcase-title">User Experience Researcher at Hong Kong Broadband Network</h4>
+                            <h5 style="text-align: left">June 2017 to August 2017</h5>
+                        </div>
+                        <p style="padding-left: 1.2em">
+                            During the summer of 2017, I led a city-wide user experience research in Hong Kong as part of my
+                            internship at Hong Kong Broadband Network, the leading telecommunications company in Hong Kong. The study
+                            evaluated the functionality of the company's mobile and web apps, specifically when customers made online
+                            transactions and payments. Not only was I repsonsible for cooperating with the marketing team to design surveys,
+                            but I also collaborated with the IT department to develop Key Performance Indicators and metrics that quantified
+                            users' ease of use, navigation convenience, and payment tracking.
+                            <br><br>
+                            In addition to the research design, I was also asked to conduct a case study of the company's web services, and compare
+                            them with local and international competitors in China, Korea, Japan, and other regions of southease Asia. Over
+                            the course of this 12-week internship, I studied the user interface, functionality, and navigation features of over
+                            20 companies in Asia, compiled a report and presented my findings and suggestions to the IT department.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gap_filler" class="parallax__group" style="height: 500em; height: 100vh;">
+                </div>
+
+            <div class="parallax__group">
+                <div class="parallax__layer parallax__layer--fore">
+                    <div class="text-container">
+                        <div class="text-showcase" style="display: flex; background-color: rgba(87, 3, 62, 0.83)">
+                            <div>
+                            <h4 class="showcase-title">Coauthor at the Chinese University of Hong Kong</h4>
+                            <h5 style="text-align: left">June 2016 to Present</h5>
+                            </div>
+                            <p style="padding-left: 1.2em">
+                                During the summer of 2016, I had the chance to work with professors at the Chinese University of Hong Kong (CUHK)
+                                Self Regulation Lab, which investigates self control, emotional regulation, and the dynamics of goal setting and motivation.
+                                As part of their experiment to track the effectiveness of self control training on mobile device usage, I programmed a mobile
+                                analytics app that would measure the duration, frequency, and other factors such asnumber of clicks per minute,
+                                frequency of certain apps. The app used the built-in sensors of a smartphone device, and was piloted among groups of university
+                                students. I was in charge of piloting the studies and translating the app from English to Chinese. I was subsequently listed
+                                as a coauthor for the app.
+                                <br><br>
+                                Beyond engineering an unprecedented app for psychological testing for social media usage, I was also involved in the statistical
+                                analysis of the data using Qualtrics, SPSS, and common statistical methods such as two-way ANOVA. With that, I helped to double
+                                check the results and offer input and observations where necessary.
+                            </p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                            <div class="res-showcase">
+                                <div class="text-showcase item-b" style="display: flex; background-color: rgba(202, 92, 24, 0.65)">
+                                <div>
+                                <h4 class="showcase-title">Assistant at the Chinese University of Hong Kong</h4>
+                                <h5 style="text-align: left">June 2016 to August 2016</h5>
+                                </div>
+                                <p style="padding-left: 1.2em">
+                                    While I was coauthoring the research for the Self Regulation Lab, I was also involved with the Self Regulation Lab as a student helper
+                                    and research assistant. There I was involved in multiple different research projects, specifically a investigating the effects of
+                                    materialistic values on social relationships. I coded videos and analyzed existing responses from couples who had been videoed while
+                                    convserving about their relationship expectations.
+                                    <br><br>
+                                    I was also responsible for translating metrics and inventories from English to Chinese, as our targeted population demographic was primarily
+                                    Chinese-speaking university students. I also designed and implemented metrics for a study investigating the relationship between creative cognition
+                                    and self regulation. During this time, I had learned how to code on SPSS and design metrics and questionnaires using Qualtrics. I also
+                                    worked with professors to design a new study investigating tempatation avoidance on social media.
+                                </p>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--fore">
+                        <div class="res-showcase-inv">
+                            <div class="text-showcase item-a" style="display: flex; background-color: rgba(17, 155, 77, 0.7)">
+                                <div>
+                                <h4 class="showcase-title">Researcher at UCLA Tennenbaum Center for the Biology of Creativity</h4>
+                                <h5 style="text-align: left">September 2017 to Present</h5>
+                                </div>
+                                <p style="padding-left: 1.2em">
+                                    As part of my personal interests in the psychology of creativity and inspiration, I offerred to be a student researcher and assistant at the
+                                    UCLA Tennenbaum Center for the Biology of Creativity, which explores the cogntive neural underpinnings of creative cognition. As part of my work
+                                    I have been asked to design an unprecedented online creativity training program that enhances and gauges human creativity. I am currently reviewing
+                                    literature regarding factors and existing measures that can be adopted to measure and train creativity. 
+                                    <br><br>
+                                    I will be looking to pilot several studies towards the end of this year. If all is successful, I will be highly interested in extending this study into
+                                    the psychology of inspiration, and also look into sociocultural differences in creativity enhancement.
+                                </p>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--fore">
+                            <div class="text-container" style="padding: 1em; background-color: rgba(238, 80, 80, 0.71)">
+                                <h4 class="showcase-title">IN ADDITION TO THAT...</h4>
+                                <p style="text-align: left">
+                                    I am also actively reading and exploring research in these areas:<br>
+                                    1) Self regulation and motivation in gaming and eSports<br>
+                                    2) Metrics for User Experience using Eye Tracking Technology<br>
+                                    3) Modeling the Psychology of Inspiration<br>
+                                    4) Neural networks and modeling human creativity with artificial intelligence<br>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+
+            <div id="gap_filler" class="parallax__group" style="height: 100vh; height: 100em">
+                </div>
+
+            <div class="parallax__group">
+            <div id="software" class="anchor"></div>
+              <div class="parallax__layer parallax__layer--deep2">
+                    <img src="https://drive.google.com/uc?export=view&id=1-GrMHvjcBmB_9GpOmB1Bz3JIocoXzyu8"/>
+              </div>
+              <div class="parallax__layer parallax__layer--base">
+                    <h3>Software</h3><br><h5>and</h5><br><h3>Engineering</h3>
+              </div>
+              <div class="parallax__layer parallax__layer--fore">
+                    <div class="text-container background-col" style="transform: translate(0, 150%)">
+                    <p class="description">In addition to research, I have merged my interests in human behavior with my newfound
+                        knowledge in programming. Though I have only started learning computer science for less than a year, I have
+                        constantly challenged myself by taking on new programming challenges, which has equipped me with the skills 
+                        and experience necessary to thrive in the tech industry.
+                    </p>
+            </div>
         </div>
-    </header>
-    <div id="displayer">
-    <div style="top:250px" id="welcome" class="parallax-title">
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                          <div class="carousel js-flickity">
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1hAHNSknlktyB0qM9UkqYeGqa8n8jgdm_"/>
+                              </div>
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1r33g7M89dNeJ3XLVhxgKwBgpbovAThq1"/>
+                              </div>
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1xY3NtSTxIz-oWOosQl49DhfH8XNMC4Ig"/>
+                              </div>
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-"/>
+                              </div>
+                        </div>  
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                        <div style="transform: translate(0, -50%)">
+                            <h2>APPSTAT</h2>
+                            <br><br><br><br>
+                            <div class="text-container background-wood">
+                            <p class="description">I created AppStat by myself as part of my position as a research assistant at Chinese University of Hong Kong (CUHK). It is an Android App designed to track users' social media usage as part of a study I am co-authoring. 
+                                I programmed not only the front end and user interface of the app, but also coded the backend server used to retrieve the data participants submit for the study, which are collected on a Google Spreadsheet for statistical testing.
+                                I have succesfully piloted the app with the staff and participants. I am currently looking to refine the app and integrate it natively for both iOS and Android, so
+                                it can reliably track user behavior on social media for future research.<br><br> 
+                                    This project was made on:&nbsp;&nbsp;Android Studio (Gradle, Java, Javascript, XML)&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://github.com/Phipson/PsychAppStatUsage">GitHub Code</a>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                          <div class="carousel js-flickity">
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1oO7dSQhltZZv5-nn3AfBcP8i4YNY4nH6"/>
+                              </div>
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1pUlXmTwj7OAvGnx5pldpJVyS85Jp0nV2"/>
+                              </div>
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1Wbfo1rK4IdQea1uUukjkk-7LLy4Z2fqY"/>
+                              </div>
+                        </div>  
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                        <div style="transform: translate(0, -50%)">
+                            <h2>Brainbound</h2>
+                            <br><br><br><br>
+                            <div class="text-container background-wood">
+                            <p class="description">BrainBound is a self-initiated project of mine, to provide an online social network for young and professional researchers alike. Similar to how programmers and entrepreneurs can connect and collaborate with each other through apps such as
+                                    AngelList, aspiring researchers should take advantage of technology to collaborate with other researchers who share common interests, and view research as a form of entrepreneurship- an investment aimed to create and innovate the world of academia with 
+                                    fruitful knowledge. By designing an app that not only connects users to desired research labs, but also equips users with necessary research skills through online training courses, I hope to bring the "startup culture" to research, to bridge the skill gap
+                                    between experienced professors and aspiring researchers across a multitude of fields. 
+                                    <br><br> 
+                                    Snippets of source code will be released in the coming months, so stay tuned!
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                          <div class="carousel js-flickity">
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1RU6101fJLaIrq_bSNk8FGpZ3JGBIvC3x"/>
+                              </div>
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1IZ2Ddko1A4MRo5XWz7G7VyOIh5l3LkbN"/>
+                              </div>
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=13glHBLSVm83mRm_UjqrH31LPCOoar16Y"/>
+                              </div>
+                              <div class="carousel-cell">
+                                <img src="https://drive.google.com/uc?export=view&id=1Uu79hxvLP9hBrNLvgxCTefIIQtjGEveB"/>
+                              </div>
+                        </div>  
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                        <div style="transform: translate(0, -50%)">
+                            <h2>SUS</h2>
+                            <br><br><br><br>
+                            <div class="text-container background-wood">
+                            <p class="description">SUS, short for "Sustainability Under SOS", is a project led by me and 3 other programmers during the annual LA Hacks Hackathon of 2017. Over the span of 3 days, we were able to design an Android App that used the API provided by the City of LA to create a social networking app that promoted sustainable lifestyles through civil engagement and real-time alert systems.
+                                    Users could pinpoint a location in LA that is of concern to the environment, and can then host an event that the public can attend. Events can range from beach clean-ups to demonstrations. The app was awarded the Most Sustainable Hack for its innovative means of promoting sustainable lifestyles and change in the city of LA. 
+                                    <br><br> 
+                                    This project was made on:&nbsp;&nbsp;Android Studio (Gradle, Java, Javascript, XML);&nbsp;&nbsp;City of LA API;&nbsp;&nbsp;SQL (Database);&nbsp;&nbsp;PHP (Server)&nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://github.com/Phipson/Civic-app">GitHub Code (Snippets)</a>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                <div class="parallax__layer parallax__layer--fore">
+                    <div class="res-showcase" style="transform: translate(0, -50%); margin: 5%">
+                        <div id="cortxai" class="item-a">
+                            <img src="https://drive.google.com/uc?export=view&id=1nXjI5_rL0cTTjKUnSGDNiKEUZbDySPKe"/>
+                        </div>
+                        <div class="item-b background-wood description">
+                            <h3 style="line-height: 1em; text-align: left">Mobile Developer and Machine Learning Trainee</h3>
+                            <h5 style="text-align: left">February 2017 - Present</h5><br><br>
+                            <p>An intern for a newly found startup, I am creating an interactive prototype on behalf of CortX.ai, 
+                                which is a newly found startup in Los Angeles that offers new swiping mechanisms for selecting clothing
+                                using machine learning algorithms. <br><br>
+                                The initial prototype, which was created as a web app, is now migrating on mobile systems. As the core mobile
+                                developer for this startup, it is my duty to research into methods of efficiently translating the machine learning functions
+                                into a mobile device, but also provide fast and interactive swiping mechanisms that have minimal delay. I am currently in the
+                                research stage of the project, and will be completing the prototype by early June.
+                            </p>
+                            <br><br>
+                            <ul class="res-layout">
+                                <li><a class="showcase-link" href="">View Source Code</a></li>
+                                <li><a class="showcase-link" href="https://www.cortx.ai/">Visit CortX.ai</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                        <div class="res-showcase-inv" style="margin: 5%">
+                            <div class="item-a background-wood description">
+                                    <h3 style="line-height: 1em; text-align: left">Computer Support Technician</h3>
+                                    <h5 style="text-align: left">February 2017 - Present</h5><br><br>
+                                    <p>As a member of the UCLA Office of Residential Life, I am responsible for ensuring that residents living on campus are
+                                        equipped with the suitable technological resources and infrastructure to thrive in their academic pursuits. Beyond troubleshooting
+                                        computers and priners, I am responsible for responding to client phone calls and addressing concerns from the UCLA office.
+                                        <br><br>
+                                        In addition to supporting the students with their technology, I am also required to maintenance college wide servers, implement cybersecurity programs
+                                        and also construct computers for residential offices when necessary.
+                                    </p>
+                                    <br><br>
+                                    <ul class="res-layout">
+                                        <li><a class="showcase-link" href="https://reslife.ucla.edu/">Visit UCLA ORL</a></li>
+                                    </ul>
+                                </div>
+                            <div id="cst" class="item-b">
+                                <img src="https://graduway.com/wp-content/uploads/2018/01/UCLA-3.png?x18935"/>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--fore">
+                        <div class="res-showcase" style="margin: 5%">
+                            <div id="3d4e" class="item-a">
+                                <img class="showcase-img" src="https://drive.google.com/uc?export=view&id=1dFhlAfYl-b7LlDkHl0aV6FC7l7JH2c8X"/>
+                            </div>
+                            <div class="item-b background-wood description">
+                                <h3 style="line-height: 1em; text-align: left">Product Engineer and Programmer</h3>
+                                <h5 style="text-align: left">September 2017 - Present</h5><br><br>
+                                <p>3D4E is the official 3D Printing club at UCLA, aiming to offer students the opportunity to learn about CAD and develop
+                                    meaningful products that can benefit the local Los Angeles community. As a member of the club, I have been involved in 
+                                    designing and implementing 3D-printed board games that incorporate Raspberry Pi hardware and Machine Learning algorithms
+                                    to generate intelligent computers that can play against students.
+                                    <br><br>
+                                    Most recently, the club has created 3D-printed ukuleles and quadcopters as part of an effort to help and nurture students at
+                                    a nearby orphanage in Los Angeles. As part of this initiative, our club has raised $3000 for mass production of ukuleles and
+                                    quadcopters. 
+                                </p>
+                                <br><br>
+                                <ul class="res-layout">
+                                    <a class="showcase-link" href="https://3d4eatucla.github.io/">Visit 3D4E</a>
+                                    <a class="showcase-link" href="https://spark.ucla.edu/project/8741">Donate to the 3D4E Campaign</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                        <div class="res-showcase-inv" style="margin: 5%">
+                            <div class="item-a background-wood description">
+                                    <h3 style="line-height: 1em; text-align: left">Club Member</h3>
+                                    <h5 style="text-align: left">September 2017 - Present</h5><br><br>
+                                    <p>UCLA ACM is one of the many chapters of the Association of Computing and Machinery. As a member of this
+                                        organization, I have been actively involved in the different groups and activities offered by UCLA ACM, namely
+                                        ACM AI, which focuses on artificial intelligence and machine learning; ACM Unity, which focuses on game design
+                                        and development using Unity; ACM ICPC, which trains students to solve computing problems at a competitive level.
+                                    </p>
+                                    <br><br>
+                                    <ul class="res-layout">
+                                        <a class="showcase-link" href="">Learn About UCLA ACM</a>
+                                    </ul>
+                                </div>
+                            <div id="cst" class="item-b">
+                                <img class="showcase-img" src="http://www.uclaacm.com/images/logo-acm.png"/>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="gap_filler" class="parallax__group" style="height: 100em; height: 50vh"> 
+            </div>
+
+            <div id="voiceup" class="anchor"></div>
+            <div class="parallax__group">
+              <div class="parallax__layer parallax__layer--back2">
+                  <img src="https://drive.google.com/uc?export=view&id=1z19tCNVgA04shOWxbuNewBz-5ytLsqbi"/>
+              </div>
+              <div class="parallax__layer parallax__layer--fore">
+                    <img style="transform: translate(0, -200%); width: 30%; height: auto; display: block; margin-right: auto; margin-left: auto" src="https://drive.google.com/uc?export=view&id=1HkZPVddvdEB5zCmkBgyNpEoiNPvO-ZXD"/>
+              </div>
+              <div class="parallax__layer parallax__layer--base">
+                  <h1 style="transform: translate(0, -50%)">VOICEUP</h1>
+                  <div class="text-container">
+                        <p class="overview">
+                                I founded VoiceUp in 2013 with a vision to host student-led events for high school students in Hong Kong that can empower and inspire them through the art of storytelling and creative expression. 
+                                Moving to California, I am starting a new chapter of VoiceUp at UCLA, aiming to empowering UCLA students through their mental well-being. 
+                        </p>
+                  </div>
+              </div>
+            </div>
+
+            <div class="parallax__group">
+                <div class="parallax__layer parallax__layer--back">
+                    <div class="text-container" style="transform: translate(0, 50%)"><p>
+                            As part of my ongoing efforts with VoiceUp, I have been awarded the Bowdoin College Book Award for innovative thinking and creativity (2015).
+                            We are also with established organizations such as UCLA MindWell, UCLA Mindfulness Awareness Research Center, and UCLA Association for American Women to empower the student body.
+                            <br><br>
+                            There is far too much information about this project, and I do not want to bore you guys with a lengthy summary.
+                            <br><br>
+                            You can find more information about us on...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax__group">
+                <div class="parallax__layer parallax__layer--base">
+                        <ul class="res_layout" style="transform: translate(0, 250%)">
+                                <li><a href="https://www.instagram.com/voiceup_hk/"><img class="img_icon" src="http://sguru.org/wp-content/uploads/2018/01/instagram-icon-good.png"/></a><br>INSTAGRAM</li>
+                                <li><a href="https://www.facebook.com/voiceuptalk/"><img class="img_icon" src="http://www.gfaschools.org/wp1/wp-content/uploads/2017/01/white-fb-icon-facebook.png"/></a><br>FACEBOOK</li>
+                                <li><a href="https://www.youtube.com/user/voiceuptalk"><img class="img_icon" src="http://moziru.com/images/youtube-clipart-png-black-12.png"/></a><br>YOUTUBE</li>
+                                <li><a href="https://twitter.com/voiceuphk"><img class="img_icon" src="https://static1.squarespace.com/static/57ddec886a49637fdbfa9503/57e84f779de4bbd550a3a0be/57e84f97e58c62bf311e91f8/1474842549020/Twitter-256.png"/></a><br>TWITTER</li>
+                        </ul>
+                </div>
+            </div>
+
+            <div id="voiceupgallery" class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                        <ul class="video-gallery">
+                            <li>
+                            <article class="video">
+                                    <figure>
+                                      <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                        <img src=""/></a>
+                                    </figure>
+                                    <h5 class="caption">VoiceUp Video</h5>
+                            </article>
+                            </li>
+                            <li>
+                                    <article class="video">
+                                            <figure>
+                                              <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                <img src=""/></a>
+                                            </figure>
+                                            <h5 class="caption">VoiceUp Video</h5>
+                                    </article>
+                            </li>
+                            <li>
+                                    <article class="video">
+                                            <figure>
+                                              <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                <img src=""/></a>
+                                            </figure>
+                                            <h5 class="caption">VoiceUp Video</h5>
+                                    </article>
+                            </li>
+                            <li>
+                                    <article class="video">
+                                            <figure>
+                                              <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                <img src=""/></a>
+                                            </figure>
+                                            <h5 class="caption">VoiceUp Video</h5>
+                                    </article>
+                            </li>
+                            <li>
+                                    <article class="video">
+                                            <figure>
+                                              <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                <img src=""/></a>
+                                            </figure>
+                                            <h5 class="caption">VoiceUp Video</h5>
+                                    </article>
+                            </li>
+                            <li>
+                                    <article class="video">
+                                            <figure>
+                                              <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                <img src=""/></a>
+                                            </figure>
+                                            <h5 class="caption">VoiceUp Video</h5>
+                                    </article>
+                            </li>
+                         </ul>
+                    </div>
+            </div>
+
+            <div id="gallery" class="anchor"></div>
+            <div class="parallax__group">
+              <div class="parallax__layer parallax__layer--back">
+                <img src="https://drive.google.com/uc?export=view&id=1CnnXrFWx1WzzzIOm5L4wY-zSL72iauWh"/>
+              </div>
+              <div class="parallax__layer parallax__layer--base">
+                <h1>VIDEO</h1><br><h3>AND</h3><br><h1>MUSIC</h1>
+              </div>
+            </div>
+
+            <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--base">
+                            <ul class="video-gallery">
+                                    <li>
+                                    <article class="video">
+                                            <figure>
+                                              <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                <img src=""/></a>
+                                            </figure>
+                                            <h5 class="caption">VoiceUp Video</h5>
+                                    </article>
+                                    </li>
+                                    <li>
+                                            <article class="video">
+                                                    <figure>
+                                                      <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                        <img src=""/></a>
+                                                    </figure>
+                                                    <h5 class="caption">VoiceUp Video</h5>
+                                            </article>
+                                    </li>
+                                    <li>
+                                            <article class="video">
+                                                    <figure>
+                                                      <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                        <img src=""/></a>
+                                                    </figure>
+                                                    <h5 class="caption">VoiceUp Video</h5>
+                                            </article>
+                                    </li>
+                                    <li>
+                                            <article class="video">
+                                                    <figure>
+                                                      <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                        <img src=""/></a>
+                                                    </figure>
+                                                    <h5 class="caption">VoiceUp Video</h5>
+                                            </article>
+                                    </li>
+                                    <li>
+                                            <article class="video">
+                                                    <figure>
+                                                      <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                        <img src=""/></a>
+                                                    </figure>
+                                                    <h5 class="caption">VoiceUp Video</h5>
+                                            </article>
+                                    </li>
+                                    <li>
+                                            <article class="video">
+                                                    <figure>
+                                                      <a data-fancybox data-type="iframe" href="https://www.youtube.com/embed/Fll6GYXICRk">
+                                                        <img src=""/></a>
+                                                    </figure>
+                                                    <h5 class="caption">VoiceUp Video</h5>
+                                            </article>
+                                    </li>
+                                 </ul>
+                    </div>
+            </div>
+<!--
+    <div id="displayer" class="parallax">
+    <div id="welcome" class="parallax__layer">
         <h1>Welcome</h1>
         <div style="float:center">
         <h5 class="lightgrey" style="float:center">Sit Down.&nbsp;Take a Deep Breath.&nbsp;Enjoy.</h5>
@@ -134,8 +665,7 @@
             </p>
         </div>
     </div>
-    <div class="parallax_2"></div>
-    <div class="parallax-body-2" id="intro-1" style="height: 300px; top: 900px">
+    <div class="parallax-__layer" id="intro-1" style="height: 300px; top: 900px">
             <p class="overview" style="font-size:2.5em; text-align: center; line-height:50px">Hi, I'm Phipson Lee (李卓彥) and I am a 19 year-old born in Hong Kong (currently studying at the University of California, Los Angeles).</p>
             <br><br><h2 weight="900"><b>I am...</b></h2>
     </div>
@@ -207,128 +737,36 @@
         </div>
     </div>
     <div class="parallax_3"></div>
-    </div>
-</body>
+-->
 </div>
+</body>
+
 <footer>
 <script type="text/javascript">
-// Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
-
-$(window).scroll(function(event){
-    didScroll = true;
-});
-
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 100);
-
-function hasScrolled() {
-    var st = $(window).scrollTop();
-    
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if ((st > lastScrollTop) && (st > navbarHeight)){
-        // Scroll Down
-        $('header').removeClass('nav-down').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('header').removeClass('nav-up').addClass('nav-down');
-        }
-    }
-    
-    lastScrollTop = st;
-}
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-    
-    /* Every time the window is scrolled ... */
-    $(window).scroll( function(){
-    
-        /* Check the location of each desired element */
-        setInterval(function(i){
-            
-            var bottom_of_object = $(".fadeinscroll_1").offset().top + $(".fadeinscroll_1").outerHeight();
-            var window_location = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it in */
-            if( window_location > bottom_of_object){
-                    $(".fadeinscroll_1").animate({"opacity": '1'}, 500);    
-                    $(".fadeinscroll_2").delay(250).animate({"opacity": '1'}, 500);  
-                    $(".fadeinscroll_3").delay(750).animate({"opacity": '1'}, 500);        
-            }
-        }); 
-    });
-    $(window).scroll( function(){
-    
-        /* Check the location of each desired element */
-        setInterval(function(i){
-            
-            var bottom_of_object = $(".fadeinscroll_8").offset().top + $(".fadeinscroll_8").outerHeight();
-            var window_location = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it in */
-            if( window_location > bottom_of_object){
-                    $(".fadeinscroll_4").animate({"opacity": '1'}, 500);    
-                    $(".fadeinscroll_5").delay(250).animate({"opacity": '1'}, 500);  
-                    $(".fadeinscroll_6").delay(750).animate({"opacity": '1'}, 500);    
-                    $(".fadeinscroll_7").delay(1250).animate({"opacity": '1'}, 500);  
-                    $(".fadeinscroll_8").delay(1750).animate({"opacity": '1'}, 500); 
-                    $(".fadeinscroll_9").delay(2250).animate({"opacity": '1'}, 500);    
-            }
-        }); 
-    });
-});
-</script>
-<script type="text/javascript">
-$(document).ready(function(){
-    $(".circleicon1").hover(function(){
-        $("#hovertext-1").animate({"opacity": '1'}, 500); 
-        }, function(){
-            $("#hovertext-1").animate({"opacity": '0'}, 500);
-    });
-    $(".circleicon2").hover(function(){
-        $("#hovertext-2").animate({"opacity": '1'}, 500); 
-        }, function(){
-            $("#hovertext-2").animate({"opacity": '0'}, 500);
-    });
-    $(".circleicon3").hover(function(){
-        $("#hovertext-3").animate({"opacity": '1'}, 500); 
-        }, function(){
-        $("#hovertext-3").animate({"opacity": '0'}, 500);
-    });
-})
-</script>
-<script type="text/javascript">
-var siteWidth = 1440;
-var scale = screen.width /siteWidth
-
-document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
-</script>
-<script type="text/javascript">
-        var nav = responsiveNav(".nav-collapse");
-</script>
-<script type="text/javascript">
-    var isMobile = false;
-    if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent.toLowerCase()) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))){
-        isMobile = true;
-    }
+/* Script for Hamburger Menu Click */
     $(document).ready(function(){
-        if(isMobile){
-            //Go to mobile site
-        }
+        $('.icon').click(function(){
+            $('.icon').toggleClass('active');
+            $('.responsive_bar').toggleClass('active');
+            $('.res-mobile').toggleClass('active');
+        })
     })
 </script>
+<script type="text/javascript">
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 2000);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </footer>
