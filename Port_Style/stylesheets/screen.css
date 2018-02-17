@@ -792,8 +792,8 @@ iframe {
 h1 {
   color: #fff;
   text-align: center;
-  letter-spacing: 20px;
-  margin-left: 12px;
+  word-spacing: 0.1em;
+  letter-spacing: 0.1em;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 7em;
   font-weight: 500;
@@ -863,7 +863,7 @@ p {
 }
 
 p.quote {
-  line-height: 30px;
+  line-height: 0.5em;
   text-align: center;
   font-style: italic;
   color: #fff;
@@ -884,7 +884,9 @@ body {
   line-height: 1.2em;
 }
 
-
+a {
+  color: #fff;
+}
 
 
 /* VIDEO */
