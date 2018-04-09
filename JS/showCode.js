@@ -35,15 +35,7 @@ $(document).ready(function(){
         opacity: 1,
         autoAlpha: 1,
         bottom: "0%"
-    }, '-=0.5')
-    .fromTo(display, 0.5, {
-        visibility: "hidden",
-        opacity: 0,
-    }, {
-        autoAlpha: 1,
-        visibility: "visible",
-        opacity: 1,
-    }, '-=0.2');
+    }, '-=0.5');
 
     //FOR SUBSEQUENT PROJECTS, ONLY ADD THINGS BELOW
     //FOLLOW SAME NAMING RULES AND METHODS
