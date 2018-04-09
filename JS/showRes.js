@@ -17,11 +17,12 @@ $(document).ready(function(){
     .fromTo(BG, 0.5, {
         visibility: "hidden",
         opacity: 0,
+        left: '-100%'
     }, {
         visibility: "visible",
         opacity: 1,
         autoAlpha: 1,
-        bottom: "0%"
+        left: "0%"
     }, '-=0.5');
 
     //FOR SUBSEQUENT PROJECTS, ONLY ADD THINGS BELOW

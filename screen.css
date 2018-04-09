@@ -95,7 +95,8 @@ svg {
 }
 
 .showcase-bg{
-  bottom: -100%;
+  top: 0%;
+  left: -100%;
   z-index: 4;
   visibility: hidden;
   position: fixed;
