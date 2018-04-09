@@ -107,6 +107,7 @@ svg {
 }
 
 .showcase-info{
+  visibility: visible;
   position: fixed;
   width: 90%;
   height: 80%;
