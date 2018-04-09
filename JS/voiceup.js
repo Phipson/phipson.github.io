@@ -15,6 +15,7 @@ $(document).ready(function(){
         visibility: 'hidden',
         opacity: 0,
         }, {
+        left:"87%",
         top:"0%",
         visibility: 'visible',
         autoAlpha: 1,
