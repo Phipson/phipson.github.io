@@ -218,7 +218,6 @@ svg {
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   margin-left: 2.5%;
   margin-right: 2.5%;
-  margin-bottom: 2.5%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
@@ -473,6 +472,10 @@ ul ab:hover:before{
     margin-left: auto;
     margin-right: auto;
   }
+
+  h1{
+    font-size: 5em;
+  }
   
 }
 
@@ -484,11 +487,19 @@ ul ab:hover:before{
   .research{
     display: block;
   }
+
+  h1{
+    font-size: 4em;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   html {
     font-size: 8px;
+  }
+
+  h1{
+    font-size: 3em;
   }
 }
 
