@@ -285,6 +285,7 @@ svg {
 }
 
 .VUURL{
+  cursor: pointer;
   font-family: 'Roboto Condensed'; 
   color: #FA4659;
   visibility: visible;
@@ -292,6 +293,11 @@ svg {
 
 .VUURL:hover{
   color: #FDA403;
+}
+
+li {
+  color: #11CBD7;
+  line-height: 1.5em;
 }
 
 

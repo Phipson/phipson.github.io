@@ -1,4 +1,33 @@
 $(document).ready(function(){
+    var closer = document.getElementById("close");
+    var resume = document.getElementById("resume");
+    var BG = document.getElementById("showcase-bg");
+    closer.style.cursor = 'pointer';
+
+    //FUNCTION FOR CLICKING RESUME
+    var tl1 = new TimelineMax({paused: true});
+    tl1
+    .to("body", 0.5, {
+        overflow: "hidden"
+    })
+    .fromTo(BG, 0.5, {
+        visibility: "hidden",
+        opacity: 0,
+        left: '-100%'
+    }, {
+        visibility: "visible",
+        opacity: 1,
+        autoAlpha: 1,
+        left: "0%"
+    }, '-=0.5');
+
+    closer.onclick = function(){
+        tl1.reverse();
+    };
+
+    resume.onclick = function(){
+        tl1.play();
+    }
 
     /* Get id of the different icons */
     var icon_alt = document.getElementById("main-icon");

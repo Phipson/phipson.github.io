@@ -221,10 +221,7 @@ $(document).ready(function(){
         disdesc.innerHTML = "UCLA ACM is one of the many chapters of the Association of Computing and Machinery. As a member of this\
         organization, I have been actively involved in the different groups and activities offered by UCLA ACM, namely\
         ACM AI, which focuses on artificial intelligence and machine learning; ACM Unity, which focuses on game design\
-        and development using Unity; ACM ICPC, which trains students to solve computing problems at a competitive level.\
-        <ul class='res-layout'>\
-        <a class='showcase-link' href=''>Learn About UCLA ACM</a>\
-        </ul>";
+        and development using Unity; ACM ICPC, which trains students to solve computing problems at a competitive level.";
         tl1.play();
     };
 
