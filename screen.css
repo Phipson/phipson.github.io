@@ -167,6 +167,8 @@ svg {
 }
 
 .socicon{
+  max-width: 20%;
+  max-height: 20%;
   display: block;
   margin: auto;
 }
