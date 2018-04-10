@@ -33,17 +33,41 @@ iframe {
   width: 560px;
 }
 
+.svg-anim{
+  width: 25%; 
+  margin-left: 37.5%; 
+}
+
+
 .nav-display{
+  background-color: #fff;
   left: -100%;
   width: 100%;
-  height: 100vh;
-  align-items: center;
-  padding: 20vh 20vw;
+  height: 100%;
   position: fixed;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 5%;
+  grid-template-rows: repeat(2, 45%);
+}
+
+.nav-group {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7fr 1fr;
+}
+
+.svg-nav{
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.nav-title {
+  text-align: center;
+  color: #FA4659;
 }
 
 .nav-icon{
@@ -56,12 +80,13 @@ iframe {
 }
 
 .nav-bg{
+  top: 0%;
   left: -100%;
   visibility: hidden;
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #C6F1E7;
 }
 
 .nav-scroll{
@@ -86,6 +111,7 @@ iframe {
 }
 
 #introtxt{
+  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -149,6 +175,7 @@ svg {
 }
 
 .show-button{
+  font-size: 1.1em;
   cursor: pointer;
   text-align: center;
   color:#F0FFF3;;
@@ -247,7 +274,7 @@ svg {
 
 .buttonbar{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   background: #FA4659;
   width: 95%;
   margin-left: 2.5%;
@@ -425,6 +452,13 @@ ul ab:hover:before{
 }
 
 /* This is the switch that detects in CSS whether or not the screen is sufficiently big for the navigation bar */
+@media only screen and (max-width: 1400px) {
+  .svg-anim{
+    width: 35%; 
+    margin-left: 27.5%; 
+  }
+}
+
 @media (max-width:910px){
   /* Normal nav for computer screen */
   nav{
@@ -476,7 +510,19 @@ ul ab:hover:before{
   h1{
     font-size: 5em;
   }
-  
+
+  p {
+    font-size: 2em;
+  }
+
+  .grid-display-desc, .grid-display-text, .show-button {
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .svg-anim{
+    width: 50%; 
+    margin-left: 25%; 
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -491,6 +537,15 @@ ul ab:hover:before{
   h1{
     font-size: 4em;
   }
+
+  p {
+    font-size: 2.3em;
+  }
+
+  .grid-display-desc, .grid-display-text, .show-button, #introtxt {
+    font-size: 1.7em;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -501,6 +556,29 @@ ul ab:hover:before{
   h1{
     font-size: 3em;
   }
+
+  p {
+    font-size: 2.5em;
+  }
+
+  .grid-display-desc, .grid-display-text, .show-button, {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  #introtxt {
+    font-size: 1.8em;
+  }
+
+  .svg-anim{
+    width: 80%; 
+    margin-left: 10%; 
+  }
+
+  .grid-display {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 /* Upon clicking, the entire screen overflows into 1 color (fade in) and menu is present */

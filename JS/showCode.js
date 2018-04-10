@@ -8,6 +8,7 @@ $(document).ready(function(){
     var distitle = document.getElementById("proj-title");
     var disdesc = document.getElementById("proj-desc");
     var disshow = document.getElementById("proj-img");
+    var disdate = document.getElementById("proj-date");
     var img1 = document.getElementById("img1");
     var img2 = document.getElementById("img2");
     var img3 = document.getElementById("img3");
@@ -82,6 +83,7 @@ $(document).ready(function(){
         ChangeImg(img4);
 
         distitle.innerHTML = "BRAINBOUND";
+        disdate.innerHTML = "SEPTEMBER 2017 to PRESENT";
         disdesc.innerHTML = "BrainBound is a self-initiated web-app designed to connect young and profe\
         ssional researchers with laboratories and research opportunities. By designing an app that not \
         only connects users to desired research labs, but also equips users with necessary research ski\
@@ -96,6 +98,7 @@ $(document).ready(function(){
     rgoal.onclick = function(){
         ChangeAll();
         distitle.innerHTML = "REGOALATE";
+        disdate.innerHTML = "SEPTEMBER 2017 to PRESENT";
         disdesc.innerHTML = "ReGoalate employs research conducted during my internship at the Chinese University of\
         Hong Kong, to transform goal-setting into fun, interactive games that are family friendly and enjoyable. I\
         used React Native Game Engine and the React Native interface to design and build the app applicable for both\
@@ -108,12 +111,9 @@ $(document).ready(function(){
     var styli = document.getElementById("open-stylify");
     styli.style.cursor = 'pointer';
     styli.onclick = function(){
-        ChangeImg(img1, "https://drive.google.com/uc?export=view&id=1hAHNSknlktyB0qM9UkqYeGqa8n8jgdm_");
-        ChangeImg(img2, "https://drive.google.com/uc?export=view&id=1r33g7M89dNeJ3XLVhxgKwBgpbovAThq1");
-        ChangeImg(img3, "https://drive.google.com/uc?export=view&id=1xY3NtSTxIz-oWOosQl49DhfH8XNMC4Ig");
-        ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-");
-
+        ChangeAll();
         distitle.innerHTML = "STYLIFY";
+        disdate.innerHTML = "FEBRUARY 2018 to PRESENT";
         disdesc.innerHTML = "As an intern for a newly found startup, I am creating an interactive prototype on behalf of Stylify, \
         which is a newly found startup in Los Angeles that offers new swiping mechanisms for selecting clothing\ using machine learning \
         algorithms <br><br>\ The initial prototype, which was created as a web app, is now migrating on mobile systems. As the core mobile\
@@ -133,6 +133,7 @@ $(document).ready(function(){
         ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-");
 
         distitle.innerHTML = "3D4E";
+        disdate.innerHTML = "SEPTEMBER 2017 to PRESENT";
         disdesc.innerHTML = "A 3D Printing Organization at UCLA, 3D4E offers opportunities for students to design and engineer meaning\
         ful projects that can improve the well-being and lifestyle of the California community. I worked with a team to \
         develop a 3D-printed tic tac toe board that uses Raspberry Pi to create an AI Computer that would compete against students.\
@@ -145,12 +146,13 @@ $(document).ready(function(){
     var sus = document.getElementById("open-sus");
     sus.style.cursor = 'pointer';
     sus.onclick = function(){
-        ChangeImg(img1, "https://drive.google.com/uc?export=view&id=1hAHNSknlktyB0qM9UkqYeGqa8n8jgdm_");
-        ChangeImg(img2, "https://drive.google.com/uc?export=view&id=1r33g7M89dNeJ3XLVhxgKwBgpbovAThq1");
-        ChangeImg(img3, "https://drive.google.com/uc?export=view&id=1xY3NtSTxIz-oWOosQl49DhfH8XNMC4Ig");
-        ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-");
+        ChangeImg(img1, "https://drive.google.com/uc?export=view&id=13glHBLSVm83mRm_UjqrH31LPCOoar16Y");
+        ChangeImg(img2, "https://drive.google.com/uc?export=view&id=1Uu79hxvLP9hBrNLvgxCTefIIQtjGEveB");
+        ChangeImg(img3, "https://drive.google.com/uc?export=view&id=1IZ2Ddko1A4MRo5XWz7G7VyOIh5l3LkbN");
+        ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1RU6101fJLaIrq_bSNk8FGpZ3JGBIvC3x");
 
         distitle.innerHTML = "SUS";
+        disdate.innerHTML = "MARCH 2017 to APRIL 2017";
         disdesc.innerHTML = "SUS, short for 'Sustainability Under SOS', is a project led by me and 3 other programmers during the annual LA Hacks Hackathon of 2017. \
         Over the span of 3 days, we were able to design an Android App that used the API provided by the City of LA to create a social networking app that promoted\
          sustainable lifestyles through civil engagement and real-time alert systems.\
@@ -166,12 +168,10 @@ $(document).ready(function(){
     var spot = document.getElementById("open-spot");
     spot.style.cursor = 'pointer';
     spot.onclick = function(){
-        ChangeImg(img1, "https://drive.google.com/uc?export=view&id=1hAHNSknlktyB0qM9UkqYeGqa8n8jgdm_");
-        ChangeImg(img2, "https://drive.google.com/uc?export=view&id=1r33g7M89dNeJ3XLVhxgKwBgpbovAThq1");
-        ChangeImg(img3, "https://drive.google.com/uc?export=view&id=1xY3NtSTxIz-oWOosQl49DhfH8XNMC4Ig");
-        ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-");
+        ChangeAll();
 
         distitle.innerHTML = "SPOT";
+        disdate.innerHTML = "MARCH 2018 to PRESENT";
         disdesc.innerHTML = "As part of my involvement with the 2018 LA Hacks, I developed a music recommendation web-app that visualized and synthesized data\
          from Spotify using machine learning algorithms and the Spotify API.\
         This web app aimed to improve the user experience when using Spotify, while also offering better statistical information about their music preferences,\
@@ -185,8 +185,9 @@ $(document).ready(function(){
     comst.style.cursor = 'pointer';
     comst.onclick = function(){
         ChangeAll();
-
+        
         distitle.innerHTML = "UCLA Computer Support Technician";
+        disdate.innerHTML = "SEPTEMBER 2017 to PRESENT";
         disdesc.innerHTML = "As a member of the UCLA Office of Residential Life, I am responsible for ensuring that residents living on campus are\
         equipped with the suitable technological resources and infrastructure to thrive in their academic pursuits. Beyond troubleshooting\
         computers and priners, I am responsible for responding to client phone calls and addressing concerns from the UCLA office.\
@@ -202,6 +203,7 @@ $(document).ready(function(){
     hkbn.onclick = function(){
         ChangeAll();
         distitle.innerHTML = "Hong Kong Broadband Network";
+        disdate.innerHTML = "JUNE 2017 to AUGUST 2017";
         disdesc.innerHTML = "As a summer intern, I was involved with the IT Operations for the company. I not only facilitated a city-wide user experience research\
         evaluating the company's web and mobile eCommerce services relative to its local and continental competitors, such as China, Singapore, Korea, and Japan\
         I also implemented the front-end of a web-app that the company would use to deploy software assisting the marketing team in targeting reponsive consumers\
@@ -215,6 +217,7 @@ $(document).ready(function(){
     acm.onclick = function(){
         ChangeAll();        
         distitle.innerHTML = "UCLA ACM";
+        disdate.innerHTML = "SEPTEMBER 2017 to PRESENT";
         disdesc.innerHTML = "UCLA ACM is one of the many chapters of the Association of Computing and Machinery. As a member of this\
         organization, I have been actively involved in the different groups and activities offered by UCLA ACM, namely\
         ACM AI, which focuses on artificial intelligence and machine learning; ACM Unity, which focuses on game design\
