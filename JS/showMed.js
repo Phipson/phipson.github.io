@@ -73,7 +73,7 @@ $(document).ready(function(){
     var web2 = document.getElementById("open-web2");
     web2.style.cursor = 'pointer';
     web2.onclick = function(){
-        changeFrame("http://voiceup.wixsite.com/voiceup");
+        changeFrame("https://voiceup.wixsite.com/voiceup");
         distitle.innerHTML = "VoiceUp Website";
         disdesc.innerHTML = "From high school to now, I have designed and developed the website for my organization VoiceUp, which aims to inspire and empower youths\
         through the art of storytelling and creative expression. The website houses a plethora of videos and resources that we have coalesced from UCLA and other organizations\
