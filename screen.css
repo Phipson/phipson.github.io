@@ -295,9 +295,12 @@ svg {
   color: #FDA403;
 }
 
-li {
+ul li {
+  font-family: 'Roboto Condensed', sans-serif;
   color: #11CBD7;
   line-height: 1.5em;
+  text-align: justify;
+  list-style: circle;
 }
 
 
