@@ -47,7 +47,7 @@ $(document).ready(function(){
     var vid2 = document.getElementById("open-video2");
     vid2.style.cursor = 'pointer';
     vid2.onclick = function(){
-        changeFrame("http://player.vimeo.com/video/253192305");
+        changeFrame("https://player.vimeo.com/video/253192305");
 
         distitle.innerHTML = "3D4E Campaign Video";
         disdesc.innerHTML = "During the beginning of 2018, I directed and edited a short campaign video for the UCLA 3D Printing Club, 3D4E.\

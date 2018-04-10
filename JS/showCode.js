@@ -12,14 +12,25 @@ $(document).ready(function(){
     var img2 = document.getElementById("img2");
     var img3 = document.getElementById("img3");
     var img4 = document.getElementById("img4");
+    var Changed = false;
 
     function ChangeImg(img, url=""){
         if (url == ""){
             img.style.display = "none";
         } else {
-            img.style.display = "inline-block";
+            img.style.display = "block";
             img.src = url;
         }
+    };
+
+    function ChangeAll(){
+        disshow.style.display = "none";
+        Changed = true;
+    };
+
+    function Revert(){
+        disshow.style.display = "block";
+        Changed = false;
     }
 
     var tl1 = new TimelineMax({paused: true});
@@ -83,11 +94,7 @@ $(document).ready(function(){
     var rgoal = document.getElementById("open-regoalate");
     rgoal.style.cursor = 'pointer';
     rgoal.onclick = function(){
-        ChangeImg(img1, "https://drive.google.com/uc?export=view&id=1hAHNSknlktyB0qM9UkqYeGqa8n8jgdm_");
-        ChangeImg(img2, "https://drive.google.com/uc?export=view&id=1r33g7M89dNeJ3XLVhxgKwBgpbovAThq1");
-        ChangeImg(img3, "https://drive.google.com/uc?export=view&id=1xY3NtSTxIz-oWOosQl49DhfH8XNMC4Ig");
-        ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-");
-
+        ChangeAll();
         distitle.innerHTML = "REGOALATE";
         disdesc.innerHTML = "ReGoalate employs research conducted during my internship at the Chinese University of\
         Hong Kong, to transform goal-setting into fun, interactive games that are family friendly and enjoyable. I\
@@ -177,10 +184,7 @@ $(document).ready(function(){
     var comst = document.getElementById("open-cst");
     comst.style.cursor = 'pointer';
     comst.onclick = function(){
-        ChangeImg(img1, "https://drive.google.com/uc?export=view&id=1hAHNSknlktyB0qM9UkqYeGqa8n8jgdm_");
-        ChangeImg(img2, "https://drive.google.com/uc?export=view&id=1r33g7M89dNeJ3XLVhxgKwBgpbovAThq1");
-        ChangeImg(img3, "https://drive.google.com/uc?export=view&id=1xY3NtSTxIz-oWOosQl49DhfH8XNMC4Ig");
-        ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-");
+        ChangeAll();
 
         distitle.innerHTML = "UCLA Computer Support Technician";
         disdesc.innerHTML = "As a member of the UCLA Office of Residential Life, I am responsible for ensuring that residents living on campus are\
@@ -196,11 +200,7 @@ $(document).ready(function(){
     var hkbn = document.getElementById("open-hkbn");
     hkbn.style.cursor = 'pointer';
     hkbn.onclick = function(){
-        ChangeImg(img1, "https://drive.google.com/uc?export=view&id=1hAHNSknlktyB0qM9UkqYeGqa8n8jgdm_");
-        ChangeImg(img2, "https://drive.google.com/uc?export=view&id=1r33g7M89dNeJ3XLVhxgKwBgpbovAThq1");
-        ChangeImg(img3, "https://drive.google.com/uc?export=view&id=1xY3NtSTxIz-oWOosQl49DhfH8XNMC4Ig");
-        ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-");
-
+        ChangeAll();
         distitle.innerHTML = "Hong Kong Broadband Network";
         disdesc.innerHTML = "As a summer intern, I was involved with the IT Operations for the company. I not only facilitated a city-wide user experience research\
         evaluating the company's web and mobile eCommerce services relative to its local and continental competitors, such as China, Singapore, Korea, and Japan\
@@ -213,11 +213,7 @@ $(document).ready(function(){
     var acm = document.getElementById("open-acm");
     acm.style.cursor = 'pointer';
     acm.onclick = function(){
-        ChangeImg(img1, "https://drive.google.com/uc?export=view&id=1hAHNSknlktyB0qM9UkqYeGqa8n8jgdm_");
-        ChangeImg(img2, "https://drive.google.com/uc?export=view&id=1r33g7M89dNeJ3XLVhxgKwBgpbovAThq1");
-        ChangeImg(img3, "https://drive.google.com/uc?export=view&id=1xY3NtSTxIz-oWOosQl49DhfH8XNMC4Ig");
-        ChangeImg(img4, "https://drive.google.com/uc?export=view&id=1y7DfiUuTUj72RWjz2dzEfqMPELpsHtZ-");
-        
+        ChangeAll();        
         distitle.innerHTML = "UCLA ACM";
         disdesc.innerHTML = "UCLA ACM is one of the many chapters of the Association of Computing and Machinery. As a member of this\
         organization, I have been actively involved in the different groups and activities offered by UCLA ACM, namely\
@@ -231,6 +227,9 @@ $(document).ready(function(){
 
     closer.onclick = function(){
         tl1.reverse();  
+        if (Changed){
+            Revert();
+        }
     };
 
     function clickOutside(evt){
@@ -251,6 +250,9 @@ $(document).ready(function(){
             //Otherwise, will reverse
             default: 
             tl1.reverse();
+            if (Changed){
+                Revert();
+            }
             break;
         }
     }
