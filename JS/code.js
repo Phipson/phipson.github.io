@@ -9,13 +9,13 @@ $(document).ready(function(){
         var introtl = new TimelineMax({});
         introtl
         .fromTo(icon_alt, 1, {
-        left:"87%",
+        right: "0%",
         top:"10%",
         scale: 1,
         visibility: 'hidden',
         opacity: 0,
         }, {
-        left: "87%",
+        right: "0%",
         top:"0%",
         visibility: 'visible',
         autoAlpha: 1,

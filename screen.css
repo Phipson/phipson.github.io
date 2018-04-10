@@ -71,6 +71,8 @@ iframe {
 }
 
 .nav-icon{
+  right: 0%;
+  visibility: hidden;
   padding-top: 1.5%;
   padding-left: 1.5%;
   padding-right: 1.5%;
@@ -91,6 +93,10 @@ iframe {
 
 .nav-scroll{
   overflow: hidden;
+}
+
+#headname, #introtxt, #code-anim {
+  visibility: hidden;
 }
 
 #menu-media, #menu-vu, #menu-code, #menu-res{
