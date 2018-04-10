@@ -164,14 +164,11 @@ svg {
   padding: 2.5% 10%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr;
-  grid-gap: 7%;
 }
 
 .socicon{
   display: block;
   margin: auto;
-  width: 2em;
 }
 
 .show-button{
