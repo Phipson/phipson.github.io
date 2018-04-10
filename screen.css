@@ -296,8 +296,9 @@ svg {
 }
 
 ul li {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #11CBD7;
+  font-size: 1.2em;
   line-height: 1.5em;
   text-align: justify;
   list-style: circle;
@@ -1059,7 +1060,7 @@ p {
 }
 
 .description{
-  padding: 1.2em;
+  padding: 0.5% 2.5%;
 }
 
 p.quote {
