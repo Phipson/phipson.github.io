@@ -41,8 +41,7 @@ iframe {
 .PortBodyFrame {
   background-color: #FFFFFF;
   top: 0;
-  left: 15%;
-  width: 85%;
+  width: 100%;
   height: 100%;
   overflow-y: auto;
   position: absolute;
@@ -50,18 +49,28 @@ iframe {
 }
 
 .PortWrapper {
+  padding: 1.5% 5%;
   position: relative;
   display: grid;
   width: 100%;
-  height: fit-content;
-  grid-template-rows: repeat(auto-fit, minmax(1fr, 50%));
+  height: 100%;
+  grid-gap: 1.5%;
+  grid-template-rows: repeat(auto-fit, minmax(30%, 1fr));
   grid-template-columns: repeat(2, minmax(40%, 1fr));
   justify-content: center;
   align-content: center;
 }
 
+.SectionHeader {
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  padding: 1.5% 5%;
+  padding-top: 5%;
+}
+
 .PortGridItem {
-  padding: 1.5%;
+  padding: 2.5%;
   width: 100%;
   height: 100%;
   display: grid;
@@ -91,17 +100,17 @@ iframe {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(min-content, min-content));
   grid-template-columns: 1fr;
   justify-content: center;
-  align-content: center;
+  align-content: flex-end;
 }
 
 .ItemTitle {
   font-size: 2em;
   text-transform: capitalize;
   font-family: 'Quicksand', sans-serif;
-  line-height: 1em;
+  line-height: 2em;
 }
 
 .ItemBlurb {
@@ -169,6 +178,16 @@ iframe {
   font-weight: bold;
   line-height: 1.5em;
 }
+
+/* Div Specific Manipulation */
+#m_LegoLogic {
+  grid-row-end: span 2;
+}
+
+#m_3D4EWeb {
+  grid-row-end: span 2;
+}
+
 
 .nav-display{
   background-color: #fff;
