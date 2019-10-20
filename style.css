@@ -30,7 +30,7 @@ time, mark, audio, video {
 }
 
 h1 {
-  color: #FA4659;
+  color: #393e46;
   text-align: center;
   word-spacing: 0.1em;
   letter-spacing: 0.1em;
@@ -45,11 +45,10 @@ h2 {
   text-align: center;
   letter-spacing: 1px;
   word-spacing: 15px;
-  color: #FA4659;
+  color: #393e46;
   font-family: 'Manjari', sans-serif;
   font-size: 5em;
   text-transform: uppercase;
-  text-align: center;
   text-decoration: none;
 }
 
@@ -58,7 +57,7 @@ h3 {
   letter-spacing: 1px;
   line-height: 2em;
   word-spacing: 8px;
-  color: #FA4659;
+  color: #393e46;
   font-family: 'Manjari', sans-serif;
   font-size: 3em;
   text-transform: uppercase;
@@ -70,7 +69,7 @@ h4 {
   letter-spacing: 0.01em;
   line-height: 1.2em;
   word-spacing: 0.02em;
-  color: #FA4659;
+  color: #393e46;
   font-family: 'Manjari', sans-serif;
   font-size: 2em;
   text-transform: uppercase;
@@ -78,7 +77,7 @@ h4 {
 }
 
 h5 {
-  color: #FA4659;
+  color: #393e46;
   text-align: center;
   letter-spacing: 0.01em;
   word-spacing: 0.02em;
@@ -91,7 +90,7 @@ h5 {
 }
 
 p {
-  color: #252a34;
+  color: #393e46;
   font-family: 'Manjari', sans-serif;
   font-size: 1em;
   text-decoration: none;
@@ -115,7 +114,6 @@ p.overview {
 
 body {
   font-family: 'Manjari', sans-serif;
-  background-color: #000;
 }
 
 .caption {
@@ -139,8 +137,28 @@ iframe {
   margin-left: 37.5%; 
 }
 
-.PortBodyFrame {
+.AnimSVG {
+  max-width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PortBorder {
   padding: 1.5% 5%;
+}
+
+.CompanyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 5%;
+  position: absolute;
+  z-index: 2;
+}
+
+.PortBodyFrame {
   top: 10em;
   width: 100%;
   height: 100%;
@@ -148,22 +166,41 @@ iframe {
   z-index: 1;
 }
 
+.ProjectBodyFrame {
+  padding: 5% 20%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.SectionOverview, .SectionDesignProcess, .SubSection {
+  padding: 2.5% 0%;
+  justify-content: left;
+  width: 100%;
+  position: relative;
+}
+
+.ProjectSectionHeader {
+  text-align: left;
+}
+
 .PortWrapper {
   position: relative;
   display: grid;
   width: 100%;
   height: fit-content;
-  grid-gap: 1.5%;
-  grid-template-rows: repeat(3, 30%);
-  grid-template-columns: repeat(2, minmax(40%, 1fr));
+  grid-gap: 5%;
+  grid-template-rows: 20em 20em;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-content: center;
 }
 
 .SectionHeader {
-  margin: auto;
+  display: flex;
   width: 100%;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   padding: 2.5% 5%;
 }
@@ -177,7 +214,7 @@ iframe {
   grid-template-columns: 1fr;
   grid-gap: 2.5%;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .PortGridTitle {
@@ -191,15 +228,16 @@ iframe {
 }
 
 .ItemGraphic {
-  width: 100%;
+  display: flex;
   height: 100%;
+  width: 100%;
 }
 
 .ItemText {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(min-content, min-content));
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
   justify-content: center;
   align-content: flex-end;
@@ -209,7 +247,6 @@ iframe {
   font-size: 2em;
   text-transform: capitalize;
   font-family: 'Manjari', sans-serif;
-  line-height: 2em;
 }
 
 .ItemBlurb {
@@ -236,8 +273,15 @@ iframe {
 }
 
 .PortPic {
-  align-content: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+.PortDivSection {
+  padding: 10%;
+  width: 100%;
+  height: 100%;
 }
 
 .NavList {
@@ -251,15 +295,76 @@ iframe {
   grid-template-columns: 1fr 1fr 1fr 2fr;
 }
 
+.NavDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .NavText {
   width: 100%;
   text-align: center;
-  margin: auto;
   color: #000000;
   text-transform: uppercase;
   font-size: 0.8em;
   line-height: 1.5em;
 }
+
+.NavSocial {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 10%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.NavSocialWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.SocialContainer {
+  width: 30%;
+}
+
+.socialmediasvg {
+  cursor: pointer;
+}
+
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
+}
+
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: -5px;
+  background: #00e0ff;
+  height: 4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
 
 .IntroGrid {
   display: grid;
@@ -280,16 +385,47 @@ iframe {
   line-height: 1.5em;
 }
 
+.ProjectOverviewBar {
+  padding: 5%;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20%;
+}
+
+.ProjectVideo {
+  width: 100%;
+}
+
+.OverviewElement {
+  display: grid;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  grid-template-rows: 3fr 2fr;
+  grid-gap: 5%;
+  grid-template-columns: 1fr;
+}
+
+.overview-icon {
+  fill: #393e46;
+  stroke: #393e46;
+}
+
+.overview-text {
+  text-align: center;
+}
+
 /* Div Specific Manipulation */
 #anchor_ARVR {
-  padding: 1.5% 5%;
   position: relative;
   display: grid;
   width: 100%;
   height: 100%;
   grid-gap: 1.5%;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 #m_LegoLogic {
@@ -298,6 +434,46 @@ iframe {
 
 #m_3D4EWeb {
   grid-row-end: span 2;
+}
+
+#anchor_intro {
+}
+
+#webmob_computer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0% 20%;
+}
+
+#introsketch {
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  padding: 10%;
+  padding-top: 0%;
+}
+
+#PortTitle, #ReturnHomeTitle {
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  cursor: pointer;
+  color: #222831;
+}
+
+/* SVG Specific Initial States */
+#SketchIcon, #Me, #Bubble, 
+#LeftMicLines, #RightMicLines, #L1, #L2, #L3, #R1, #R2, #R3,
+#Voxels,
+#PentagonTable, #HexagonTable, #SquareTable,
+#ShowcaseWindow {
+  opacity: 0;
+}
+
+#PortfolioSketch {
+  width: 45%;
 }
 
 
@@ -329,7 +505,7 @@ iframe {
 
 .nav-title {
   text-align: center;
-  color: #FA4659;
+  color: #393e46;
 }
 
 .nav-icon{
@@ -357,27 +533,6 @@ iframe {
   overflow: hidden;
 }
 
-#headname, #introtxt, #code-anim {
-  visibility: hidden;
-}
-
-#menu-media, #menu-vu, #menu-code, #menu-res{
-  visibility: hidden;
-  cursor: pointer;
-}
-
-#menu-main, #main-icon{
-  cursor: pointer;
-}
-
-#Computer, #Myhead, #Table, #Pants, #Music, #Shirt{
-  visibility: hidden;
-}
-
-#CSS, #HTML, #PYTHON, #JAVA, #JAVASCRIPT, #CPP, #BASH, #VU{
-  visibility: hidden;
-}
-
 #introtxt{
   font-size: 1.2em;
   font-weight: bold;
@@ -386,46 +541,6 @@ iframe {
 svg {
   display: block;
   width:100%;
-}
-
-.showcase-bg{
-  top: 0%;
-  left: -100%;
-  z-index: 4;
-  visibility: hidden;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  padding: 5% 5%;
-  background-color: rgba(0, 0, 0, 0.63);
-}
-
-.showcase-info{
-  visibility: visible;
-  position: fixed;
-  width: 90%;
-  height: 80%;
-  background-color: #C6F1E7;
-  overflow-y: auto;
-}
-
-.show-close{
-  color: #FA4659;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 1%;
-}
-
-.show-close:hover{
-  color: #FF8264;
-}
-
-.main-link{
-  color: #11CBD7;
-}
-
-.main-link:hover{
-  color: #FA4659;
 }
 
 .socmed{
@@ -441,127 +556,6 @@ svg {
   margin: auto;
 }
 
-.show-button{
-  font-size: 1.1em;
-  cursor: pointer;
-  text-align: center;
-  color:#F0FFF3;;
-  text-decoration: none;
-  padding: 10% 2.5%;
-}
-
-.show-button:hover{
-  background: #C51350;
-}
-
-/* Alternative method: using CSS Grid */
-/* Essentially eliminates the need for multiple classes so that you only need to deal with one specific class */
-.res_layout{
-  display: grid;
-  grid-gap: 0;
-
-  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
-}
-
-.res-mobile.active{
-  visibility: visible;
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: 1fr;
-  margin-top: 20%;
-  transition: visibility 0.2 ease-in-out;
-}
-
-.res-mobile{
-  visibility: hidden;
-  transition: visibility 0.2 ease-in-out;
-}
-
-.res-showcase{
-  display: grid;
-  grid-gap: 3%;
-  grid-template-columns: 1fr 2fr;
-}
-
-.res-showcase-inv{
-  display: grid;
-  grid-gap: 3%;
-  /* repeat minmax means that once a container is less than 100px it will be fixed to it other wise it is 1fr */
-  grid-template-columns: 2fr 1fr;
-}
-
-.res-showcase-inv item-a {
-  grid-column: 1/2;
-  margin: auto;
-}
-
-.res-showcase-inv item-b {
-  grid-column: 2/3;
-  margin: auto;
-}
-
-.showcase-link {
-  text-transform: none;
-  font-size: 1.2em;
-}
-
-.grid-display {
-  background-color: #C6F1E7;
-  width: 95%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-}
-
-.grid-display-text {
-  font-weight: bold;
-  text-align: center;
-}
-
-.grid-display-desc {
-  font-size: 1em;
-  text-align: center;
-}
-
-.grid-display-img {
-  padding: 5% 0%;
-}
-
-.grid-element {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr auto 1fr;
-  padding: 5% 5%;
-}
-
-.buttonbar{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  background: #FA4659;
-  width: 95%;
-  margin-left: 2.5%;
-}
-
-.articleid{
-  visibility: visible;
-}
-
-.VUURL{
-  user-select: none;
-  cursor: pointer;
-  font-family: 'Manjari', sans-serif; 
-  color: #FA4659;
-  visibility: visible;
-}
-
-.VUURL:hover{
-  color: #FDA403;
-}
 
 ul li {
   font-family: 'Manjari', sans-serif;
@@ -570,6 +564,35 @@ ul li {
   line-height: 1.5em;
   text-align: justify;
   list-style: circle;
+}
+
+/* Project Pages Specific CSS */
+.project-userprofile {
+  padding-right: 5%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5%;
+}
+
+.userwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-userdesc {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 5%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr;
 }
 
 
@@ -929,746 +952,322 @@ img{
   }
 }
 
-/* buttons, no circle */
-.flickity-prev-next-button {
-  width: 60px;
-  height: 60px;
-  background: transparent;
-  opacity: 0.6;
-  transition: opacity 0.2s ease-in-out;
-}
-.flickity-prev-next-button:hover {
-  background: transparent;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-  fill: white;
-}
-.flickity-prev-next-button.no-svg {
-  color: white;
-}
-/* closer to edge */
-.flickity-prev-next-button.previous { left: 0; }
-.flickity-prev-next-button.next { right: 0; }
-/* hide disabled button */
-.flickity-prev-next-button:disabled {
-  display: none;
+/* Basic sample */
+.flipbook-viewport{
+	width:100%;
+  height:100%;
+  align-items: center;
+  justify-items: center;
 }
 
-
-/* FONTS */
-/* TODO: DEFAULT TO TEXT-CONTAINER WHEN IT IS MOBILE */
-.text-container {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 80%;
-  text-align: center;
+.flipbook-viewport .container{
+  top: 50%;
+  left: 50%;
+  margin: auto;
 }
 
-.text-showcase {
-  background-color: rgba(0, 30, 44, 0.66);
-  text-align: left;
-  padding: 1em 1em;
+.flipbook-viewport .flipbook{
+	width:922px;
+  height:600px;
+  align-content: center;
+  justify-content: center;
 }
 
-.background-col {
-  background-color: rgba(3, 15, 37, 0.66);
+.flipbook-viewport .page{
+	width:461px;
+	height:600px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
 }
 
-.background-wood {
-  background-color: rgba(73, 24, 1, 0.75)
+.flipbook .page{
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
 
-.showcase-title{
-  text-align: left;
-  line-height: 1.5em;
-}
-
-.research {
-  display: flex;
-}
-
-
-/* VIDEO */
- /* First make sure the video thumbnail images are responsive. */
-
- img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* 
-This is the starting grid for each video with thumbnails 4 across for the largest screen size.
-It's important to use percentages or there may be gaps on the right side of the page. 
-*/
-
-.video {
-  background: #fff;
-  padding-bottom: 20px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  width: 100%; /* Thumbnails 4 across */
-  margin: 1%;
-  float: left;
-}
-
- /* 
- These keep the height of each video thumbnail consistent between YouTube and Vimeo.
- Each can have thumbnail sizes that vary by 1px and are likely break your layout. 
- */
-
-.video figure {
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-}
-
-.video figure a {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  line-height: 0;
-}
-
-/* Media Queries - This is the responsive grid. */
-
-.video-gallery{
-  display: grid;
-  grid-gap: 5%;
-
-  /* repeat minmax means that once a container is less than 100px it will be fixed to it other wise it is 1fr */
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-
-}
-
-/* These are my preferred rollover styles. */
-
-.video img {
-  width: 100%;
-  opacity: 1;
-}
-
-.video img:hover, .video img:active, .video img:focus {
-  opacity: 0.75;
-}
-
-
-/* Fancebox */
-body.fancybox-active {
-	overflow: hidden;
-}
-
-body.fancybox-iosfix {
-	position: fixed;
-    left: 0;
-    right: 0;
-}
-
-.fancybox-is-hidden {
-	position: absolute;
-	top: -9999px;
-	left: -9999px;
-	visibility: hidden;
-}
-
-.fancybox-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 99992;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	backface-visibility: hidden;
-	transform: translateZ(0);
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.fancybox-outer,
-.fancybox-inner,
-.fancybox-bg,
-.fancybox-stage {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.fancybox-outer {
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-}
-
-.fancybox-bg {
-	background: rgb(30,30,30);
-	opacity: 0;
-	transition-duration: inherit;
-	transition-property: opacity;
-	transition-timing-function: cubic-bezier(.47,0,.74,.71);
-}
-
-.fancybox-is-open .fancybox-bg {
-	opacity: 0.87;
-	transition-timing-function: cubic-bezier(.22,.61,.36,1);
-}
-
-.fancybox-infobar,
-.fancybox-toolbar,
-.fancybox-caption-wrap {
-	position: absolute;
-	direction: ltr;
-	z-index: 99997;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity .25s, visibility 0s linear .25s;
-	box-sizing: border-box;
-}
-
-.fancybox-show-infobar .fancybox-infobar,
-.fancybox-show-toolbar .fancybox-toolbar,
-.fancybox-show-caption .fancybox-caption-wrap {
-	opacity: 1;
-	visibility: visible;
-	transition: opacity .25s, visibility 0s;
-}
-
-.fancybox-infobar {
-	top: 0;
-	left: 0;
-	font-size: 13px;
-	padding: 0 10px;
-	height: 44px;
-	min-width: 44px;
-	line-height: 44px;
-	color: #ccc;
-	text-align: center;
-	pointer-events: none;
-	user-select: none;
+.flipbook-viewport .page img{
 	-webkit-touch-callout: none;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-font-smoothing: subpixel-antialiased;
-	mix-blend-mode: exclusion;
-}
-
-.fancybox-toolbar {
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-}
-
-.fancybox-stage {
-	overflow: hidden;
-	direction: ltr;
-	z-index: 99994;
-	-webkit-transform: translate3d(0, 0, 0);
-}
-
-.fancybox-is-closing .fancybox-stage {
-  overflow: visible;
-}
-
-.fancybox-slide {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	overflow: auto;
-	outline: none;
-	white-space: normal;
-	box-sizing: border-box;
-	text-align: center;
-	z-index: 99994;
-	-webkit-overflow-scrolling: touch;
-	display: none;
-	backface-visibility: hidden;
-	transition-property: transform, opacity;
-}
-
-.fancybox-slide::before {
-	content: '';
-	display: inline-block;
-	vertical-align: middle;
-	height: 100%;
-	width: 0;
-}
-
-.fancybox-is-sliding .fancybox-slide,
-.fancybox-slide--previous,
-.fancybox-slide--current,
-.fancybox-slide--next {
-	display: block;
-}
-
-.fancybox-slide--image {
-	overflow: visible;
-}
-
-.fancybox-slide--image::before {
-	display: none;
-}
-
-.fancybox-slide--video .fancybox-content,
-.fancybox-slide--video iframe {
-	background: #000;
-}
-
-.fancybox-slide--map .fancybox-content,
-.fancybox-slide--map iframe {
-	background: #E5E3DF;
-}
-
-.fancybox-slide--next {
-	z-index: 99995;
-}
-
-.fancybox-slide > * {
-	display: inline-block;
-	position: relative;
-	padding: 24px;
-	margin: 44px 0 44px;
-	border-width: 0;
-	vertical-align: middle;
-	text-align: left;
-	background-color: #fff;
-	overflow: auto;
-	box-sizing: border-box;
-}
-
-.fancybox-slide > title,
-.fancybox-slide > style,
-.fancybox-slide > meta,
-.fancybox-slide > link,
-.fancybox-slide > script,
-.fancybox-slide > base {
-	display: none;
-}
-
-.fancybox-slide .fancybox-image-wrap {
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	z-index: 99995;
-	background: transparent;
-	cursor: default;
-	overflow: visible;
-	transform-origin: top left;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	backface-visibility: hidden;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
-	transition-property: transform, opacity;
+	margin:0;
 }
 
-.fancybox-can-zoomOut .fancybox-image-wrap {
-	cursor: zoom-out;
+.flipbook-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #000;
+	-moz-box-shadow:0 0 20px #000;
+	-o-box-shadow:0 0 20px #000;
+	-ms-box-shadow:0 0 20px #000;
+	box-shadow:0 0 20px #000;
 }
 
-.fancybox-can-zoomIn .fancybox-image-wrap {
-	cursor: zoom-in;
+.page {
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
 }
 
-.fancybox-can-drag .fancybox-image-wrap {
-	cursor: grab;
+.pagecontent {
+  height: 80%;
+  width: 80%;
 }
 
-.fancybox-is-dragging .fancybox-image-wrap {
-	cursor: grabbing;
+.pagegrid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 5%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
-.fancybox-image,
-.fancybox-spaceball {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	max-width: none;
-	max-height: none;
-	user-select: none;
+.pagegridcell {
+  width: 100%; 
+  height: 100%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 
- .fancybox-spaceball {
-	z-index: 1;
+/* Page Transitions */
+.animate-in {
+  -webkit-animation: fadeIn .5s ease-in;
+  animation: fadeIn .5s ease-in;
 }
 
-.fancybox-slide--iframe .fancybox-content {
-	padding: 0;
-	width: 80%;
-	height: 80%;
-	max-width: calc(100% - 100px);
-	max-height: calc(100% - 88px);
-	overflow: visible;
-	background: #fff;
+.animate-out {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
-.fancybox-iframe {
-	display: block;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	width: 100%;
-	height: 100%;
-  background: #fff;
-  transform: translate(-25%, -25%);
+.booklink {
+  cursor: pointer;
+  color: #222831;
 }
 
-.fancybox-error {
-	margin: 0;
-	padding: 40px;
-	width: 100%;
-	max-width: 380px;
-	background: #fff;
-	cursor: default;
+.projectlink  {
+  cursor: pointer;
+  color: #ff2e63;
 }
 
-.fancybox-error p {
-	margin: 0;
-	padding: 0;
-	color: #444;
-	font-size: 16px;
-	line-height: 20px;
+.booklink:hover, .projectlink:hover {
+  color: #00adb5;
 }
 
-
-/* Buttons */
-
-.fancybox-button {
-    box-sizing: border-box;
-    display: inline-block;
-    vertical-align: top;
-    width: 44px;
-    height: 44px;
-    margin: 0;
-    padding: 10px;
-    border: 0;
-    border-radius: 0;
-    background: rgba(30,30,30,0.6);
-    transition: color .3s ease;
-    cursor: pointer;
-	outline: none;
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.fancybox-button,
-.fancybox-button:visited,
-.fancybox-button:link {
-	color: #ccc;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.fancybox-button:focus,
-.fancybox-button:hover {
-	color: #fff;
+/* Carousel CSS */
+/* Carousel */
+.carousel {
+  background: rgba(0, 0, 0, 0);
 }
 
-.fancybox-button[disabled] {
-	color: #ccc;
-	cursor: default;
-    opacity: 0.6;
+.carousel-cell {
+  width: 70%;
+  height: 50vh;
+  /* flex-box, center image in cell */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 
-.fancybox-button svg {
-    display: block;
-	position: relative;
-    overflow: visible;
-    shape-rendering: geometricPrecision;
+.carousel-cell img {
+  display: block;
+  width: auto;
+  height: 100%;
+  /* dim unselected */
+  opacity: 0.7;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+          transition: opacity 0.3s, transform 0.3s, filter 0.3s;
 }
 
-.fancybox-button svg path {
-    fill: currentColor;
-    stroke: currentColor;
-    stroke-linejoin: round;
-    stroke-width: 3;
+/* brighten selected image */
+.carousel-cell.is-selected img {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: none;
+          filter: none;
 }
 
-.fancybox-button--share svg path {
-	stroke-width: 1;
+@media screen and ( min-width: 768px ) {
+  .carousel-cell {
+    height: 400px;
+  }
 }
 
-.fancybox-button--play svg path:nth-child(2) {
-    display: none;
+@media screen and ( min-width: 960px ) {
+  .carousel-cell {
+    width: 60%;
+  }
 }
 
-.fancybox-button--pause svg path:nth-child(1) {
-    display: none;
+/*! Flickity v2.2.1
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
 }
 
-.fancybox-button--zoom svg path {
-	fill: transparent;
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
 }
 
-
-/* Navigation arrows */
-
-.fancybox-navigation {
-    display: none;
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-.fancybox-show-nav .fancybox-navigation {
-    display: block;
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.fancybox-navigation button {
-    position: absolute;
-    top: 50%;
-    margin: -50px 0 0 0;
-    z-index: 99997;
-	background: transparent;
-	width: 60px;
-	height: 100px;
-	padding: 17px;
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
-.fancybox-navigation button:before {
-	content: "";
-	position: absolute;
-	top: 30px;
-	right: 10px;
-	width: 40px;
-	height: 40px;
-	background: rgba(30,30,30,0.6);
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
-.fancybox-navigation .fancybox-button--arrow_left {
-	left: 0;
+/* ---- flickity-button ---- */
+
+.flickity-button {
+  position: absolute;
+  background: hsla(0, 0%, 100%, 0.75);
+  border: none;
+  color: #333;
 }
 
-.fancybox-navigation .fancybox-button--arrow_right {
-	right: 0;
+.flickity-button:hover {
+  background: white;
+  cursor: pointer;
 }
 
-/* Close button on the top right corner of html content */
-
-.fancybox-close-small {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 40px;
-	height: 40px;
-	padding: 0;
-	margin: 0;
-	border: 0;
-	border-radius: 0;
-	background: transparent;
-	z-index: 10;
-	cursor: pointer;
+.flickity-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #19F;
 }
 
-.fancybox-close-small:after {
-	content: '×';
-	position: absolute;
-	top : 5px;
-	right: 5px;
-	width: 30px;
-	height: 30px;
-	font: 22px/30px Arial,"Helvetica Neue",Helvetica,sans-serif;
-	color: #888;
-	font-weight: 300;
-	text-align: center;
-	border-radius: 50%;
-	border-width: 0;
-	background-color: transparent;
-	transition: background-color .25s;
-	box-sizing: border-box;
-	z-index: 2;
+.flickity-button:active {
+  opacity: 0.6;
 }
 
-.fancybox-close-small:focus {
-	outline: none;
+.flickity-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  /* prevent disabled button from capturing pointer up event. #716 */
+  pointer-events: none;
 }
 
-.fancybox-close-small:focus:after {
-	outline: 1px dotted #888;
+.flickity-button-icon {
+  fill: currentColor;
 }
 
-.fancybox-close-small:hover:after {
-	color: #555;
-	background: #eee;
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* vertically center */
+  transform: translateY(-50%);
 }
 
-.fancybox-slide--image .fancybox-close-small,
-.fancybox-slide--iframe .fancybox-close-small {
-	top: 0;
-	right: -40px;
+.flickity-prev-next-button.previous { left: 10px; }
+.flickity-prev-next-button.next { right: 10px; }
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
 }
 
-.fancybox-slide--image .fancybox-close-small:after,
-.fancybox-slide--iframe .fancybox-close-small:after {
-	font-size: 35px;
-	color: #aaa;
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
 }
 
-.fancybox-slide--image .fancybox-close-small:hover:after,
-.fancybox-slide--iframe .fancybox-close-small:hover:after {
-	color: #fff;
-	background: transparent;
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
 }
 
-.fancybox-is-scaling .fancybox-close-small,
-.fancybox-is-zoomable.fancybox-can-drag .fancybox-close-small {
-	display: none;
+.flickity-rtl .flickity-page-dots { direction: rtl; }
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
 }
 
-/* Caption */
-
-.fancybox-caption-wrap {
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 60px 2vw 0 2vw;
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.2) 40%,rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.8) 100%);
-	pointer-events: none;
-}
-
-.fancybox-caption {
-	padding: 30px 0;
-	border-top: 1px solid rgba(255,255,255,0.4);
-	font-size: 14px;
-	color: #fff;
-	line-height: 20px;
-	-webkit-text-size-adjust: none;
-}
-
-.fancybox-caption a,
-.fancybox-caption button,
-.fancybox-caption select {
-	pointer-events: all;
-	position: relative; /* Fix IE11 */
-}
-
-
-/* Loading indicator */
-
-.fancybox-slide > .fancybox-loading {
-	border: 6px solid rgba(100, 100, 100, .4);
-	border-top: 6px solid rgba(255, 255, 255, .6);
-	border-radius: 100%;
-	height: 50px;
-	width: 50px;
-	animation: fancybox-rotate .8s infinite linear;
-	background: transparent;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -30px;
-	margin-left: -30px;
-	z-index: 99999;
-}
-
-@keyframes fancybox-rotate {
-	from { transform: rotate( 0deg ); }
-	to   { transform: rotate( 359deg ); }
-}
-
-
-/* Transition effects */
-
-.fancybox-animated {
-	transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
-}
-
-/* transitionEffect: slide */
-
-.fancybox-fx-slide.fancybox-slide--previous {
-	transform: translate3d(-100%, 0, 0);
-	opacity: 0;
-}
-
-.fancybox-fx-slide.fancybox-slide--next {
-	transform: translate3d(100%, 0, 0);
-	opacity: 0;
-}
-
-.fancybox-fx-slide.fancybox-slide--current {
-	transform: translate3d(0, 0, 0);
-	opacity: 1;
-}
-
-/* transitionEffect: fade */
-
-.fancybox-fx-fade.fancybox-slide--previous,
-.fancybox-fx-fade.fancybox-slide--next {
-	opacity: 0;
-	transition-timing-function: cubic-bezier(.19,1,.22,1);
-}
-
-.fancybox-fx-fade.fancybox-slide--current {
-	opacity: 1;
-}
-
-/* transitionEffect: zoom-in-out */
-
-.fancybox-fx-zoom-in-out.fancybox-slide--previous {
-	transform: scale3d(1.5, 1.5, 1.5);
-	opacity: 0;
-}
-
-.fancybox-fx-zoom-in-out.fancybox-slide--next {
-	transform: scale3d(0.5, 0.5, 0.5);
-	opacity: 0;
-}
-
-.fancybox-fx-zoom-in-out.fancybox-slide--current {
-	transform: scale3d(1, 1, 1);
-	opacity: 1;
-}
-
-/* transitionEffect: rotate */
-
-.fancybox-fx-rotate.fancybox-slide--previous {
-	transform: rotate(-360deg);
-	opacity: 0;
-}
-
-.fancybox-fx-rotate.fancybox-slide--next {
-	transform: rotate(360deg);
-	opacity: 0;
-}
-
-.fancybox-fx-rotate.fancybox-slide--current {
-	transform: rotate(0deg);
-	opacity: 1;
-}
-
-/* transitionEffect: circular */
-
-.fancybox-fx-circular.fancybox-slide--previous {
-	transform: scale3d(0, 0, 0) translate3d(-100%, 0, 0);
-	opacity: 0;
-}
-
-.fancybox-fx-circular.fancybox-slide--next {
-	transform: scale3d(0, 0, 0) translate3d(100%, 0, 0);
-	opacity: 0;
-}
-
-.fancybox-fx-circular.fancybox-slide--current {
-	transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-	opacity: 1;
-}
-
-/* transitionEffect: tube */
-
-.fancybox-fx-tube.fancybox-slide--previous {
-	transform: translate3d(-100%, 0, 0) scale(0.1) skew(-10deg);
-}
-
-.fancybox-fx-tube.fancybox-slide--next {
-	transform: translate3d(100%, 0, 0) scale(0.1) skew(10deg);
-}
-
-.fancybox-fx-tube.fancybox-slide--current {
-	transform: translate3d(0, 0, 0) scale(1);
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
 }

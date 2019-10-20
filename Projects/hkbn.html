@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<title>Phipson Lee: Psychology Researcher, Programmer, and Creative</title>
+<head>
+    <!-- TODO: Compile the CSS File Later -->
+    <link rel="stylesheet" type="text/css" href="./../style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <!-- TODO: Update Mobile UIUX -->
+    <meta charset="UTF-8">
+    <meta property="og:title" content="My Project Portfolio">
+    <meta property="og:site_name" content="Phipson Lee: Psychology Researcher, Programmer, and Creative">
+    <meta property="og:image" content="img_sources/preview.jpg">
+    <meta name="image" content="img_sources/preview.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta name="keywords" content="HTML, CSS, Java, SCSS, Javascript, UCLA, Computer Science, Phipson Lee, Lee Cheuk Yin, Portfolio">
+    <meta name="author" content="Cheuk Yin Phipson Lee (李卓彥)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="originTop" style="background-color:#FFFFFF; height: 100%" class="animate-in">
+
+  <!-- Main Code for the Side Menu Bar-->
+    <div id="SideMenu" class="SideMenuFrame">
+      <div id="MenuGrid" class="SideMenuWrapper">
+        <div id="IntroWrapper" class="IntroGrid">
+          <div id="PortPic" class="PortPic">
+            <h4 id="ReturnHomeTitle">&#8592; Back</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- For Scroll 'Swiping' https://stackoverflow.com/questions/31223341/detecting-scroll-direction -->
+
+    <!-- Brief Intro Div About Myself -->
+
+    <!-- Main Code for the Body of the Portfolio -->
+    <div id="ARVR-1-Body" class="ProjectBodyFrame">
+
+        <div id="anchor-proj-title" class="SectionHeader">
+            <h3>Hong Kong Broadband Network</h3>
+        </div>
+
+        <div id="anchor-proj-overview" class="SectionOverview">
+            <h4 class="ProjectSectionHeader">Overview</h4>
+            <br>
+            <p>
+              As a Business Enterprise IT Intern at Hong Kong Broadband Network (HKBN), one of Hong Kong's leading telecommunications company, I worked on a variety of projects ranging from user experience research to an internal web application for visualizing and organizing customer data.
+            </p>
+            <br>
+            <b><i>(As my work is under the company's NDA, I am not allowed to describe all my projects in detail. However, all my projects have been stored and used by the company for future software development)</i></b>
+        </div>
+        
+
+        <div id="anchor-proj-design-process" class="SectionDesignProcess">
+          <h4 class="ProjectSectionHeader">Projects</h4>
+        </div>
+
+        <div id="anchor-proj-use-cases" class="SubSection">
+          <h5 class="ProjectSectionHeader">User Experience Research</h5>
+          <br>
+          <p>
+            At the beginning of my internship, I was responsible for independently acquiring user experience data when potential customers use the company's web services to purchase products and make transactions. To do so, I was required to design and execute a study on my own.
+            <br><br>
+            Though I came from a Psychology background, I had no prior experience with user experience research. However, upon conducting simple searches online, and with guidance from my team, I learned more about the nuances between behavioral research and user studies. Hence, I designed my own metrics, and began by performing a case study evaluating the functionality and interface design of the company's web services in contrast to their local and international competitors. Some of the features I investigated included navigating to products; making purchases; and scalability on other mobile devices such as tablets and smartphones. 
+            <br><br>
+            Extracting common themes from these features, I then further referenced data obtained by the company's marketing team, who was also investigating customer experience with our web services, to compile an internal report that was later presented and shared with the CTO and IT directors of the company. In this meeting, I also offerred some actionable solutions moving forward. Findings and data were kept and referenced by the company.
+          </p>
+        </div>
+
+        <div id="anchor-proj-use-cases" class="SubSection">
+            <h5 class="ProjectSectionHeader">Internal Customer Data Web Application</h5>
+            <br>
+            <p>
+              In order to better respond and handle customer's online requests and visualize statistics pertaining to customer purchases, our team was tasked to design an internal web application that would be used for further marketing operations.
+              <br><br>
+              During this project, I gained first-hand experience in the web development process, such as learning how to write HTML, CSS, and Javascript code. I also designed and prototyped exemplar front-end interfaces for the application, which were used and referenced by the company.
+            </p>
+          </div>
+    </div>
+  </div>
+  <script src="./../JS/TweenMax.min.js" type="text/javascript"></script>
+  <script src="./../JS/animationProject.js" type="text/javascript"></script>
+  <script type="text/javascript">// Select all links with hashes
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+          && 
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+      </script>
+</body>
