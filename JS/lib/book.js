@@ -37,37 +37,11 @@
                             <div class="pagecontent">
                                 <h4>Table of Contents</h4>
                                 <br><br>
-                                <p style="text-align: left">UCLA Human Computer Interaction Lab</p>
-                                <br>
                                 <p style="text-align: left">UCLA Vision Cognition Learning and Autonomy</p>
                                 <br>
                                 <p style="text-align: left">Chinese University of Hong Kong</p>
                                 <br>
                                 <p style="text-align: left">Hong Kong Broadband Network</p>
-                            </div>
-                        </div>
-
-                        <!-- UCLA HCI -->
-                        <div>
-                            <div style="height: 100%; display: flex; justify-content: center; align-items: center">
-                                <div class="pagecontent">
-                                    <div class="pagegrid">
-                                        <div class="pagegridcell">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/University_of_California%2C_Los_Angeles_logo.svg/1280px-University_of_California%2C_Los_Angeles_logo.svg.png" style="width: 100%">
-                                        </div>
-                                        <div class="pagegridcell">
-                                            <div>
-                                            <h6>UCLA HCI Lab</h6>
-                                            (June 2018 - Present)
-                                            <p style="text-align: left"> 
-                                            <br>
-                                            <b>Focus:</b> AR and VR Explorations (CAVECAD); Voice Input Interfaces (Geno)
-                                            <br><br>
-                                            <a class="booklink" onclick="transitionToPage('./Projects/uclahci.html')"><b>Click to learn more</b></a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -87,7 +61,7 @@
                                             <br>
                                             <b>Focus:</b> Virtual AI Agents (VRGym); Physics Simulation Environment (Bullet Physics Engine)
                                             <br><br>
-                                            <a class="booklink" onclick="transitionToPage('./Projects/vcla.html')"><b>Click to learn more</b></a></p>
+                                            <button class="booklink" onclick="transitionToPage('./Projects/vcla.html')"><b>Click to learn more</b></button></p>
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +85,7 @@
                                             <br>
                                             <b>Focus:</b> Exploring Emotion and Self Regulation in Mobile Usage
                                             <br><br>
-                                            <a class="booklink" onclick="transitionToPage('./Projects/cuhk.html')"><b>Click to learn more</b></a></p>
+                                            <button class="booklink" onclick="transitionToPage('./Projects/cuhk.html')"><b>Click to learn more</b></button></p>
                                             </div>
                                         </div>
                                     </div>
@@ -135,14 +109,13 @@
                                             <br>
                                             <b>Focus:</b> Exploring user experience with online transactions and customer service
                                             <br><br>
-                                            <a class="booklink" onclick="transitionToPage('./Projects/hkbn.html')"><b>Click to learn more</b></a></p>
+                                            <button class="booklink" onclick="transitionToPage('./Projects/hkbn.html')"><b>Click to learn more</b></button></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div></div>
                         <div class="hard">
                         <div style="height: 100%; width: 100%; background-image:url(https://live.staticflickr.com/4103/5032206759_e0b3c4f45a_b.jpg); background-color: rgba(255,255,255, 0.3)"></div>
                         </div>

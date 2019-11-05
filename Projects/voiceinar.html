@@ -4,6 +4,8 @@
     <!-- TODO: Compile the CSS File Later -->
     <link rel="stylesheet" type="text/css" href="./../style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     
     <!-- TODO: Update Mobile UIUX -->
     <meta charset="UTF-8">
@@ -47,7 +49,7 @@
             <div class="ProjectOverviewBar">
                 <div class="OverviewElement">
                     <svg class="overview-icon" viewBox="0 0 20 20">
-  <path fill="none" d="M16.254,3.399h-0.695V3.052c0-0.576-0.467-1.042-1.041-1.042c-0.576,0-1.043,0.467-1.043,1.042v0.347H6.526V3.052c0-0.576-0.467-1.042-1.042-1.042S4.441,2.476,4.441,3.052v0.347H3.747c-0.768,0-1.39,0.622-1.39,1.39v11.813c0,0.768,0.622,1.39,1.39,1.39h12.507c0.768,0,1.391-0.622,1.391-1.39V4.789C17.645,4.021,17.021,3.399,16.254,3.399z M14.17,3.052c0-0.192,0.154-0.348,0.348-0.348c0.191,0,0.348,0.156,0.348,0.348v0.347H14.17V3.052z M5.136,3.052c0-0.192,0.156-0.348,0.348-0.348S5.831,2.86,5.831,3.052v0.347H5.136V3.052z M16.949,16.602c0,0.384-0.311,0.694-0.695,0.694H3.747c-0.384,0-0.695-0.311-0.695-0.694V7.568h13.897V16.602z M16.949,6.874H3.052V4.789c0-0.383,0.311-0.695,0.695-0.695h12.507c0.385,0,0.695,0.312,0.695,0.695V6.874z M5.484,11.737c0.576,0,1.042-0.467,1.042-1.042c0-0.576-0.467-1.043-1.042-1.043s-1.042,0.467-1.042,1.043C4.441,11.271,4.908,11.737,5.484,11.737z M5.484,10.348c0.192,0,0.347,0.155,0.347,0.348c0,0.191-0.155,0.348-0.347,0.348s-0.348-0.156-0.348-0.348C5.136,10.503,5.292,10.348,5.484,10.348z M14.518,11.737c0.574,0,1.041-0.467,1.041-1.042c0-0.576-0.467-1.043-1.041-1.043c-0.576,0-1.043,0.467-1.043,1.043C13.475,11.271,13.941,11.737,14.518,11.737z M14.518,10.348c0.191,0,0.348,0.155,0.348,0.348c0,0.191-0.156,0.348-0.348,0.348c-0.193,0-0.348-0.156-0.348-0.348C14.17,10.503,14.324,10.348,14.518,10.348z M14.518,15.212c0.574,0,1.041-0.467,1.041-1.043c0-0.575-0.467-1.042-1.041-1.042c-0.576,0-1.043,0.467-1.043,1.042C13.475,14.745,13.941,15.212,14.518,15.212z M14.518,13.822c0.191,0,0.348,0.155,0.348,0.347c0,0.192-0.156,0.348-0.348,0.348c-0.193,0-0.348-0.155-0.348-0.348C14.17,13.978,14.324,13.822,14.518,13.822z M10,15.212c0.575,0,1.042-0.467,1.042-1.043c0-0.575-0.467-1.042-1.042-1.042c-0.576,0-1.042,0.467-1.042,1.042C8.958,14.745,9.425,15.212,10,15.212z M10,13.822c0.192,0,0.348,0.155,0.348,0.347c0,0.192-0.156,0.348-0.348,0.348s-0.348-0.155-0.348-0.348C9.653,13.978,9.809,13.822,10,13.822z M5.484,15.212c0.576,0,1.042-0.467,1.042-1.043c0-0.575-0.467-1.042-1.042-1.042s-1.042,0.467-1.042,1.042C4.441,14.745,4.908,15.212,5.484,15.212z M5.484,13.822c0.192,0,0.347,0.155,0.347,0.347c0,0.192-0.155,0.348-0.347,0.348s-0.348-0.155-0.348-0.348C5.136,13.978,5.292,13.822,5.484,13.822z M10,11.737c0.575,0,1.042-0.467,1.042-1.042c0-0.576-0.467-1.043-1.042-1.043c-0.576,0-1.042,0.467-1.042,1.043C8.958,11.271,9.425,11.737,10,11.737z M10,10.348c0.192,0,0.348,0.155,0.348,0.348c0,0.191-0.156,0.348-0.348,0.348s-0.348-0.156-0.348-0.348C9.653,10.503,9.809,10.348,10,10.348z"></path>
+                        <path fill="none" d="M16.254,3.399h-0.695V3.052c0-0.576-0.467-1.042-1.041-1.042c-0.576,0-1.043,0.467-1.043,1.042v0.347H6.526V3.052c0-0.576-0.467-1.042-1.042-1.042S4.441,2.476,4.441,3.052v0.347H3.747c-0.768,0-1.39,0.622-1.39,1.39v11.813c0,0.768,0.622,1.39,1.39,1.39h12.507c0.768,0,1.391-0.622,1.391-1.39V4.789C17.645,4.021,17.021,3.399,16.254,3.399z M14.17,3.052c0-0.192,0.154-0.348,0.348-0.348c0.191,0,0.348,0.156,0.348,0.348v0.347H14.17V3.052z M5.136,3.052c0-0.192,0.156-0.348,0.348-0.348S5.831,2.86,5.831,3.052v0.347H5.136V3.052z M16.949,16.602c0,0.384-0.311,0.694-0.695,0.694H3.747c-0.384,0-0.695-0.311-0.695-0.694V7.568h13.897V16.602z M16.949,6.874H3.052V4.789c0-0.383,0.311-0.695,0.695-0.695h12.507c0.385,0,0.695,0.312,0.695,0.695V6.874z M5.484,11.737c0.576,0,1.042-0.467,1.042-1.042c0-0.576-0.467-1.043-1.042-1.043s-1.042,0.467-1.042,1.043C4.441,11.271,4.908,11.737,5.484,11.737z M5.484,10.348c0.192,0,0.347,0.155,0.347,0.348c0,0.191-0.155,0.348-0.347,0.348s-0.348-0.156-0.348-0.348C5.136,10.503,5.292,10.348,5.484,10.348z M14.518,11.737c0.574,0,1.041-0.467,1.041-1.042c0-0.576-0.467-1.043-1.041-1.043c-0.576,0-1.043,0.467-1.043,1.043C13.475,11.271,13.941,11.737,14.518,11.737z M14.518,10.348c0.191,0,0.348,0.155,0.348,0.348c0,0.191-0.156,0.348-0.348,0.348c-0.193,0-0.348-0.156-0.348-0.348C14.17,10.503,14.324,10.348,14.518,10.348z M14.518,15.212c0.574,0,1.041-0.467,1.041-1.043c0-0.575-0.467-1.042-1.041-1.042c-0.576,0-1.043,0.467-1.043,1.042C13.475,14.745,13.941,15.212,14.518,15.212z M14.518,13.822c0.191,0,0.348,0.155,0.348,0.347c0,0.192-0.156,0.348-0.348,0.348c-0.193,0-0.348-0.155-0.348-0.348C14.17,13.978,14.324,13.822,14.518,13.822z M10,15.212c0.575,0,1.042-0.467,1.042-1.043c0-0.575-0.467-1.042-1.042-1.042c-0.576,0-1.042,0.467-1.042,1.042C8.958,14.745,9.425,15.212,10,15.212z M10,13.822c0.192,0,0.348,0.155,0.348,0.347c0,0.192-0.156,0.348-0.348,0.348s-0.348-0.155-0.348-0.348C9.653,13.978,9.809,13.822,10,13.822z M5.484,15.212c0.576,0,1.042-0.467,1.042-1.043c0-0.575-0.467-1.042-1.042-1.042s-1.042,0.467-1.042,1.042C4.441,14.745,4.908,15.212,5.484,15.212z M5.484,13.822c0.192,0,0.347,0.155,0.347,0.347c0,0.192-0.155,0.348-0.347,0.348s-0.348-0.155-0.348-0.348C5.136,13.978,5.292,13.822,5.484,13.822z M10,11.737c0.575,0,1.042-0.467,1.042-1.042c0-0.576-0.467-1.043-1.042-1.043c-0.576,0-1.042,0.467-1.042,1.043C8.958,11.271,9.425,11.737,10,11.737z M10,10.348c0.192,0,0.348,0.155,0.348,0.348c0,0.191-0.156,0.348-0.348,0.348s-0.348-0.156-0.348-0.348C9.653,10.503,9.809,10.348,10,10.348z"></path>
                       </svg>
                       <div>
                           <h5>Timeline</h5>
@@ -87,11 +89,7 @@
                 </div>
               </div>
             <br>
-            <p>Apple's newly released Reality Composer offers new features for end-users to animate and interact with virtual content using ARKit. However, how would Reality Composer look like in an AR environment? Towards the end of my summer internship at Apple, I worked with a group of 3D software engineers at Apple's Applied Research Team to explore and investigate ways we could use voice to add actions and logic into Reality Composer. 
-            <br><br>
-            In contrast to my original logic programming interface, which used 3D hand gestures as a primary mode of input, our goal was to identify ways to program strictly using voice, and design a scalable representation of behaviors and actions in Reality Composer.
-            <br><br>
-            Currently, Reality Composer does not offer ample utilities to efficiently prototype and debug projects in a 3D environment. As a result, users have to navigate the logic of their program using typical 2D gestures or keyboard and mouse interface. On the other hand, voice offers users more expressive capabilities that are familiar and intuitive for casual end users with little programming experience. Rather than representing an action or behavior in terms of a programming language, we propose using voice input to generate code by saying the intended action to be implemented.</p>
+            <p>Apple's newly released Reality Composer offers new features for end-users to animate and interact with virtual content using ARKit. However, how would Reality Composer look like in an AR environment? How do we use voice as a primary means of adding logic in Reality Composer? Towards the end of my summer internship at Apple, I worked with Apple's Applied Research Team to investigate ways we could use voice to add logic into Reality Composer </p>
             <br>
             <b><i>(As my work is under Apple's NDA, I am not allowed to describe the project in detail. However, my work was demoed live at internal Open House events, and videos of my work have been showcased across different teams at Apple)</i></b>
         </div>
@@ -104,13 +102,9 @@
         <div id="anchor-proj-use-cases" class="SubSection">
           <h5 class="ProjectSectionHeader">User Profiles and Use Cases</h5>
           <br>
-          <p>To define the scope of our project, we first brainstormed different possible use cases for Reality Composer. We then categorized different these scenarios based on target audience and the intended product. For preliminary research purposes, we then selected a small portion of the categories most representative of our target audience as the basis of our research. The following user profiles resulted from the brainstorming session:
-            <br>
-            <br>  Bowling Ball Game
-            <br>  Virtual Apple Store
-            <br>  AR Fast Food Menu
+          <p>To define the scope of our project, we first brainstormed different possible use cases for Reality Composer. We then categorized different these scenarios based on target audience and the intended product. For preliminary research purposes, we then selected a small portion of the categories most representative of our target audience for our project.
             <br><br>
-            To represent the logic for each of the scenarios, we went with a bottom-up approach: we distilled the common components of each logical command in Reality Composer, and from there, identified the types of possible voice commands that users could utter to express these components. After our brainstorming sessions, we derived 3 classes of data we could use to represent behaviors in Reality Composer.
+            To represent the logic for each of the scenarios, we distilled the common components of each logical command in Reality Composer, and, from there, identified the types of possible voice commands that users could utter to express these components.
             <br><br>
             In tandem with our brainstorming sessions, we also designed and are currently piloting a user study investigating voice commands users would use to represent a program in Reality Composer.
           </p>
@@ -122,23 +116,34 @@
             <p>
                 To give users visual feedback of their voice input, we proceeded by investigating different representations of the logic. One constraint we have is that the visual representation of the logic must convey the underlying modes of interaction: as our research is focused on voice input, we must avoid visuals that suggest other inputs like hand gestures are the sole method used to interact with the system. 
                 <br><br>
-                Taking this into consideration, my goal was to eschew block or graph-based representations for our interface, which led me to a card-based representation of our logic, as inspired by the following concepts.
+                Taking this into consideration, I decided to use a card-based representation of our logic, as inspired by the following concepts.
             </p>
           </div>
 
         <div id="anchor-proj-reference" class="SubSection">
-          <p>
-            Google Game Builder: Offers a 2D UI for card-based representation of logic. Having both a graphic and textual representation of the logic is very digestible and easy to understand. Also steers away from the complex node-graph, block-based representation. Only caveat is that it is a very 2D styled visualization method, and is thus not suited for 3D visualizations.
-            <br><br>
-            Playing Cards: Observing physical use of cards, I noticed that playing cards provide an improvement to Google's Game Builder card representation, as it uses the design of the card itself to thematically categorize cards. Numeric values on the card can also be used to reflect certain elements of the card-specific game, which we can use in context to Reality Composer for representing action-related numbers and values.
-          </p>
+            <div class="project-sourceref">
+                <div class="userwrapper">
+                  <img src="../img/GoogleGameBuilder.gif" />
+                </div>
+                <div class="project-userdesc">
+                    <h6>Google Game Builder</h6>
+                    <p>Offers a 2D UI for card-based representation of logic. Having both a graphic and textual representation of the logic is very digestible and easy to understand. Only caveat is that it is a very 2D styled visualization method, and is thus not suited for 3D visualizations.</p>
+                </div>
+            </div>
+            <div class="project-sourceref">
+                <div class="userwrapper">
+                  <img src="../img/PlayingCards.gif" />
+                </div>
+                <div class="project-userdesc">
+                    <h6>Playing Cards</h6>
+                    <p>Clean separation and organization of visuals, text, and numeric values to convey meaning of the card. The designs allow users to associate visuals with functionality.</p>
+                </div>
+            </div>
           </div>
 
         <div id="anchor-proj-use-cases" class="SubSection">
             <p>
-              Following several iterations, I created 3 virtual cards, each categorized by their color, to represent the 3 aforementioned categories. Each card contained both a text description corresponding to the voice input the users would use to generate the card, as well as a visual graphic representing the type of information stored in the card. This allows users to associate the form of the card with its function, thereby making the programming process more efficient.
-              <br><br>
-              Unlike the logic block representation of the program, I added features to expand and collapse details in each card. By using hand gestures as a secondary mode of input, users could hide and show certain elements of the card. Note that hand gestures cannot be used to generate logic, so voice is still considered a primary mode of input.
+              Following several iterations, I created a variation of the virtual cards, to represent the logical components of our system. Unlike the logic block representation of the program, I added features to expand and collapse details in each card. By using hand gestures as a secondary mode of input, users could hide and show certain elements of the card. Note that hand gestures cannot be used to generate logic, so voice is still considered a primary mode of input.
             </p>
           </div>
 
@@ -146,9 +151,7 @@
             <h5 class="ProjectSectionHeader">Organizing the Workspace</h5>
             <br>
             <p>
-              One key feedback I received from my original visual programming prototype was that I should consider ways to organize and separate the interaction environment from the programming environment: because users are tasked with programming and interacting in the same 3D environment, as the programs grow increasingly complex, without organization utilities, users will easily confused themselves as they add more logic.
-              <br><br>
-              Taking this into consideration, I designed a central system to collapse all the logic cards. The idea is that by using voice commands, users can hide and reveal certain elements in the logic hierarchy, thus setting the scope of their workspace. Although I was not able to implement the system, I did add code and mockups showing how it could be done.
+              One key feedback I received from my original visual programming prototype was that I should consider ways to <b>organize and separate the interaction environment from the programming environment.</b> Hence, I designed a central system to collapse all the logic cards. The idea is that by using voice commands, users can hide and reveal certain elements in the logic hierarchy, thus setting the scope of their workspace. Although I was not able to implement the system, I did add code and mockups showing how it could be done.
             </p>
           </div>
 
@@ -156,7 +159,7 @@
             <h4 class="ProjectSectionHeader">Final Thoughts</h4>
             <br>
             <p>
-                Unfortunately, I was not able to continue working on the project, as I was nearing the end of my internship. However, in contrast to my original visual programming project, which was an independent research exploration, I learned more about how to coordinate and collaborate with other researchers in teams, and ultimately gained a lot of experience providing and receiving constructive feedback from my colleagues.
+                Unfortunately, I was not able to complete the project, as I was nearing the end of my internship. However, in contrast to my original visual programming project, which was an independent research exploration, I learned more about how to coordinate and collaborate with other researchers in teams, and ultimately gained a lot of experience providing and receiving constructive feedback from my colleagues.
             </p>
         </div>
         
@@ -164,40 +167,4 @@
   </div>
   <script src="./../JS/TweenMax.min.js" type="text/javascript"></script>
   <script src="./../JS/animationProject.js" type="text/javascript"></script>
-    <script type="text/javascript">// Select all links with hashes
-      $('a[href*="#"]')
-        // Remove links that don't actually link to anything
-        .not('[href="#"]')
-        .not('[href="#0"]')
-        .click(function(event) {
-          // On-page links
-          if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-            && 
-            location.hostname == this.hostname
-          ) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
-            if (target.length) {
-              // Only prevent default if animation is actually gonna happen
-              event.preventDefault();
-              $('html, body').animate({
-                scrollTop: target.offset().top
-              }, 1000, function() {
-                // Callback after animation
-                // Must change focus!
-                var $target = $(target);
-                $target.focus();
-                if ($target.is(":focus")) { // Checking if the target was focused
-                  return false;
-                } else {
-                  $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                  $target.focus(); // Set focus again
-                };
-              });
-            }
-          }
-        });</script>
 </body>

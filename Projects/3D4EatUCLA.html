@@ -4,6 +4,7 @@
     <!-- TODO: Compile the CSS File Later -->
     <link rel="stylesheet" type="text/css" href="./../style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     
     <!-- TODO: Update Mobile UIUX -->
@@ -127,14 +128,14 @@
         </div>
 
         <div id="anchor-proj-user-profiles" class="SubSection">
-            <div class="carousel js-flickity">
-                <div id="cell2" class="carousel-cell">
+            <div class="carousel" data-flickity='{ "wrapAround": true }' style="height: 500px">
+                <div class="carousel-cell">
                     <img src="./../img/Website_1.png"/>
                 </div>
-                <div id="cell3" class="carousel-cell">
+                <div class="carousel-cell">
                     <img src="./../img/Website_2.png"/>
                 </div>
-                <div id="cell4" class="carousel-cell">
+                <div class="carousel-cell">
                     <img src="./../img/Website_3.png"/>
                 </div>
           </div>
@@ -158,13 +159,33 @@
               5. Particularly with the projects section, I learned how to animate SVGs using Javascript, and generated 2D animations to illustrate the core projects that have been built in this club. These animations are aimed at users who may not want to read about each project in detail, but simply want a high-level overview of the work we do.
             </p>
           </div>
+
+          <div id="anchor-proj-interface-design" class="SubSection">
+            <!-- TODO: Sketches and previous website version -->
+            <h5 class="ProjectSectionHeader">Creating an Online Shop</h5>
+            <br>
+            <p>
+              To offer users the ability to purchase custom-made 3D prints for future fundraisers and club activities, I also developed an online shop for our club. In order to maintain the same design and functionality as our original website, I decided to use Snipcart, which offerred a backend API and front-end workflow for users to make secure online purchases through a static web-page. 
+              <br><br>
+              To create this site, I referenced the following eShop interfaces and designs:
+              Nike, Adidas
+              <br><br>
+              From these websites, I made the following observations:
+              1. Designs typically emphasized product images over textual descriptions
+              2. A shopping cart was visible throughout the website so end-users could easily navigate and refer to their cart.
+              3. Color schemes were clean and simple to complement the diverse array of images and products
+              4. Any textual elements were concise and emphasized to add contextual elements to the products introduced.
+              <br><br>
+              Based on these observations, I made the following design. The idea was to maintain a similar theme as the original website, in order to give a sense of familiarity. However, I also integrated that style with previous observations to develop a club-themed eShop.
+            </p>
+          </div>
           
         <div id="anchor-proj-use-cases" class="SubSection">
             <!-- TODO: Screenshots and videos -->
             <h5 class="ProjectSectionHeader">Ongoing Development</h5>
             <br>
             <p>
-              Currently, I am in the process of developing an <b>online store</b> for users to purchase 3D-printed merchandise that we design, which we use for our fundraisers to fund our annual spring showcase and other 3D printing events. I am also improving website navigation so that it is <b>responsive for other mobile devices</b>.
+              Currently, I am in the process of refining an <b>online store</b> upon receiving preliminary user feedback. I am also improving website navigation so that it is <b>responsive for other mobile devices</b>.
             </p>
           </div>     
     </div>

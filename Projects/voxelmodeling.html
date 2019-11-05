@@ -87,9 +87,9 @@
               </div>
             <br>
             <p>
-            As part of a 4-week exploratory research activity at Apple's Applied Research Team, I collaborated with engineers and designers at Apple to investigate methods users could create personalized assets in AR. 
+            As part of a 4-week exploratory research activity at Apple's Applied Research Team, I collaborated with engineers and designers at Apple to <b>investigate methods users could create personalized assets in AR.</b>
             <br><br>
-            Currently, one of the challenges when using Reality Composer is that casual designers and end users do not get the opportunity to directly build and create their own 3D models to interact with. Instead, they must use pre-existing models for their composition, or design assets using external software. To improve the workflow and creative capabilities of Reality Composer, I investigated ways users could maximize the capabilities of voxel modeling to create models using free-form, expressive hand gestures.
+            Currently, one of the challenges when using Reality Composer is that <b>casual designers and end users do not get the opportunity to directly build and create their own 3D models to interact with.</b> Instead, they must use pre-existing models for their composition, or design assets using external software. To improve the workflow and creative capabilities of Reality Composer, I investigated ways users could use voxels to create models using 3D hand gestures.
             <br><br>
             In the process of designing this interface, I used the AR capabilities on the latest iPad. I also captured 3D Hand Gestures by combining the ARKit environment with LeapMotion sensors. 
             </p>
@@ -106,38 +106,44 @@
           <h5 class="ProjectSectionHeader">Profiles and Use Cases</h5>
           <br>
           <!-- Add an icon: 1 per design stage -->
-          <p>To explore different 3D modeling, the group came together for multiple brainstorming sessions examining different possible use cases and design goals. After narrowing down the scope of our project, I designed the following user profiles repesenting the different scenarios users would want to design assets for Reality Compoosers, these user profiles are both from personal experiences using 3D modeling CAD software, existing literature surrounding CAD software, as well as other group members' experiences with 3D modeling. Here, we are assuming that end users have some design experience and thus are capable of designing their own virtual content in 3D space.
-          </p>
-        </div>
-
-        <div id="anchor-proj-user-profiles" class="SubSection">
-          </div>
-
-        <div id="anchor-proj-user-profiles" class="SubSection">
-          <p>
+          <p>To explore different 3D modeling, the group came together for multiple brainstorming sessions examining different possible use cases and design goals. After narrowing down the scope of our project, we designed several user profiles repesenting the different scenarios users would want to design assets for Reality Compoosers.
+            <br><br>
               From these user profiles I identified the following design challenges most common with existing 3D designers:
               <br><br>
-              1. Finding a balance between expressively using free-form hand gestures to design, while also having a high level of precision and accuracy when using those gestures to add detail.
-              <br>
-              2. Having a dynamic design workflow that optimizes both the ability to generate large volumes quickly, and also having fine-grained control with details of different portions of the model.
+              1. Finding a balance between using free-form hand gestures to design, while also maintaing a high level of precision when using those gestures to add detail.
+              <br><br>
+              2. Having a dynamic design workflow that optimizes both the ability to generate large volumes quickly, and also having fine-grained control with details.
               <br><br>
               Examining these profiles in detail, I posited that using voxels as a foundation for modeling in 3D would adequately address the two design needs. This is primarily because:
               <br><br>
-              1. Voxels offer a grid-like structure where even with coarse-grained gesture control and detection, shapes can be clearly defined thanks to mechanisms such as snapping.
-              <br>
+              1. Voxels offer a grid-like structure where shapes can be clearly defined thanks to mechanisms such as snapping.
+              <br><br>
               2. Voxels also offer a method of representing large volumes and complex meshes, while also giving users control with small details, as illustrated later.
               <br><br>
               To examine existing workflows with voxels in a 2D interface, I referenced the following existing apps and design tools.
           </p>
-          </div>
+        </div>
 
         <div id="anchor-proj-reference" class="SubSection">
-            <p>
-              Minecraft: A first person role-playing game, Minecraft has also been used as a voxel modeling tool where players immersively create and modify voxels one by one in third virtual 3D environment. The ability to handle fine-grained detail by modifying 1 voxel at a time, and the immersive experience of doing so in first person are two elements I want to bring into my prototype.
-              <br><br>
-              MagicaVoxel: A third person tool for modeling voxelized models. By using click-and-drag gestures, this tool easily allows users to create large voxelized volumes such as mountains and buildings. This fast and efficient workflow is one thing I would like to emulate in my prototype.
-            </p>
+            <div class="project-sourceref">
+                <div class="userwrapper">
+                  <img src="../img/MincraftVoxel.gif" />
+                </div>
+                <div class="project-userdesc">
+                    <h6>Minecraft</h6>
+                    <p>A first person role-playing game, Minecraft has also been used as a voxel modeling tool where players immersively create and modify voxels one by one in third virtual 3D environment. The ability to handle fine-grained detail by modifying 1 voxel at a time, and the immersive experience of doing so in first person are two elements I want to bring into the prototype.</p>
+                </div>
             </div>
+            <div class="project-sourceref">
+                <div class="userwrapper">
+                  <img src="../img/MagicaVoxel.gif" />
+                </div>
+                <div class="project-userdesc">
+                    <h6>MagicaVoxel</h6>
+                    <p>A third person tool for modeling voxelized models. By using click-and-drag gestures, this tool easily allows users to create large voxelized volumes such as mountains and buildings. This fast and efficient workflow is one thing I would like to emulate in my prototype.</p>
+                </div>
+            </div>
+          </div>
 
         <div id="anchor-proj-interface-design" class="SubSection">
             <h5 class="ProjectSectionHeader">Designing an Interface</h5>
@@ -153,7 +159,7 @@
             <h5 class="ProjectSectionHeader">Adding Gesture Input</h5>
             <br>
             <p>
-              Due to time constraints, in order to create a prototype before the exploratory activity ended, I reused an existing customized gesture library I previously made for a previous project involving visual logic programming in AR. Mapping the gestures to different functions, and also integrating it into the iPad AR environment, I was able to design a customized 2D and 3D interface where users could create voxels or voxelized meshes; erase individual voxels or groups of voxels; color voxels; navigate around the scene; and extrude voxelized surfaces.
+              Due to time constraints, in order to create a prototype before the exploratory activity ended, I reused a library I previously made for visual logic programming in AR. Mapping the gestures to different functions, and also integrating it into the iPad AR environment, I was able to design a customized 2D and 3D interface where users could perform the aforementioned functions.
             </p>
           </div>
 
@@ -169,7 +175,7 @@
           <h5 class="ProjectSectionHeader">Performance Optimization</h5>
           <br>
           <p>
-            Due to memory limitations, the voxelization can lead to potential frame rate drops. Furthermore, as the number of voxels propagate, there are noticeable performance issues with both memory and speed. As a result, to scale this design tool, we would need to find ways of optimizing the data and memory to maintain the same level of performance even with a high number of voxels.
+            As the number of voxels propagate, there are noticeable performance issues with both memory and speed. As a result, to scale this design tool, we would need to optimize the data and memory performances and voxel representation.
           </p>
         </div>
 
@@ -177,7 +183,7 @@
             <h5 class="ProjectSectionHeader">Menu Scalability</h5>
             <br>
             <p>
-              One of the noticeable limitations with 2D interfaces for CAD software is the fact that it is difficult to navigate the plethora of tools available. In a 3D setting, I would like to investigate ways of designing a menu such that tools are easily identifiable, so that users do not need to spend excessive amounts of time finding their desired tool.
+              One limitation with 2D interfaces for CAD software is the fact that it is difficult to navigate the plethora of tools available. In a 3D setting, I would like to investigate ways of designing a menu such that tools are easily accessible, to further streamline the design workflow.
             </p>
           </div>        
     </div>

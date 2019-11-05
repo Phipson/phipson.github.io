@@ -62,48 +62,14 @@
                 transitionToPage("./Projects/logicinar.html");
             }
 
-            // Voice Mic
-            var RightLines = document.getElementById("RightMicLines");
-            var LeftLines = document.getElementById("LeftMicLines");
-            var LineL1 = document.getElementById("L1");
-            var LineL2 = document.getElementById("L2");
-            var LineL3 = document.getElementById("L3");
-            var LineR1 = document.getElementById("R1");
-            var LineR2 = document.getElementById("R2");
-            var LineR3 = document.getElementById("R3");
-            var VoiceDiv = document.getElementById("m_Voice");
-
-            var tlARVR_3 = new TimelineMax({paused: true});
-            tlARVR_3
-            .to(RightLines, 0.05, {autoAlpha: 1})
-            .to(LeftLines, 0.05, {autoAlpha: 1}, '-=0.05')
-            .to(LineL1, 0.25, {autoAlpha: 1})
-            .to(LineR1, 0.25, {autoAlpha: 1}, '-=0.25')
-            .to(LineL2, 0.25, {autoAlpha: 1}, '+=0.1')
-            .to(LineR2, 0.25, {autoAlpha: 1}, '-=0.25')
-            .to(LineL3, 0.25, {autoAlpha: 1}, '+=0.1')
-            .to(LineR3, 0.25, {autoAlpha: 1}, '-=0.25');
-
-            VoiceDiv.onmouseenter = function() {
-                tlARVR_3.play();
-            }
-
-            VoiceDiv.onmouseleave = function() {
-                tlARVR_3.reverse();
-            }
-
-            VoiceDiv.onclick = function() {
-                transitionToPage("./Projects/voiceinar.html");
-            }
-
             // Voxel Modeling
             var VoxelDiv = document.getElementById("m_Voxel");
             TweenMax.set(".monkey-3", {scale: 0, transformOrigin: "50% 50%"});
 
             var tlARVR_4 = new TimelineMax({paused: true});
             tlARVR_4
-            .to("#Voxels", 0.05, {autoAlpha: 1})
-            .staggerTo(".monkey-3", 0.3, {scale: 1, transformOrigin: "50% 50%"}, 0.1)
+            .to("#Voxels", 0.01, {autoAlpha: 1})
+            .staggerTo(".monkey-3", 0.15, {scale: 1, transformOrigin: "50% 50%"}, 0.1)
             .to("#Original", 0.3, {autoAlpha: 0});
 
             VoxelDiv.onmouseenter = function() {
@@ -156,6 +122,49 @@
             var _3D4Ebtn = document.getElementById("_3D4E");
             var Spotbtn = document.getElementById("Spot");
             var SUSbtn = document.getElementById("SUS");
+
+            var iframeWidth = '800';
+            var iframeHeight = '600';
+
+            $('#_3D4E').qtip({
+                content: { text: '<h4>3D Printing for (4) Everyone</h4><br><br><h5>A Student-led 3D Printing Club at UCLA</h5><iframe id="theframe" src="https://3d4eatucla.github.io"' + 'width=' + '"' + iframeWidth + '"' + 'height' + iframeHeight + '"' + '><p>Your browser does not support iframes.</p></iframe>' },
+                position: {
+                target: 'mouse', // Track the mouse as the positioning target
+                adjust: { mouse: false } // Offset it slightly from under the mouse
+                },
+                show: 'hover',
+                hide: 'unfocus',
+                style: {
+                    classes: "qTipCustomClass",
+                    color: 'white'
+                }
+            });
+
+            $('#SUS').qtip({
+                content: { text: '<iframe id="theframe" src="https://github.com/Phipson/SUS"' + 'width=' + '"' + iframeWidth + '"' + 'height' + iframeHeight + '"' + '><p>Your browser does not support iframes.</p></iframe>' },
+                position: {
+                target: 'mouse', // Track the mouse as the positioning target
+                adjust: { mouse: false } // Offset it slightly from under the mouse
+                },
+                show: 'hover',
+                hide: 'unfocus',
+                style: {
+                classes: "qTipCustomClass"
+                }
+            });
+
+            $('#Spot').qtip({
+                content: { text: '<iframe id="theframe" src="https://linksin3.vg3uaunike.us-west-2.elasticbeanstalk.com"' + 'width=' + '"' + iframeWidth + '"' + 'height' + iframeHeight + '"' + '><p>Your browser does not support iframes.</p></iframe>' },
+                position: {
+                target: 'mouse', // Track the mouse as the positioning target
+                adjust: { mouse: false } // Offset it slightly from under the mouse
+                },
+                show: 'hover',
+                hide: 'unfocus',
+                style: {
+                classes: "qTipCustomClass"
+                }
+            });
 
             var hoverButton = document.getElementById("WMDetailButton");
             var hoverDetails = new TimelineMax({paused: true});
@@ -264,6 +273,7 @@
             hoverButton.onclick = function() {
                 ProjectDetailArray[CurrElement]();
             }
+
 
         });
 
