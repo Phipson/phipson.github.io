@@ -598,60 +598,9 @@ ul ab:hover:before{
   transform: rotate(-45deg);
 }
 
-/* This is the switch that detects in CSS whether or not the screen is sufficiently big for the navigation bar */
-@media only screen and (max-width: 1400px) {
-  .svg-anim{
-    width: 35%; 
-    margin-left: 27.5%; 
-  }
-}
-
 @media (max-width:910px){
-  /* Normal nav for computer screen */
-  nav{
-    display: none;
-  }
-
-  /* Nav for phones and tablets */
-  .responsive_bar{
-    display: block;
-  }
-
   html {
     font-size: 15px;
-  }
-
-  .res-showcase{
-    display: grid;
-    grid-gap: 5em;
-    grid-template-columns: 100%;
-  }
-  
-  .res-showcase-inv{
-    display: grid;
-    grid-gap: 5em;
-    /* repeat minmax means that once a container is less than 100px it will be fixed to it other wise it is 1fr */
-    grid-template-columns: 100%;
-  }
-
-  .item-a {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    margin: auto;
-  }
-  
-  .item-b {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    margin: auto;
-  }
-
-  .showcase-img{
-    width: 30%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   h1{
@@ -660,15 +609,6 @@ ul ab:hover:before{
 
   p {
     font-size: 2em;
-  }
-
-  .grid-display-desc, .grid-display-text, .show-button {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  .svg-anim{
-    width: 50%; 
-    margin-left: 25%; 
   }
 }
 
@@ -686,7 +626,7 @@ ul ab:hover:before{
   }
 
   p {
-    font-size: 2.3em;
+    font-size: 1em;
   }
 
   .grid-display-desc, .grid-display-text, .show-button, #introtxt {
@@ -705,25 +645,7 @@ ul ab:hover:before{
   }
 
   p {
-    font-size: 2.5em;
-  }
-
-  .grid-display-desc, .grid-display-text, .show-button, {
-    font-size: 2em;
-    text-align: center;
-  }
-
-  #introtxt {
-    font-size: 1.8em;
-  }
-
-  .svg-anim{
-    width: 80%; 
-    margin-left: 10%; 
-  }
-
-  .grid-display {
-    grid-template-columns: 1fr;
+    font-size: 1em;
   }
 
 }

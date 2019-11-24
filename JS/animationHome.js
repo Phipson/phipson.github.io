@@ -36,7 +36,7 @@
             tlARVR_1
             .to(GuyHandL, 1, {rotation: 15, transformOrigin: "10% 40%"})
             .to(GuyHandR, 1, {rotation: -20, transformOrigin: "10% 40%"}, '-=1')
-            .to(GuyHead, 1, {rotation: -20, transformOrigin: "12% 52%"}, '-=1');
+            .to(GuyHead, 1, {rotation: -20, transformOrigin: "22.1% 63%"}, '-=1');
 
             tlARVR_1.play();
 
@@ -123,49 +123,6 @@
             var Spotbtn = document.getElementById("Spot");
             var SUSbtn = document.getElementById("SUS");
 
-            var iframeWidth = '800';
-            var iframeHeight = '600';
-
-            $('#_3D4E').qtip({
-                content: { text: '<h4>3D Printing for (4) Everyone</h4><br><br><h5>A Student-led 3D Printing Club at UCLA</h5><iframe id="theframe" src="https://3d4eatucla.github.io"' + 'width=' + '"' + iframeWidth + '"' + 'height' + iframeHeight + '"' + '><p>Your browser does not support iframes.</p></iframe>' },
-                position: {
-                target: 'mouse', // Track the mouse as the positioning target
-                adjust: { mouse: false } // Offset it slightly from under the mouse
-                },
-                show: 'hover',
-                hide: 'unfocus',
-                style: {
-                    classes: "qTipCustomClass",
-                    color: 'white'
-                }
-            });
-
-            $('#SUS').qtip({
-                content: { text: '<iframe id="theframe" src="https://github.com/Phipson/SUS"' + 'width=' + '"' + iframeWidth + '"' + 'height' + iframeHeight + '"' + '><p>Your browser does not support iframes.</p></iframe>' },
-                position: {
-                target: 'mouse', // Track the mouse as the positioning target
-                adjust: { mouse: false } // Offset it slightly from under the mouse
-                },
-                show: 'hover',
-                hide: 'unfocus',
-                style: {
-                classes: "qTipCustomClass"
-                }
-            });
-
-            $('#Spot').qtip({
-                content: { text: '<iframe id="theframe" src="https://linksin3.vg3uaunike.us-west-2.elasticbeanstalk.com"' + 'width=' + '"' + iframeWidth + '"' + 'height' + iframeHeight + '"' + '><p>Your browser does not support iframes.</p></iframe>' },
-                position: {
-                target: 'mouse', // Track the mouse as the positioning target
-                adjust: { mouse: false } // Offset it slightly from under the mouse
-                },
-                show: 'hover',
-                hide: 'unfocus',
-                style: {
-                classes: "qTipCustomClass"
-                }
-            });
-
             var hoverButton = document.getElementById("WMDetailButton");
             var hoverDetails = new TimelineMax({paused: true});
             hoverDetails
@@ -183,18 +140,27 @@
                 TweenMax.to(_3D4Ebtn, 0.25, {autoAlpha: 1})
                 TweenMax.to(Spotbtn, 0.25, {autoAlpha: 0}, "-=0.25")
                 TweenMax.to(SUSbtn, 0.25, {autoAlpha: 0}, "-=0.25");
+                $("#TextDescLine1").html("As the webmaster for UCLA's 3D Printing club,");
+                $("#TextDescLine2").html("I was responsible for rebranding the club and");
+                $("#TextDescLine3").html("enhancing the club website.");
             }
 
             var showSpot = function() {
                 TweenMax.to(_3D4Ebtn, 0.25, {autoAlpha: 0})
                 TweenMax.to(Spotbtn, 0.25, {autoAlpha: 1}, "-=0.25")
                 TweenMax.to(SUSbtn, 0.25, {autoAlpha: 0}, "-=0.25");
+                $("#TextDescLine1").html("As a full-stack developers for LinksIn,");
+                $("#TextDescLine2").html("I designed and deployed a Tinder-styled app");
+                $("#TextDescLine3").html("for gamers to network and play together.");
             }
 
             var showSUS = function() {
                 TweenMax.to(_3D4Ebtn, 0.25, {autoAlpha: 0})
                 TweenMax.to(Spotbtn, 0.25, {autoAlpha: 0}, "-=0.25")
                 TweenMax.to(SUSbtn, 0.25, {autoAlpha: 1}, "-=0.25");
+                $("#TextDescLine1").html("As a front-end Android developer for my team");
+                $("#TextDescLine2").html("I built an app for users to coordinate events");
+                $("#TextDescLine3").html("to promote environmental awareness.");
             }
 
             // TODO: Details Page Display
@@ -219,60 +185,145 @@
 
             ProjectArray[CurrElement](); // Initialize the current element
 
-            // Arrow buttons on window
-            var WMLeft = document.getElementById("WMButtonLeft");
-            tlWML = new TimelineMax({paused: true});
-            tlWML
-            .to("#WMButtonLBG", 0.25, {fill: "#c9d6df"});
+            // Highlight App to Select
+            $(".webmob-index").hover(function() {
+                TweenMax.to($(this), 0.25, {css:{fill: '#FFFFFF'}});
+            }, function() {
+                TweenMax.to($(this), 0.25, {css:{fill: '#000000'}});
+            });
 
-            WMLeft.onmouseenter = function() {
-                tlWML.play();
-            }
+            $(".webmob-index").click(function() {
+                var index = $(this).data("wmindex");
+                var offset = (CurrElement-index) * 65;
+                CurrElement = index;
+                console.log(offset);
+                TweenMax.to($("#WMBGHighlighter"), 0.5, {y: `-=${offset}`});
+                ProjectArray[CurrElement]();
+            });
 
-            WMLeft.onmouseleave = function() {
-                tlWML.reverse();
-            }
-
-            WMLeft.onclick = function() {
-                // Get Length of array
-                var len = ProjectArray.length;
-                if (CurrElement == 0)
-                    CurrElement = 2;
-                else
-                    CurrElement = (CurrElement - 1) % len;
-
-                //console.log(CurrElement);
-
-                ProjectArray[CurrElement]();                
-            }
-
-            var WMRight = document.getElementById("WMButtonRight");
-            tlWMR = new TimelineMax({paused: true});
-            tlWMR
-            .to("#WMButtonRBG", 0.25, {fill: "#c9d6df"});
-
-            WMRight.onmouseenter = function() {
-                tlWMR.play();
-            }
-
-            WMRight.onmouseleave = function() {
-                tlWMR.reverse();
-            }
-
-            WMRight.onclick = function() {
-                // Get Length of array
-                var len = ProjectArray.length;
-                CurrElement = (CurrElement + 1) % len;
-
-                //console.log(CurrElement);
-
-                ProjectArray[CurrElement]();                
-            }
 
             // View More Button
             hoverButton.onclick = function() {
                 ProjectDetailArray[CurrElement]();
             }
+
+
+            // Research Notebook
+            var playing = false;
+            var hoverFlipAmount = 0;
+            var count = 0;
+
+            flipReset = function(e) {
+                if ($(e).data("flip")) {
+                    anime({
+                        targets: e,
+                        transformOrigin: '0% 0%',
+                        rotateY: {value: `-180`, delay: 0},
+                        //translateX: {value: '-=50%', delay: 0},
+                        easing: 'easeInOutSine',
+                        duration: 100
+                    });
+                } else {
+                    anime({
+                        targets: e,
+                        transformOrigin: '0% 0%',
+                        rotateY: {value: `0`, delay: 0},
+                        //translateX: {value: '-=50%', delay: 0},
+                        easing: 'easeInOutSine',
+                        duration: 100
+                    });
+                }
+            }
+
+            flipHoverIn = function(e) {
+                if (playing)
+                    return;
+                if ($(e).data("flip")) {
+                    anime({
+                        targets: e,
+                        transformOrigin: '0% 0%',
+                        rotateY: {value: `+=${hoverFlipAmount}`, delay: 0},
+                        //translateX: {value: '-=50%', delay: 0},
+                        easing: 'easeInOutSine',
+                        duration: 400
+                    });
+                } else {
+                    anime({
+                        targets: e,
+                        transformOrigin: '0% 0%',
+                        rotateY: {value: `-=${hoverFlipAmount}`, delay: 0},
+                        //translateX: {value: '-=50%', delay: 0},
+                        easing: 'easeInOutSine',
+                        duration: 400
+                    });
+                }
+            };
+
+            flipHoverOut = function(e) {
+                if (playing)
+                    return;
+
+                if ($(e).data("flip")) {
+                    anime({
+                        targets: e,
+                        transformOrigin: '0% 0%',
+                        rotateY: {value: `-=${hoverFlipAmount}`, delay:0},
+                        //translateX: {value: '-=50%', delay: 0},
+                        easing: 'easeInOutSine',
+                        duration: 400
+                    });
+                } else {
+                    anime({
+                        targets: e,
+                        transformOrigin: '0% 0%',
+                        rotateY: {value: `+=${hoverFlipAmount}`, delay: 0},
+                        //translateX: {value: '-=50%', delay: 0},
+                        easing: 'easeInOutSine',
+                        duration: 400
+                    });
+                }
+            };
+
+            flipPage = function(e) {
+                if(playing)
+                    return;
+                
+                playing = true;
+                $(e).css('z-index', count);
+                $(e).css('transform-origin', "0% 0%");
+                //console.log($(this).data("flip"));
+                if ($(e).data("flip")) {
+                    anime({
+                        targets: e,
+                        rotateY: {value: `+=${180-hoverFlipAmount}`, delay: 50},
+                        //translateX: {value: '-=50%', delay: 0},
+                        easing: 'easeInOutSine',
+                        duration: 400,
+                        complete: function(anim){
+                            playing = false;
+                            count += 1;
+                        }
+                    });
+                } else {
+                    anime({
+                        targets: e,
+                        rotateY: {value: `-=${180-hoverFlipAmount}`, delay: 50},
+                        //translateX: {value: '-=50%', delay: 0},
+                        easing: 'easeInOutSine',
+                        duration: 400,
+                        complete: function(anim){
+                            playing = false;
+                            count += 1;
+                        }
+                    });
+                }
+                $(e).data("flip", !$(e).data("flip"));
+            };
+
+            $(".card").click(function() {
+                flipPage(this);
+            });
+ 
 
 
         });

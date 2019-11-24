@@ -99,9 +99,9 @@
         </div>
         
         <div id="anchor-proj-design-process" class="SectionDesignProcess">
-            <iframe class="ProjectVideo" src="./../vid/3d4evideo.mp4">
-              Your browser does not support video.
-            </iframe>
+            <video class="ProjectVideo" controls>
+              <source src="./../vid/3d4evideo.mp4" type="video/mp4">
+            </video>
           </div>
 
         <div id="anchor-proj-design-process" class="SectionDesignProcess">
@@ -171,23 +171,50 @@
               Nike, Adidas
               <br><br>
               From these websites, I made the following observations:
+              <br>
               1. Designs typically emphasized product images over textual descriptions
+              <br>
               2. A shopping cart was visible throughout the website so end-users could easily navigate and refer to their cart.
+              <br>
               3. Color schemes were clean and simple to complement the diverse array of images and products
+              <br>
               4. Any textual elements were concise and emphasized to add contextual elements to the products introduced.
               <br><br>
               Based on these observations, I made the following design. The idea was to maintain a similar theme as the original website, in order to give a sense of familiarity. However, I also integrated that style with previous observations to develop a club-themed eShop.
             </p>
           </div>
+
+          <div id="anchor-proj-interface-design" class="SubSection">
+              <!-- TODO: Sketches and previous website version -->
+              <h5 class="ProjectSectionHeader">Defining a Transaction Workflow</h5>
+              <br>
+              <p>
+                Unlike most traditional eShops, however, as our club was only using an online store for fundraisers, we realized that a database would be required to store and manage all available products. Furthermore, transactions must be made reliably through available payment gateways.
+                <br><br>
+                To circumvent the payment issues, we decided to use PayPal's developer API. The reason for doing so was that PayPal only took a flat percent of each transaction for each purchase: this meant that we would not be required to pay a monthly subscription to use their service, which was predominant in other APIs such as BrainTree, Stripe, etc. Additionally, PayPal already offered HTML code for adding PayPal buttons to existing websites, so there was little need to create an entire front-end interface from scratch.
+                <br><br>
+                To make our website scalable, we also used Google's Firebase Storage and Real-Time Database for managing all user transactions. The reason for doing so is to avoid hard-coding all possible products. Additionally, because the underlying logic for making purchases is similar, a database would streamline the process of making transactions.
+                <br><br>
+                The diagram below illustrates the program architecture.
+              </p>
+            </div>
           
         <div id="anchor-proj-use-cases" class="SubSection">
             <!-- TODO: Screenshots and videos -->
             <h5 class="ProjectSectionHeader">Ongoing Development</h5>
             <br>
             <p>
-              Currently, I am in the process of refining an <b>online store</b> upon receiving preliminary user feedback. I am also improving website navigation so that it is <b>responsive for other mobile devices</b>.
+              Currently, I am improving website navigation so that it is <b>responsive for mobile devices of different dimensions</b>. A piloted version of the eShop has been deployed, and we are currently running preliminary user tests to examine the user experience of purchasing products and how effectively we can keep track of all purchases.
+              <br><br>
+              The following is an updated video of the eShop.
             </p>
-          </div>     
+          </div>
+          
+          <div id="anchor-proj-design-process" class="SectionDesignProcess">
+              <video class="ProjectVideo" controls>
+                <source src="./../vid/3d4evideo.mp4" type="video/mp4">
+              </video>
+            </div>
     </div>
   </div>
   <script src="./../JS/TweenMax.min.js" type="text/javascript"></script>

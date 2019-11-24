@@ -37,17 +37,88 @@
 
             tlProf.play();
 
+            // Hamburger Menu Dev
+            $("#hamMenu").click(function() {
+                if ($(this).hasClass("is-active")) {
+                    $(this).removeClass("is-active");
+                    TweenMax.to("#MobileMenuUI", 0.5, {css:{visibility: "hidden"}});
+                } else {
+                    $(this).addClass("is-active");
+                    TweenMax.to("#MobileMenuUI", 0.5, {css:{visibility: "visible"}});
+
+                }
+            })
+
             // Web Mobile Dev Entrance Animation
             var CompWindow = document.getElementById("ShowcaseWindow");
+            var CompBodyBG = document.getElementById("BodyBG");
+            var CompBody = document.getElementById("CompBody");
+            var CompBottom = document.getElementById("MainBottom");
+            var CompIndent = document.getElementById("BottomIndent");
+
+            // Showcase Window Animations
+            var CompBGWhite = document.getElementById("WMBGWhite");
+            var CompBGGray = document.getElementById("WMBGGray");
+            var CompBGHL = document.getElementById("WMBGHighlighter");
+            var CompWindowBG = document.getElementById("WMBGWindow");
 
             // Set Initial State
-            TweenMax.set(CompWindow, {scale: 0, transformOrigin: "50% 50%"});
+            TweenMax.set(CompBodyBG, {attr:{width:0}, transformOrigin:"50% 50%"});
+            TweenMax.set(CompBody, {attr:{width:0}, transformOrigin:"50% 50%"});
+            TweenMax.set(CompBottom, {attr:{width:0}, transformOrigin:"50% 50%"});
+            TweenMax.set(CompIndent, {attr:{width:0}, transformOrigin:"50% 50%"});
+            TweenMax.set(CompBGWhite, {attr:{width:0}, transformOrigin:"50% 50%"});
+            TweenMax.set(CompBGGray, {attr:{height:0}, transformOrigin:"50% 50%"});
+            TweenMax.set(CompBGHL, {attr:{width:0}, transformOrigin:"50% 50%"});
+            TweenMax.set(CompWindowBG, {attr:{width:0}, transformOrigin:"50% 50%"});
             
             var tlWebDev = new TimelineMax({paused: true, delay: 0.1});
             tlWebDev
-            .to(CompWindow, 0.05, {autoAlpha: 1})
-            .to(CompWindow, 0.4, {scale: 1.1, transformOrigin: "50% 50%"})
-            .to(CompWindow, 0.1, {scale: 1, transformOrigin: "50% 50%"});
+            .to(CompBottom, 0.6, {attr:{width:982}, transformOrigin:"50% 50%"})
+            .to(CompBodyBG, 0.5, {attr:{width:904}, transformOrigin:"50% 50%"}, '-=0.4')
+            .to(CompBody, 0.5, {attr:{width:818}, transformOrigin:"50% 50%"}, '-=0.3')
+            .to(CompIndent, 0.5, {attr:{width:256}, transformOrigin:"50% 50%"}, '-=0.3')
+
+            // Animate in the actual showcase window
+            .to(CompWindow, 0.05, {autoAlpha: 1}, '-=0.4')
+            .to(CompWindowBG, 0.5, {attr:{width:728}, transformOrigin:"50% 50%"})
+            .staggerTo(".webmob-circle", 0.2, {autoAlpha: 1}, 0.2, '-=0.3')
+            .to("#TextTitle", 0.2, {autoAlpha: 1}, '-=0.2')
+            .to(CompBGGray, 0.4, {attr:{height:435}, transformOrigin:"50% 50%"})
+            .staggerTo(".webmob-index", 0.2, {autoAlpha: 1}, 0.2, '-=0.2')
+            .to(CompBGWhite, 0.6, {attr:{width:518}, transformOrigin:"50% 50%"}, '-=0.3')
+            .to(CompBGHL, 0.4, {attr:{width:211}, transformOrigin:"50% 50%"}, '-=0.3')
+            .to('.webmob-14', 0.5, {autoAlpha: 1})
+            .to('.webmob-text', 0.5, {autoAlpha: 1}, '-=0.3')
+            .to("#WMDetailButton", 0.5, {autoAlpha: 1}, '-=0.3');
+
+            var tlIPad = new TimelineMax({paused: true});
+            tlIPad
+            .to(CompBody, 0.5, {attr:{width:800}, transformOrigin:"50% 50%"})
+            .to("#IPadButton", 0.25, {autoAlpha: 1}, '-=0.2')
+            .to(CompIndent, 0.5, {attr:{width:0}, transformOrigin:"50% 50%"})
+            .to(CompBottom, 0.6, {attr:{width:0}, transformOrigin:"50% 50%"}, '-=0.3')
+            .to("#svg_webmob", 0.5, {rotation: 90, transformOrigin: "50% 50%"})
+            .to(CompWindow, 0.5, {rotation: -90, transformOrigin: "50% 50%"}, '-=0.5')
+            .to('.webmob-circle', 0.5, {autoAlpha: 0}, '-=0.5')
+            .to(CompWindowBG, 0.5, {attr:{width:555, height: 800}, x:'+=72', y:'-=162'}, '-=0.5')
+            .to("#TextTitle", 0.5, {y: '-=162'}, '-=0.5')
+            .to(CompBGGray, 0.5, {attr:{height: 744}, x:'+=72', y:'-=162'}, '-=0.5')
+            .to(CompBGWhite, 0.5, {attr:{width: 344, height: 744}, x:'+=72', y:'-=162'}, '-=0.5')
+            .to('.webmob-index', 0.5, {x:'+=72', y:'-=162'}, '-=0.5')
+            .to(CompBGHL, 0.5, {x:'+=72', y:'-=162'}, '-=0.5')
+            .to("#WMInfoDisplay", 0.5, {x: '-=20', y:'-=50'}, '-=0.5');
+
+            $("#SwitchMode").click( function() {
+                if (tlWebDev.progress() == 1 && tlIPad.progress() == 0) {
+                    console.log("playing");
+                    tlIPad.play();
+                }
+                else if (tlIPad.progress() == 1) {
+                    console.log("reversing");
+                    tlIPad.reverse();
+                }
+            });
 
             // Social Media Outlets
             var Linkedin = document.getElementById("linkedin");
@@ -72,16 +143,7 @@
             var WebMobTop =  document.getElementById("anchor_webmob").offsetTop;
             var ResearchTop =  document.getElementById("anchor_research").offsetTop;
 
-            // Update offsetTop based on window resizing
-            window.addEventListener('resize', function() {
-                // Get the y-axis positions of anchors for the document
-                ARVRTop =  document.getElementById("anchor_ARVR").offsetTop;
-                WebMobTop =  document.getElementById("anchor_webmob").offsetTop;
-                ResearchTop =  document.getElementById("anchor_research").offsetTop;
-            })
-            
-            // Animate as you scroll
-            window.addEventListener('scroll', function() {
+            var checkColor = function() {
                 var scrollTop = $(window).scrollTop();
                 var scrollBot = scrollTop + $(window).height();
 
@@ -99,12 +161,12 @@
                 // Case 1: Reached Research Section
                 if ((scrollTop >= ResearchTop - threshold) || (scrollBot == height)) {
                     //console.log("1");
+                    TweenMax.to("body", 0.25, {css:{backgroundColor: '#1fab89'}});
                     TweenMax.to("#anchor_research", 0.25, {autoAlpha: 1}); // Research background image fade in
                     TweenMax.to("#anchor_webmob", 0.25, {autoAlpha: 0}); // Web Mobile Dev fade out
                     TweenMax.to("#nav-research", 0.25, {scale: ScaleSize, transformOrigin: "50% 50%"}); // Scale the header to make it noticeable
                     TweenMax.to("#nav-3dint", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: 1, transformOrigin: "50% 50%"});
-                    tlWebDev.reverse(); // Hide the Screen Window
                 }
 
                 // Case 2: Reached Web Mobile Dev Section
@@ -131,7 +193,6 @@
                     TweenMax.to("#nav-research", 0.25, {scale: 1, transformOrigin: "50% 50%"}); // Scale the header to make it noticeable
                     TweenMax.to("#nav-3dint", 0.25, {scale: ScaleSize, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: 1, transformOrigin: "50% 50%"});
-                    tlWebDev.reverse();
                 }
 
                 // Case 4: Top of webpage 
@@ -149,11 +210,11 @@
                 if (scrollTop >= 0 && scrollTop <= ProfIconThreshold) {
                         tlProf.play().timeScale(1);
                 } else {
-                        tlProf.reverse().timeScale(2);
+                        tlProf.reverse().timeScale(1);
                 }
 
                 // Changing color of menu
-                if (scrollTop >= ARVRTop - threshold) {
+                if (scrollTop >= ARVRTop - threshold && $("#SideMenu").css("visibility") == "visible") {
                     TweenMax.to(".NavText", 0.25, {css:{color: '#f9f7f7'}}); // Set the color of the text for the navigation menu
                     TweenMax.to("#PortTitle", 0.25, {css:{color: '#f9f7f7'}});
                     TweenMax.to(".socialmediasvg", 0.25, {stroke: '#f9f7f7'}); // Set the color of the text for the navigation menu
@@ -164,7 +225,23 @@
                     TweenMax.to(".socialmediasvg", 0.25, {stroke: '#222831'}); // Set the color of the text for the navigation menu
                     TweenMax.to(".socialmediasvg", 0.25, {fill: '#222831'});
                 }
+            }
+
+            // Update offsetTop based on window resizing
+            window.addEventListener('resize', function() {
+                // Get the y-axis positions of anchors for the document
+                ARVRTop =  document.getElementById("anchor_ARVR").offsetTop;
+                WebMobTop =  document.getElementById("anchor_webmob").offsetTop;
+                ResearchTop =  document.getElementById("anchor_research").offsetTop;
+            })
+            
+            // Animate as you scroll
+            window.addEventListener('scroll', function() {
+                checkColor();
             });
+
+            // Call once to change color based on current location
+            checkColor();
 
         });
 }) (jQuery);
