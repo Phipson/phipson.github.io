@@ -49,76 +49,40 @@
                 }
             })
 
-            // Web Mobile Dev Entrance Animation
-            var CompWindow = document.getElementById("ShowcaseWindow");
-            var CompBodyBG = document.getElementById("BodyBG");
-            var CompBody = document.getElementById("CompBody");
-            var CompBottom = document.getElementById("MainBottom");
-            var CompIndent = document.getElementById("BottomIndent");
+            // Set Init States
+            TweenMax.set("#wmbottombg", {width: "0vw", marginLeft: "-80vw"});
+            TweenMax.set("#wmbottomindent", {width: "0vw", marginLeft: "-20vw"});
+            TweenMax.set("#webmob_computer", {width: "0vw", marginLeft: "-70vw"});
+            TweenMax.set("#webmob_computerscreen", {width: "0%"});
+            TweenMax.set("#webmob_windowBG", {height: "0%"});
+            TweenMax.set("#webmob_menuLeft", {height: "0%"});
+            TweenMax.set("#webmob_displayRight", {width: "0%"});
 
-            // Showcase Window Animations
-            var CompBGWhite = document.getElementById("WMBGWhite");
-            var CompBGGray = document.getElementById("WMBGGray");
-            var CompBGHL = document.getElementById("WMBGHighlighter");
-            var CompWindowBG = document.getElementById("WMBGWindow");
+            var clickStart = function() {
+                $("#webmob_start").click();
+            }
 
-            // Set Initial State
-            TweenMax.set(CompBodyBG, {attr:{width:0}, transformOrigin:"50% 50%"});
-            TweenMax.set(CompBody, {attr:{width:0}, transformOrigin:"50% 50%"});
-            TweenMax.set(CompBottom, {attr:{width:0}, transformOrigin:"50% 50%"});
-            TweenMax.set(CompIndent, {attr:{width:0}, transformOrigin:"50% 50%"});
-            TweenMax.set(CompBGWhite, {attr:{width:0}, transformOrigin:"50% 50%"});
-            TweenMax.set(CompBGGray, {attr:{height:0}, transformOrigin:"50% 50%"});
-            TweenMax.set(CompBGHL, {attr:{width:0}, transformOrigin:"50% 50%"});
-            TweenMax.set(CompWindowBG, {attr:{width:0}, transformOrigin:"50% 50%"});
-            
-            var tlWebDev = new TimelineMax({paused: true, delay: 0.1});
-            tlWebDev
-            .to(CompBottom, 0.6, {attr:{width:982}, transformOrigin:"50% 50%"})
-            .to(CompBodyBG, 0.5, {attr:{width:904}, transformOrigin:"50% 50%"}, '-=0.4')
-            .to(CompBody, 0.5, {attr:{width:818}, transformOrigin:"50% 50%"}, '-=0.3')
-            .to(CompIndent, 0.5, {attr:{width:256}, transformOrigin:"50% 50%"}, '-=0.3')
+            var TLWebMob = new TimelineMax({paused: true});
+            TLWebMob
+            .to("#wmbottombg", 0.001, {autoAlpha: 1})
+            .to("#wmbottombg", 0.5, {width: "80vw", marginLeft: "0vw"})
+            .to("#wmbottomindent", 0.25, {width: "20vw", marginLeft: "0vw"});
 
-            // Animate in the actual showcase window
-            .to(CompWindow, 0.05, {autoAlpha: 1}, '-=0.4')
-            .to(CompWindowBG, 0.5, {attr:{width:728}, transformOrigin:"50% 50%"})
-            .staggerTo(".webmob-circle", 0.2, {autoAlpha: 1}, 0.2, '-=0.3')
-            .to("#TextTitle", 0.2, {autoAlpha: 1}, '-=0.2')
-            .to(CompBGGray, 0.4, {attr:{height:435}, transformOrigin:"50% 50%"})
-            .staggerTo(".webmob-index", 0.2, {autoAlpha: 1}, 0.2, '-=0.2')
-            .to(CompBGWhite, 0.6, {attr:{width:518}, transformOrigin:"50% 50%"}, '-=0.3')
-            .to(CompBGHL, 0.4, {attr:{width:211}, transformOrigin:"50% 50%"}, '-=0.3')
-            .to('.webmob-14', 0.5, {autoAlpha: 1})
-            .to('.webmob-text', 0.5, {autoAlpha: 1}, '-=0.3')
-            .to("#WMDetailButton", 0.5, {autoAlpha: 1}, '-=0.3');
-
-            var tlIPad = new TimelineMax({paused: true});
-            tlIPad
-            .to(CompBody, 0.5, {attr:{width:800}, transformOrigin:"50% 50%"})
-            .to("#IPadButton", 0.25, {autoAlpha: 1}, '-=0.2')
-            .to(CompIndent, 0.5, {attr:{width:0}, transformOrigin:"50% 50%"})
-            .to(CompBottom, 0.6, {attr:{width:0}, transformOrigin:"50% 50%"}, '-=0.3')
-            .to("#svg_webmob", 0.5, {rotation: 90, transformOrigin: "50% 50%"})
-            .to(CompWindow, 0.5, {rotation: -90, transformOrigin: "50% 50%"}, '-=0.5')
-            .to('.webmob-circle', 0.5, {autoAlpha: 0}, '-=0.5')
-            .to(CompWindowBG, 0.5, {attr:{width:555, height: 800}, x:'+=72', y:'-=162'}, '-=0.5')
-            .to("#TextTitle", 0.5, {y: '-=162'}, '-=0.5')
-            .to(CompBGGray, 0.5, {attr:{height: 744}, x:'+=72', y:'-=162'}, '-=0.5')
-            .to(CompBGWhite, 0.5, {attr:{width: 344, height: 744}, x:'+=72', y:'-=162'}, '-=0.5')
-            .to('.webmob-index', 0.5, {x:'+=72', y:'-=162'}, '-=0.5')
-            .to(CompBGHL, 0.5, {x:'+=72', y:'-=162'}, '-=0.5')
-            .to("#WMInfoDisplay", 0.5, {x: '-=20', y:'-=50'}, '-=0.5');
-
-            $("#SwitchMode").click( function() {
-                if (tlWebDev.progress() == 1 && tlIPad.progress() == 0) {
-                    console.log("playing");
-                    tlIPad.play();
-                }
-                else if (tlIPad.progress() == 1) {
-                    console.log("reversing");
-                    tlIPad.reverse();
-                }
-            });
+            var TLWebMobWindow = new TimelineMax({paused: true, delay: 0.25, onComplete: clickStart});
+            TLWebMobWindow
+            .to("#webmob_computer", 0.001, {autoAlpha: 1})
+            .to("#webmob_computer", 0.5, {width: "70vw", marginLeft: "0vw"})
+            .to("#webmob_computerscreen", 0.001, {autoAlpha: 1})
+            .to("#webmob_computerscreen", 0.4, {width: "100%"})
+            .to("#webmob_windowBG", 0.001, {autoAlpha: 1}, '-=0.15')
+            .to("#webmob_windowBG", 0.5, {height: "100%"}, '-=0.15')
+            .to("#webmob_menudisplay", 0.001, {autoAlpha: 1})
+            .to("#webmob_menuLeft", 0.5, {height: "100%"})
+            .to("#webmob_displayRight", 0.4, {width: "100%"}, '-=0.5')
+            .staggerTo(".webmob-button", 0.2, {autoAlpha: 1}, 0.2)
+            .to("#webmob_displayRight", 0.2, {padding: "2em"}, '-=0.2')
+            .to("#webmob_compmenubutton", 0.5, {autoAlpha: 1})
+            .to("#wmheader", 0.5, {autoAlpha: 1}, '-=0.5');
 
             // Social Media Outlets
             var Linkedin = document.getElementById("linkedin");
@@ -167,6 +131,8 @@
                     TweenMax.to("#nav-research", 0.25, {scale: ScaleSize, transformOrigin: "50% 50%"}); // Scale the header to make it noticeable
                     TweenMax.to("#nav-3dint", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: 1, transformOrigin: "50% 50%"});
+                    TLWebMob.reverse();
+                    TLWebMobWindow.reverse();
                 }
 
                 // Case 2: Reached Web Mobile Dev Section
@@ -180,7 +146,10 @@
                     TweenMax.to("#nav-research", 0.25, {scale: 1, transformOrigin: "50% 50%"}); // Scale the header to make it noticeable
                     TweenMax.to("#nav-3dint", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: ScaleSize, transformOrigin: "50% 50%"});
-                    tlWebDev.play();
+                    //tlWebDev.play();
+                    TLWebMob.play();
+                    TLWebMobWindow.play();
+
                 }
 
                 // Case 3: Reached ARVR Section
@@ -193,6 +162,8 @@
                     TweenMax.to("#nav-research", 0.25, {scale: 1, transformOrigin: "50% 50%"}); // Scale the header to make it noticeable
                     TweenMax.to("#nav-3dint", 0.25, {scale: ScaleSize, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: 1, transformOrigin: "50% 50%"});
+                    TLWebMob.reverse();
+                    TLWebMobWindow.reverse();
                 }
 
                 // Case 4: Top of webpage 
@@ -204,6 +175,8 @@
                     TweenMax.to("#nav-research", 0.25, {scale: 1, transformOrigin: "50% 50%"}); // Scale the header to make it noticeable
                     TweenMax.to("#nav-3dint", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: 1, transformOrigin: "50% 50%"});
+                    TLWebMob.reverse();
+                    TLWebMobWindow.reverse();
                 }
 
                 // Special State Case: Checking when to show the ProfIcon
