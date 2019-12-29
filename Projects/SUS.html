@@ -3,6 +3,7 @@
 <head>
     <!-- TODO: Compile the CSS File Later -->
     <link rel="stylesheet" type="text/css" href="./../style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
@@ -157,7 +158,7 @@
           </div>
 
         <div id="anchor-proj-user-profiles" class="SubSection">
-            <div class="carousel js-flickity">
+            <div class="carousel" data-flickity='{ "wrapAround": true }' style="height: 100vh">
                 <div id="cell2" class="carousel-cell">
                     <img src="./../img/home.png"/>
                 </div>

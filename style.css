@@ -295,7 +295,7 @@ iframe {
 }
 
 .MobileMenuGrid {
-  background-color: #FFFFFF;
+  background-color: #cccccc;
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -404,12 +404,13 @@ iframe {
   right: 0;
   width: 0;
   bottom: -5px;
-  background: #00e0ff;
   height: 4px;
+  background: #d1d1d1;
   transition-property: width;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
+
 .underline:hover:after,
 .underline:focus:after,
 .underline:active:after {
@@ -454,9 +455,8 @@ iframe {
 .OverviewElement {
   display: grid;
   width: 100%;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  grid-template-rows: 3fr 2fr;
   grid-gap: 5%;
   grid-template-columns: 1fr;
 }
@@ -560,7 +560,7 @@ iframe {
   padding-top: 0%;
 }
 
-#PortTitle, #ReturnHomeTitle {
+#PortTitle, #PortMTitle, #ReturnHomeTitle {
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -658,7 +658,7 @@ iframe {
 }
 
 .book-header {font-size: 0.4em; line-height: 1.5em; color:#fdfdfd}
-.book-date {text-align: left; font-size: 0.35em; line-height: 1.5em}
+.book-date {text-align: left; font-size: 0.35em; line-height: 1.5em; color: #bbbbbb}
 
 /* SVG Specific Initial States */
 #SketchIcon, #Me, #Bubble, 
@@ -783,9 +783,6 @@ ul li {
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr;
-  grid-gap: 5%;
 }
 
 .project-userprofile {
@@ -795,6 +792,7 @@ ul li {
 }
 
 .project-sourceref {
+  padding: 2em;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   grid-gap: 5%;
@@ -825,83 +823,7 @@ ul li {
   grid-template-rows: 1fr;
 }
 
-
-/* PART 2 - NAVIGATION BAR */
-/* Navigation bar: need to make it responsive */
-/* Currently, the nav acts as a fixed class, where it uses the javascript function to track scrolling */
-/* Upon scrolling a certain number of pixels, it will switch classes and disappear */
-nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  height: 100px;
-  transition: top 0.2s ease-in-out;
-}
-/* nav-up hides the navigation bar */
-.nav-up{
-  top: -100px;
-  transition: top 0.2s ease-in-out;
-}
-
-.nav-down{
-  top: 0;
-  transition: top 0.2 ease-in-out;
-}
-
-/* The following is for the menu hamburger icon used when responding to smaller mobile screens */
-.icon{
-  position: absolute;
-  top: 50%;
-  left: 90%;
-  transform: translate(-100%, 100%);
-  width: 2em;
-  height: 2em;
-  cursor: pointer;
-  z-index: 10;
-}
-.menu_hamburger{
-  width: 3em;
-  height: 0.2em;
-  position: absolute;
-  background: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate (-50%, -50%);
-  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-}
-.menu_hamburger:before, .menu_hamburger:after{
-  content: "";
-  position: absolute;
-  width: 3em;
-  height: 0.2em;
-  background: #fff;
-  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-}
-.menu_hamburger:before{
-  top: -1em;
-}
-.menu_hamburger:after{
-  top: 1em;
-}
-.icon.active .menu_hamburger:before, .menu_hamburger:after{
-  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.5);
-}
-.icon.active .menu_hamburger{
-  background: rgba(0, 0, 0, 0);
-  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.0);
-}
-.icon.active .menu_hamburger:before{
-  top: 0;
-  transform: rotate(45deg);
-}
-.icon.active .menu_hamburger:after{
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-@media (max-width:910px){
+@media (max-width:1000px){
   html {
     font-size: 15px;
   }
@@ -953,6 +875,22 @@ nav {
 
   #wmbottombg {
     visibility: hidden !important;
+  }
+
+  .ProjectBodyFrame {
+    padding: 5% 5%;
+  }
+
+  .ProjectOverviewBar {
+    grid-gap: 1em;
+  }
+
+  .SectionOverview, .SectionDesignProcess, .SubSection {
+    padding: 3em 0;
+  }
+
+  .project-userdesc h6 {
+    font-size: 2em;
   }
 
 }
@@ -1031,7 +969,7 @@ nav {
   .book-header {font-size: 1em; line-height: 1.5em}
   .book-date {font-size: 0.6em; line-height: 1.5em}
 
-  #SideMenu {visibility: hidden;}
+  #HomeSideMenu {visibility: hidden;}
   #SideMenuMobile {visibility: visible;}
   .NavText {
     font-size: 1.8em;
@@ -1046,6 +984,12 @@ nav {
     visibility: hidden;
   }
 
+  .wmviewmorebutton {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+  }
+
   #wmdesc {
     font-size: 1.5em !important;
   }
@@ -1058,11 +1002,19 @@ nav {
     visibility: hidden !important;
   }
 
+  .ProjectBodyFrame {
+    padding: 5% 5%;
+  }
+
+  .ProjectOverviewBar {
+    grid-gap: 1em;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   h1{
@@ -1070,7 +1022,15 @@ nav {
   }
 
   p {
-    font-size: 1em;
+    font-size: 1.5em;
+  }
+
+  .ProjectBodyFrame {
+    padding: 5% 5%;
+  }
+
+  .ProjectOverviewBar {
+    grid-gap: 1em;
   }
 
 }

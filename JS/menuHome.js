@@ -2,6 +2,41 @@
     {
         $(document).ready(function(){
 
+            // Changing pseudoStyles
+            var UID = {
+                _current: 0,
+                getNew: function(){
+                    this._current++;
+                    return this._current;
+                }
+            };
+            
+            HTMLElement.prototype.pseudoStyle = function(element,prop,value){
+                var _this = this;
+                var _sheetId = "pseudoStyles";
+                var _head = document.head || document.getElementsByTagName('head')[0];
+                var _sheet = document.getElementById(_sheetId) || document.createElement('style');
+                _sheet.id = _sheetId;
+                var className = "pseudoStyle" + UID.getNew();
+                
+                _this.className +=  " "+className; 
+                
+                _sheet.innerHTML += " ."+className+":"+element+"{"+prop+":"+value+"}";
+                _head.appendChild(_sheet);
+                return this;
+            };
+
+            // Update hamburger menu
+            updateHamMenu = function(newcolor) {
+                var menu = document.getElementById("hamburgermenu");
+                var title = document.getElementById("PortMTitle");
+                $(title).css('color', newcolor);
+                $(menu).css('background-color', newcolor);
+                menu.pseudoStyle('before', 'background-color', newcolor);
+                menu.pseudoStyle('after', 'background-color', newcolor);
+            };
+
+
             // Define animation for intro picture
             var ProfIcon = document.getElementById("SketchIcon");
             var Bubble = document.getElementById("Bubble");
@@ -62,17 +97,14 @@
                 $("#webmob_start").click();
             }
 
-            var TLWebMob = new TimelineMax({paused: true});
+            var TLWebMob = new TimelineMax({paused: true, onComplete: clickStart});
             TLWebMob
             .to("#wmbottombg", 0.001, {autoAlpha: 1})
             .to("#wmbottombg", 0.5, {width: "80vw", marginLeft: "0vw"})
-            .to("#wmbottomindent", 0.25, {width: "20vw", marginLeft: "0vw"});
-
-            var TLWebMobWindow = new TimelineMax({paused: true, delay: 0.25, onComplete: clickStart});
-            TLWebMobWindow
+            .to("#wmbottomindent", 0.25, {width: "20vw", marginLeft: "0vw"})
             .to("#webmob_computer", 0.001, {autoAlpha: 1})
             .to("#webmob_computer", 0.5, {width: "70vw", marginLeft: "0vw"})
-            .to("#webmob_computerscreen", 0.001, {autoAlpha: 1})
+            .to("#webmob_computerscreen", 0.001, {autoAlpha: 1}, '+=0.25')
             .to("#webmob_computerscreen", 0.4, {width: "100%"})
             .to("#webmob_windowBG", 0.001, {autoAlpha: 1}, '-=0.15')
             .to("#webmob_windowBG", 0.5, {height: "100%"}, '-=0.15')
@@ -132,7 +164,7 @@
                     TweenMax.to("#nav-3dint", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TLWebMob.reverse();
-                    TLWebMobWindow.reverse();
+                    updateHamMenu('white');
                 }
 
                 // Case 2: Reached Web Mobile Dev Section
@@ -148,7 +180,7 @@
                     TweenMax.to("#nav-webmob", 0.25, {scale: ScaleSize, transformOrigin: "50% 50%"});
                     //tlWebDev.play();
                     TLWebMob.play();
-                    TLWebMobWindow.play();
+                    updateHamMenu('white');
 
                 }
 
@@ -163,7 +195,7 @@
                     TweenMax.to("#nav-3dint", 0.25, {scale: ScaleSize, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TLWebMob.reverse();
-                    TLWebMobWindow.reverse();
+                    updateHamMenu('white');
                 }
 
                 // Case 4: Top of webpage 
@@ -176,7 +208,8 @@
                     TweenMax.to("#nav-3dint", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TweenMax.to("#nav-webmob", 0.25, {scale: 1, transformOrigin: "50% 50%"});
                     TLWebMob.reverse();
-                    TLWebMobWindow.reverse();
+                    updateHamMenu('black');
+
                 }
 
                 // Special State Case: Checking when to show the ProfIcon
