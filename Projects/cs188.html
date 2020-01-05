@@ -38,7 +38,7 @@
     <div id="ARVR-1-Body" class="ProjectBodyFrame">
 
         <div id="anchor-proj-title" class="SectionHeader">
-            <h3>LinkIn</h3>
+            <h3>LinksIn</h3>
         </div>
 
         <div id="anchor-proj-overview" class="SectionOverview">
@@ -70,7 +70,8 @@
                         <br>
                         <p class="overview-text">Phipson (Me)/ Full-stack
                           <br>Toshio Wan/ Full-stack
-                          <br>Amy Tu/ Full-stack
+                          <br>Amy Tu/ Back-end
+                          <br>Omar Tielmat/ Back-end
                         </p>
                       </div>
                 </div>
@@ -89,11 +90,21 @@
               </div>
             <br>
             <p>
-              As part of an undergraduate course on scalable internet services at UCLA, I worked in a group of 3 to create a internet service that was deployed on Amazon Web Services this quarter. The group project was done following Agile Software Development paradigms, and we had weekly sprints to create this service from start to finish. For this project, there were no project manager or scrum master, so we were all held accountable for our own portion of the project.
+              As part of an undergraduate course on scalable internet services at UCLA, I worked with 3 other undergraduates to create a internet service that was deployed on Amazon Web Services this quarter. The group project was done following Agile Software Development paradigms, and we had weekly sprints to create this service from start to finish. For this project, there were no project manager or scrum master, so we were all held accountable for our own portion of the project.
               <br><br>
-              As a team of 3, we created an internet service called LinkIn, which is a social media application for gamers to connect, host LAN events, and socialize through their favorite console or online games. Borrowing the idea of using Tinder, gamers can now connect and socialize using a card interface where they can select players through swiping on their device, or liking a user profile on a computer or laptop.
+              As a team of 4, we created an internet service called LinkIn, which is a social media application for gamers to connect, host LAN events, and socialize through their favorite console or online games. Borrowing the idea of using Tinder, gamers can now connect and socialize using a card-swiping interface where they can select players through swiping on their device, or liking a user profile on a computer or laptop.
+              <br><br>
+              The code for our project can be found in <a class="projectlink" href="https://github.com/scalableinternetservices/linksin">the following repository</a>.
             </p>
         </div>
+
+        <div id="anchor-proj-design-process" class="SectionDesignProcess">
+          <div id="anchor-proj-design-process" class="SectionDesignProcess">
+              <video class="ProjectVideo" controls>
+                <source src="./../vid/LinksInDemo.mkv" type="video/mp4">
+              </video>
+            </div>
+        </div>     
         
 
         <div id="anchor-proj-design-process" class="SectionDesignProcess">
@@ -105,42 +116,68 @@
           <br>
           <!-- Add an icon: 1 per design stage -->
           <p>
+            During an initial brainstorming sessions, we designed several user profiles that would best fit our application, as shown:
+          
+            We decided on the following features. These features were decided based on the nature of our application, the available features supported by Ruby on Rails, as well as the need to demonstrate and perform techniques for scaling and optimizing our internet service.
+            <br><br>
+            1. Card-swiping mechanism for users to match with other users.
+            <br>
+            2. Real-time messaging system for users to message friends they have matched with.
+            <br>
+            3. Event-creation system for users to host events and invite friends they have matched with.
           </p>
         </div>
-
-        <div id="anchor-proj-user-profiles" class="SubSection">
-          </div>
 
         <div id="anchor-proj-interface-design" class="SubSection">
             <h5 class="ProjectSectionHeader">Design Iterations</h5>
             <br>
             <p>
+              As one of the front-end developers for the project, I was responsible for drafting several designs for the website. My intention was to communicate to users that the application was intended for gaming, and make the website feel fun. Inspired by concepts from Google Play as well as the color themes from the Nintendo Switch, I brainstormed the following icons and buttons, which were later integrated to the website through a vote.
+              <br><br>
+              Upon implementing the website, and later realizing that some features were causing performance bottlenecks, we simplified the website by removing some images and icons that took too long to load. We also removed libraries that caused high I/O interrupts, in order to optimize memory performance.
+              <!-- TODO: Annotated features per page via screenshots and ipad sketches -->
             </p>
           </div>
 
-        <div id="anchor-proj-use-cases" class="SubSection">
-            <h5 class="ProjectSectionHeader">Current Iteration</h5>
-            <br>
-            <p>
-              The following is a video of the club website, which has been released to the public.
-            </p>
-          </div>   
-          
-        <div id="anchor-proj-use-cases" class="SubSection">
-            <h5 class="ProjectSectionHeader">Ongoing Development</h5>
-            <br>
-            <p>
-              Currently, I am in the process of developing an online store for users to purchase 3D-printed merchandise that we design, which we use for our fundraisers to fund our annual spring showcase and other 3D printing events. I am also improving website navigation so that it is more responsive for other mobile devices.
-            </p>
-          </div>  
-          
-        <div id="anchor-proj-design-process" class="SectionDesignProcess">
-            <h4 class="ProjectSectionHeader">Testing and Evaluation</h4>
-            <br>
-            <p>
-              Upon deploying the service onto Amazon Web Services, we were required to perform test-driven developments.
-            </p>
+        <div id="anchor-proj-user-profiles" class="SubSection">
+          <h5 class="ProjectSectionHeader">Performance Optimizations</h5>
+          <br>
+          <p>
+            As this class was focused on examining conventional techniques for scaling and optimizing the performance of our internet service, after finishing our first iteration of the website, we focused on measuring the website performance and optimizing it. To do so, we deployed our internet service Elastic Beanstalk using Amazon Web Services (AWS). To test our app, we created several Tsung scripts, and later ran them on our deployed instance. The following are some of the key techniques we have used and explored to scale our website performance:
+            <br><br>
+            <i>Vertical Scaling</i> : By changing the instance type of our app, we were able to alter the virtual CPU and memory on which LinksIn was deployed.
+            <br><br>
+            <i>Horizontal Scaling</i> : To scale the app horizontally, we added several app servers to our Elastic Beanstalk instance.
+            <br><br>
+            <i>Database Optimizations and Pagination</i> : Using Rails's Model-View-Controller (MVC) architecture, we reduced the number of database queries by optimizing when and where our app fetched data when displaying pages.
+            <br><br>
+            <i>Server-side Caching</i> : We made use of Russian doll caching and fragment caching to store components of our page that would remain unchanged after multiple queries. We also used Amazon's Elasticache feature to implement a server-side cache that would also reduce the number of I/O operations the server makes when fetching data.
+            <br><br>
+            <i>Client-side Caching</i> : Using Rails's built-in features, we further optimized database queries by reducing the number of client-side requests that users make to the server when navigating the app. In turn, a cached query would return a 304 response, indicating that the client has updated data as the server.
+            <br><br>
+            <i>Multiprocess and Multi-threading</i> : By configuring the Ruby on Rails deployment environment, we were able to control the number of threads and processes on which the app was deployed. We also adjusted our code so that it would be thread-safe.
+            <br><br>
+            <i>Read Slaves</i> : We partitioned our databases into two separate databases: one dedicated for read operations and one dedicated for write operations. Doing so, we could horizontally scale only the read databases, because most of our users are typically reading from the database rather than modifying it.
+            <br><br>
+            For more details, we have also submitted a <a class="projectlink" href="https://docs.google.com/document/d/1pZIY-BLB3HV3RVphmYKWswR9zAXH_6Z4v6zi-Rqt1zw/edit?usp=sharing">written report</a> for this project. We also presented our findings for this class, using the <a class="projectlink" href="https://drive.google.com/open?id=1_N4FbRkKFog2XB6HsxBgPFlJIlMSicqR06nKHAo12jE">following Google Slides</a>.
+          </p>
         </div>
+
+        <div id="anchor-proj-design-process" class="SectionDesignProcess">
+          <h4 class="ProjectSectionHeader">Testing and Evaluation</h4>
+          <br>
+          <p>
+            Due to time constraints, we were unable to perform user studies to evaluate the user experience of our project. However, we had received preliminary feedback from our Professors and Teaching Assistants after our presentation, saying that we had clearly communicated our techniques and had thoroughly explored all types of performance optimizations. They thought that our website design matched the theme of our internet service, and both the presentation and report clearly demonstrated our knowledge of industry-standard scaling techniques. As a result, we were awarded an A+ for this class.
+          </p>
+      </div>
+
+        <div id="anchor-proj-design-process" class="SectionDesignProcess">
+          <h4 class="ProjectSectionHeader">Final Thoughts</h4>
+          <br>
+          <p>
+            Although we received high marks for this class, I would have liked to improve and develop the front-end more to fit the theme and nature of our web service. With more time and better understanding of the capabilities with Ruby 6.0, I would like to develop a mobile-friendly version of the application and also explore alternative programming languages that would offer more support and performance enhancemenets such as React.js, Node.js and so forth. I was somewhat disappointed that at the time of creating this project we were unable to implement advanced database optimizations such as sharding, due to the limitations of Ruby. With more understanding of databases, I believe that our internet service could benefit the eSport and gaming ecosystem by offering more intimiate ways of connecting users together.
+          </p>
+      </div>
     </div>
   </div>
   <script src="./../JS/TweenMax.min.js" type="text/javascript"></script>

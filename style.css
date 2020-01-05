@@ -893,6 +893,12 @@ ul li {
     font-size: 2em;
   }
 
+  .project-sourceref {
+    padding: 2em;
+    grid-template-columns: 1fr;
+    grid-gap: 5%;
+  }
+
 }
 
 .webmob-14,.webmob-24{fill:none;stroke-miterlimit:10}.webmob-3{fill:#ccc}.webmob-12{fill:#fff}.webmob-13{clip-path:url(#clip-path)}
@@ -1164,8 +1170,12 @@ img{
   color: #ff2e63;
 }
 
-.booklink:hover, .projectlink:hover {
-  background-color: #dbe2ef;
+.booklink:hover{
+  color: #dbe2ef;
+}
+
+.projectlink:hover {
+  color: #ff9999;
 }
 
 @-webkit-keyframes fadeIn {

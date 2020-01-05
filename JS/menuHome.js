@@ -220,7 +220,7 @@
                 }
 
                 // Changing color of menu
-                if (scrollTop >= ARVRTop - threshold && $("#SideMenu").css("visibility") == "visible") {
+                if (scrollTop >= ARVRTop - threshold) {
                     TweenMax.to(".NavText", 0.25, {css:{color: '#f9f7f7'}}); // Set the color of the text for the navigation menu
                     TweenMax.to("#PortTitle", 0.25, {css:{color: '#f9f7f7'}});
                     TweenMax.to(".socialmediasvg", 0.25, {stroke: '#f9f7f7'}); // Set the color of the text for the navigation menu
