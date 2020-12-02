@@ -1,0 +1,895 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Import the default font family for the main bodies of texts */
+body, html, div, img, p {
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    font-size: 14px;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* Set the default display for the SVG so that it fills up the container it is placed in */
+svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Default background for the body when users first land on the page */
+body {
+    background: white;
+}
+
+/* Set the button and input style for the website */
+button, input {
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Set the links for the website so that they don't change color or have any decorations */
+a, a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+/* Set the color and the secondary font family for the headers for the text */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amiri', serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Set the color for the paragraphs and divs (used for animation on landing page) */
+p, div {
+    color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Set the font size for h1 */
+h1 {
+    font-size: 6em;
+}
+
+/* Set the font size for h2 */
+h2 {
+    font-size: 4em;
+    font-weight: 800;
+}
+
+/* Set the font size for h3 */
+h3 {
+    font-size: 3.5em;
+}
+
+/* Set the font size for h4 */
+h4 {
+    font-size: 2.5em;
+}
+
+/* Set the font size for h5 */
+h5 {
+    font-size: 2em;
+}
+
+/* Set the font size for button */
+button {
+    font-size: 1.5em;
+}
+
+.LandingWrapper, .ProjectCatalogueWrapper, .ProjectDetailWrapper {
+    opacity: 1;
+}
+
+/* NAVIGATION BAR */
+/* Div wrapper for the menu on the top of the page */
+.PortfolioMenuWrapper {
+    padding: 2em 0;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: minmax(10vh, auto);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Div wrapper for the logo of the page */
+.PortfolioLogo {
+    color: black;
+    text-align: center;
+    width: 100%;
+    padding: 1em;
+    text-transform:uppercase;
+    cursor: pointer;
+
+    /* Set text to be unselectable */
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+/* Text for the menu based on which page user is on */
+.PortfolioTitle {
+    text-align: center;
+    color: black;
+    width: 100%;
+    letter-spacing: 0.05em;
+    padding: 1em;
+    text-transform:uppercase;
+    grid-column: 2 / 5;
+    opacity: 0.5;
+}
+
+/* Hamburger div or About page div based on where the user is located */
+.PortfolioNav {
+    color: black;
+    text-align: center;
+    width: 100%;
+    text-transform:uppercase;
+    cursor: pointer;
+    display: grid;
+    justify-items: center;
+}
+
+/* Set the alignment and width of the hamburger div so that SVG does not look too big */
+.PortfolioHamburger {
+    text-align: center;
+    width: 2vw;
+}
+
+/* LANDING PAGE */
+/* Wrapper for the landing page div */
+.LandingWrapper {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 1fr;
+    padding: 10vh 8vw;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Set the grid for the text on the left side of the landing page */
+.LandingText {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: start;
+}
+
+/* Set the grid for the text for "I'm a [Mixed Reality Developer/UX Designer/Software Engineer]" */
+.LandingInteractionWrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 4em;
+}
+
+/* Set the div for the columns and grid layout based on the side of the text and the grid itself */
+.LandingInteractionWrapper div {
+    display: grid;
+    grid-template-columns: minmax(5em, auto) minmax(300px, 1fr) minmax(5em, auto);
+}
+
+/* Set the font size and color for the text in the landing page */
+.LandingInteractionText, .LandingInteractionButton {
+    color: black;
+    font-size: 2.5em;
+}
+
+/* Set the opacity for the text in the arrow buttons */
+.LandingInteractionButton {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Set the opacity for the text in the "Browse Work" button */
+.LandingNavigationButton {
+    padding-top: 2em;
+    color: black;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Project Catalogue Div Class Grid Wrapper for each project element */
+/* The wrapper for the projects in the ProjectCatalogue component */
+.ProjectElementWrapper, .ProjDet-TitleWrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 10vh 8vw;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 1em;
+    align-items: center;
+    justify-items: center;
+    opacity: 0;
+}
+
+/* Wrapper for the Project Element Text */
+/* Text grid for the projects (on the left of each div ) */
+.ProjectElementText {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    align-items: start;
+}
+
+/* Project Catalogue Page based on Color of Page (in ReactJS State) */
+/* Default class to add to any text that we want to have white text */
+.ProjectWhiteText {
+    color: white;
+}
+
+/* Class for setting the SVGs so that they look more 3D with a 100% width */
+.ProjectElementSVG {
+    width: 100%;
+    perspective: 50em;
+}
+
+/* Rotate the SVG slightly so that there is perspective */
+.ProjectElementSVG svg {
+    transform: rotateY(-30deg);
+}
+
+/* Set the font size and opacity for the subtitles of the projects */
+.ProjectSubtitle {
+    opacity: 1;
+    font-size: 1.5em;
+    height: 1.5em;
+}
+
+/* Set the font size and opacity for the buttons of the text */
+.ProjectButtonText {
+    height: 1.5em;
+    margin-top: 1.5em;
+    opacity: 0.5;
+    text-align: start;
+    align-self: start;
+    cursor: pointer;
+}
+
+/* Class for XR Subtitle Colors */
+.ProjectSubtitleXR {
+    color: #FFEE99;
+}
+
+/* Class for UX Subtitle Colors */
+.ProjectSubtitleUX {
+    color: #FF9999;
+}
+
+/* Class for SWE Subtitle Colors */
+.ProjectSubtitleSWE {
+    color: #FFCC99;
+}
+
+/* Positions the side of the screen */
+.SideCarouselWrapper {
+    position: fixed;
+    right: 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0.5em;
+    top: 45vh;
+    z-index: 4
+}
+
+/* Sets each element to have a dot and a text on 1 row with a gap in between */
+.SideCarouselElement {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: auto 4em;
+    height: 2em;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Sets size of the dot without fill until hovered */
+.SideCarouselCircle {
+    fill: none;
+    stroke: white;
+    stroke-width: 0.5;
+}
+
+/* Sets style of the text when we animate it in */
+.SideCarouselHoverText {
+    opacity: 0; /* Target: opacity: 0.5 */
+    color: rgba(255, 255, 255, 0.5);
+    display: none;
+    grid-column-start: 1;
+}
+
+/* Changes the class of the text when our mouse hovers away from it */
+.SideCarouselHoverTextHidden {
+    display: none;
+}
+
+/* Sets the position of the SVG when the text is set to display none (so that it is always aligned right */
+.SideCarouselHoverSVG {
+    grid-column-start: 2;
+}
+
+/* For Project Details */
+.ScrollArrowDown {
+    color: white;
+    opacity: 0;
+    position: fixed;
+    bottom: 3vh;
+    left: 50vw;
+    font-size: 2em;
+
+    /* Set text to be unselectable */
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    
+    z-index: -1;
+}
+
+/* Sets the opactiy of the title to be 1 */
+.ProjDet-TitleWrapper {
+    opacity: 1
+}
+
+/* Sets the wrapper for each section of the body for our project detail content */
+.ProjDet-Section {
+    width: 100vw;
+    padding: 10vh 8vw;    
+}
+
+/* Sets the grid layout for the overview div in our project details */
+.ProjDet-OverviewWrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 4fr 3fr;
+    gap: 1.5em;
+}
+
+/* Font size and line height for our paragraphs */
+.ProjDet-p {
+    line-height: 150%;
+    font-size: 1.3em;
+}
+
+/* Font size and line height for our paragraph subtitles */
+.ProjDet-p-sub {
+    line-height: 150%;
+    font-size: 1.1em;
+    opacity: 0.5
+}
+
+/* Font size and line height for our paragraphs with more text */
+.ProjDet-p-mini {
+    line-height: 150%;
+    font-size: 1em;
+}
+
+/* Sets the text on the right column of the overview div */
+.ProjDet-OverviewInfo {
+    padding-left: 2em;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+    opacity: 0.5;
+}
+
+/* Adds padding to the bottom of the header */
+.ProjDet-Header {
+    padding-bottom: 1em;
+}
+
+/* For desktop/landscape screens, we want to limit the width of the section description to improve readability */
+.ProjDet-SectionDesc {
+    max-width: 50vw;
+}
+
+/* Define a table with padding that takes up the entire width of the div */
+.ProjDet-Table {
+    width: 100%;
+    padding-top: 3em;
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 2em;
+    grid-template-columns: 1fr;
+}
+
+/* Create nested rows for the table where we have columns for different information */
+.ProjDet-TableRow {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 3fr 2fr;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Specify the text and image grid for text to be on left and image to be on the right */
+.ProjDet-TextImg {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 1em;
+    width: 100%;
+}
+
+/* Set the image so that it does not take up more than 80% of the viewport height */
+.ProjDet-ImgFrame {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+/* Add a caption at the very bottom right of the image */
+.ProjDet-ImgCaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    padding: 2em;
+    background-color: black;
+    width: 30vw;
+}
+
+/* Add a wrapper for the about us page that can be fetched in JQuery for animation */
+.AboutWrapper {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 1fr;
+    gap: 2em;
+    padding: 10vh 8vw;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Set the grid for the text and paragraphs for the about me page */
+.AboutText {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    align-items: center;
+    justify-items: start;
+}
+
+/* Sets the width height and remove border for the PDF Resume viewer */
+.AboutResume, .AboutIFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Sets the div for the Navigation Menu */
+.HamburgerMenuWrapper {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    padding: 10vh 8vw;
+    align-items: center;
+}
+
+/* Sets the opacity and cursor for the headers within the menu */
+.HamburgerMenuWrapper h3 {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Modifies the CSS for the classes if it is in the tablet */
+@media only screen and (max-width: 800px) {
+    body, html, div, img, p {
+        font-size: 18px;
+    }
+
+    .PortfolioMenuWrapper {
+        padding: 2em 0;
+        gap: 0.5em;
+        grid-template-columns: 2fr 3fr 2fr;
+    }
+
+    .PortfolioTitle {
+        grid-column: 2/3;
+    }
+
+    .LandingWrapper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .LandingInteractionWrapper div {
+        display: grid;
+        grid-template-columns: minmax(2em, auto) minmax(100px, 1fr) minmax(2em, auto);
+        gap: 0.5em;
+    }
+
+    .LandingInteractionWrapper {
+        gap: 2em;
+    }
+
+    .LandingInteractionText, .LandingInteractionButton {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1.75em;
+    }
+
+    .SideCarouselWrapper {
+        display: none;
+    }
+
+    .ProjectElementWrapper, .ProjDet-TitleWrapper {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .ProjectSubtitle {
+        font-size: 1.2em;
+        line-height: 175%;
+        height: auto;
+    }
+
+    .ProjectButtonText {
+        margin-top: auto;
+        font-size: 1.2em;
+    }
+
+    .ProjDet-TitleWrapper {
+        height: auto;
+        gap: 0;
+    }
+
+    .ProjDet-Header {
+        padding-bottom: 0.5em;
+    }
+
+    .ProjDet-OverviewWrapper {
+        display: grid;
+        width: 100%;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    .ProjDet-OverviewInfo {
+        padding: 0;
+        gap: 1.5em;
+    }
+
+    .ProjDet-SectionDesc {
+        max-width: 100%;
+    }
+
+    .ProjDet-TableRow {
+        grid-template-columns: 1fr 1fr 3fr;
+    }
+
+    .ProjDet-TextImg {
+        display: grid;
+        grid-template-rows: auto 30vh;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .ProjDet-ImgCaption {
+        width: 100%;
+    }
+
+    .AboutWrapper {
+        grid-template-rows: auto 100vh;
+        grid-template-columns: 1fr;
+        padding: 10vh 2em;
+    }
+
+    .AboutResume, .AboutIFrame {
+        min-width: 50vw;
+        min-height: 100vh;
+        border: none;
+    }
+}
+
+/* Modifies the CSS for the classes if it is in a phone */
+@media only screen and (max-width: 550px) {
+    body, html, div, img, p {
+        font-size: 10px;
+    }
+
+    .PortfolioMenuWrapper {
+        padding: 2em 0;
+        gap: 0.5em;
+        grid-template-columns: 2fr 3fr 2fr;
+    }
+
+    .PortfolioTitle {
+        grid-column: 2/3;
+    }
+
+    .LandingWrapper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .LandingInteractionWrapper div {
+        display: grid;
+        grid-template-columns: minmax(2em, auto) minmax(100px, 1fr) minmax(2em, auto);
+        gap: 0.5em;
+    }
+
+    .LandingInteractionWrapper {
+        gap: 2em;
+    }
+
+    .LandingInteractionText, .LandingInteractionButton {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1.75em;
+    }
+
+    .SideCarouselWrapper {
+        display: none;
+    }
+
+    .ProjectElementWrapper, .ProjDet-TitleWrapper {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .ProjectSubtitle {
+        font-size: 1.2em;
+        line-height: 175%;
+        height: auto;
+    }
+
+    .ProjectButtonText {
+        margin-top: auto;
+        font-size: 1.2em;
+    }
+
+    .ProjDet-TitleWrapper {
+        height: auto;
+        gap: 0;
+    }
+
+    .ProjDet-TitleWrapper h2 {
+        height: 15vh;
+    }
+
+    .ProjDet-Header {
+        padding-bottom: 0.5em;
+    }
+
+    .ProjDet-OverviewWrapper {
+        display: grid;
+        width: 100%;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    .ProjDet-OverviewInfo {
+        padding: 0;
+        gap: 1.5em;
+    }
+
+    .ProjDet-SectionDesc {
+        max-width: 100%;
+    }
+
+    .ProjDet-TableRow {
+        grid-template-columns: 1fr 1fr 3fr;
+    }
+
+    .ProjDet-TextImg {
+        display: grid;
+        grid-template-rows: auto 30vh;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .ProjDet-ImgCaption {
+        width: 100%;
+    }
+
+    .AboutWrapper {
+        grid-template-rows: auto 100vh;
+        grid-template-columns: 1fr;
+        padding: 10vh 2em;
+    }
+
+}
+
+/* Modifies the CSS for the classes if it is in a phone */
+@media only screen and (max-width: 450px) {
+    body, html, div, img, p {
+        font-size: 10px;
+    }
+
+    .PortfolioMenuWrapper {
+        padding: 2em 0;
+        gap: 0.5em;
+        grid-template-columns: 2fr 3fr 2fr;
+    }
+
+    .PortfolioTitle {
+        grid-column: 2/3;
+    }
+
+    .LandingWrapper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        padding: 10vh 2em;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .LandingInteractionWrapper div {
+        display: grid;
+        grid-template-columns: minmax(2em, auto) minmax(100px, 1fr) minmax(2em, auto);
+        gap: 0.5em;
+    }
+
+    .LandingInteractionWrapper {
+        gap: 2em;
+    }
+
+    .LandingInteractionText, .LandingInteractionButton {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    .SideCarouselWrapper {
+        display: none;
+    }
+
+    .ProjectElementWrapper, .ProjDet-TitleWrapper {
+        padding: 10vh 2em;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .ProjectSubtitle {
+        font-size: 1.2em;
+        line-height: 175%;
+        height: auto;
+    }
+
+    .ProjectButtonText {
+        margin-top: auto;
+        font-size: 1.2em;
+    }
+
+    .ProjDet-TitleWrapper {
+        height: auto;
+        gap: 0;
+    }
+
+    .ProjDet-Header {
+        padding-bottom: 0.5em;
+    }
+
+    .ProjDet-OverviewWrapper {
+        display: grid;
+        width: 100%;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    .ProjDet-OverviewInfo {
+        padding: 0;
+        gap: 1.5em;
+    }
+
+    .ProjDet-SectionDesc {
+        max-width: 100%;
+    }
+
+    .ProjDet-TableRow {
+        grid-template-columns: 1fr 1fr 3fr;
+    }
+
+    .ProjDet-TextImg {
+        display: grid;
+        grid-template-rows: auto 30vh;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .ProjDet-ImgCaption {
+        width: 100%;
+    }
+
+    .AboutWrapper {
+        grid-template-rows: auto 100vh;
+        grid-template-columns: 1fr;
+        padding: 10vh 2em;
+    }
+}

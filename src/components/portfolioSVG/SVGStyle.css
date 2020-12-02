@@ -1,0 +1,96 @@
+/* Landing Icon */
+.landing-shadow {fill: black; opacity: 0.5}
+.landing-oculus-strap, .landing-body, .landing-table-leg-top{fill:#cbcbcb}
+.landing-skin{fill:#ffd7ad}
+.landing-table-side{fill:#8b6239}
+.landing-sticky-yellow-1{fill:#fbf164}
+.landing-sticky-yellow-2{fill:#ccc451}
+.landing-sticky-green{fill:#39b44a}
+.landing-sticky-pink-1{fill:#ff7bab}
+.landing-sticky-pink-2{fill:#cc6289}
+.landing-sticky-blue{fill:#29aae1}
+.landing-brush-handle, .landing-shoe{fill:#42210b}
+.landing-table-leg-side {fill:#989898}
+.landing-keyboard-side {fill: #333}
+.landing-shoe-outline {fill:brown}
+.landing-pants{fill:#802020}
+.landing-computer-front {fill:#4d4d4d}
+.landing-computer-body, .landing-body-outline {fill:#666}
+.landing-oculus-body{fill:#fff}
+.landing-table-top{fill:#c59b6d}
+.landing-table-front{fill:#a57c52}
+.landing-keyboard-key-side, .landing-laptop-cover, .landing-oculus-outline{fill:gray}
+.landing-oculus-main {fill: #e5e5e5}
+.landing-body-crown {fill: #faaf3b}
+.landing-table-leg-front{fill:#b2b2b2}
+.landing-neck-shadow{fill:#997855}
+.landing-pokeball-top {fill: #ec1c24}
+.landing-pokeball-center {fill: #fff; stroke: #000}
+.landing-brush-paint {fill: #f6921e}
+.landing-head-hair, .landing-pokeball-strip, .landing-head-eyes, .landing-pants-outline, .landing-monitor-stand {fill: black}
+
+/* A11Y Collab AR SVG */
+.ux-a11y-avatar{fill:#fbb03b;}
+.ux-a11y-speech1{fill:#006837;}
+.ux-a11y-speech2{fill:#9e005d;}
+.ux-a11y-airpods{fill:#fff;}
+
+/* Pokemon VR SVG */
+.xr-pokemonvr-ballwhite,.xr-pokemonvr-ballbelt{fill:#fff;}
+.xr-pokemonvr-ballpurple{fill:teal;}
+.xr-pokemonvr-ballbelt{stroke:#000;stroke-miterlimit:10;stroke-width:8px;}
+.xr-pokemonvr-collision1{fill:#f7931e;}
+.xr-pokemonvr-collision2{fill:#f15a24;}
+.xr-pokemonvr-collision3{fill:#fbb03b;}
+.xr-pokemonvr-ballred{fill:#ed1c24;}
+
+/* Multi-Object Selection SVG */
+.xr-multiselect-sphere1{fill:#00b35e;}
+.xr-multiselect-sphere2{fill:#00e678;}
+.xr-multiselect-sphere3{fill:#006837;}
+.xr-multiselect-bubble1{fill:#4df7ff;stroke:#fff;stroke-miterlimit:10;stroke-width:10px;opacity:0.5;}
+.xr-multiselect-bubble2{fill:#fff;opacity:0.4;}
+.xr-multiselect-pyramid1{fill:#ed1c24;}
+.xr-multiselect-pyramid2{fill:#991f24;}
+.xr-multiselect-cube1{fill:#007bcc;}
+.xr-multiselect-cube2{fill:#45a6e6;}
+.xr-multiselect-cube3{fill:#005c99;}
+
+/* COVID Dashboard SVG */
+.swe-covid-1{fill:#e65c62;}
+.swe-covid-2{fill:#c1272d;}
+.swe-covid-3{fill:#f2797e;}
+.swe-covid-4{fill:#e6454c;}
+.swe-covid-5{fill:#991f24;}
+.swe-covid-6{fill:#c1131a;}
+.swe-covid-7{fill:#b3242a;}
+.swe-covid-8{fill:#801a1e;}
+.swe-covid-9{fill:#e92f2f;}
+.swe-covid-10{fill:#990f15;}
+.swe-covid-11{fill:#cc666a;}
+.swe-covid-12{fill:#cc3d44;}
+.swe-covid-13{fill:#e62e36;}
+.swe-covid-14{fill:#f2797d;}
+
+/* Pearl SVG */
+.swe-pearl-briefcase_1{fill:#bc6115;}
+.swe-pearl-briefcase_2{fill:#88460e;}
+.swe-pearl-briefcase_1{fill:#e17a17;}
+.swe-pearl-resume_4{opacity:0.2;}
+.swe-pearl-resume_3{fill:#231f20;}
+.swe-pearl-resume_2{fill:#e0e0d1;}
+.swe-pearl-resume_1{fill:#fff;}
+.swe-pearl-annotation2_2,.swe-pearl-annotation2,.swe-pearl-annotation3,.swe-pearl-annotation4_2,.swe-pearl-annotation4,.swe-pearl-annotation1_2,.swe-pearl-annotation1{fill:none;stroke-miterlimit:10;stroke-width:4px;}
+.swe-pearl-annotation1_2,.swe-pearl-annotation1{stroke:#f15a24;}
+.swe-pearl-annotation2,.swe-pearl-annotation4,.swe-pearl-annotation1{stroke-linecap:square;}
+.swe-pearl-annotation2_2,.swe-pearl-annotation2{stroke:#ed1e79;}
+.swe-pearl-annotation3{stroke:#0071bc;}
+.swe-pearl-annotation4_2,.swe-pearl-annotation4{stroke:#c1272d;}
+
+/* Lego Blocks SVG */
+.lego-1{fill:#ff2e3f}
+.lego-2{fill:#fff}
+
+/* Monkey Voxel SVG */
+.monkey-1{fill:#005cff}
+.monkey-3{fill:#004ee7;stroke:#1200a2;stroke-miterlimit:10}
