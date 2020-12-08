@@ -1,4 +1,3 @@
-import { HashRouter } from 'react-router-dom';
 import React, {Component} from 'react';
 import '../style.css';
 import $ from 'jquery';
@@ -57,6 +56,9 @@ export default class ProjectCatalogue extends Component {
             })
             .to($(element), {css: {opacity: 0}, duration: 0.35, ease: "Power2.easeInOut"});
         })
+
+        this.props.changeBodyCSS(this.props.pageID);
+        this.props.onChangeNavMenu();
     }
 
     // This sets a boolean that is used to disable any intermmediate changes to the side carousel white circles when we click on it

@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 import gsap from "gsap";
 import { TweenMax } from 'gsap/all';
-import {Link} from 'react-router-dom';
+import DelayLink from 'react-delay-link';
 
 // JSX Element for the hamburger menu
 const HamburgerMenu = (open) => {return(<div className="PortfolioHamburger">
@@ -18,6 +18,7 @@ const HamburgerMenu = (open) => {return(<div className="PortfolioHamburger">
                         </svg>
                       </div>)}
 
+// The constant JSX Navigation bar component at the top of the page
 class NavigationBar extends React.Component {
     constructor(props) {
         super(props);
@@ -32,10 +33,10 @@ class NavigationBar extends React.Component {
 
         this.changeTitleText = this.changeTitleText.bind(this);
         this.changeLogoButton = this.changeLogoButton.bind(this);
-        this.changeHamburger = this.changeHamburger.bind(this);
     }
 
 
+    // On mount, we set the animations for the different parts of the navigation bar using jQuery and GSAP
     componentDidMount() {
         this.props.onRef(this);
 
@@ -56,10 +57,17 @@ class NavigationBar extends React.Component {
         })
     }
 
+    // We make sure to remove the reference to the component in App.js when it unmounts
     componentWillUnmount() {
         this.props.onRef(null);
     }
 
+    /**
+     * Helper function called by App.js to set the new link of the navigation menu when it fades out and back in
+     * @param {String} newButtonText A string that containts what the logo button should say
+     * @param {Function} newOnChange A function object that sets what the new logo button should direct to on click
+     * @param {String} newLink A path to the new page when the button is clicked
+     */
     changeLogoButton(newButtonText, newOnChange, newLink) {
         TweenMax.to($(".PortfolioLogo"), {css: {opacity: 0}, duration: 0.2,
                     onComplete: () => {
@@ -73,6 +81,10 @@ class NavigationBar extends React.Component {
                     }})
     }
 
+    /**
+     * A helper function called by App.js when we switch to a new page to change the text displayed in the header
+     * @param {String} newText The new string to display on the Portfolio Title Div
+     */
     changeTitleText(newText) {
         TweenMax.to($(".PortfolioTitle"), {css: {opacity: 0}, duration: 0.2,
                     onComplete: () => {
@@ -84,26 +96,15 @@ class NavigationBar extends React.Component {
                     }})
     }
 
-    changeHamburger(newDiv) {
-        TweenMax.to($(".PortfolioNav"), {css: {opacity: 0}, duration: 0.2,
-                    onComplete: () => {
-                        this.setState(() => ({
-                            nav: newDiv,
-                        }), () => {
-                            TweenMax.to($(".PortfolioNav"), {css: {opacity: 1}, duration: 0.2});
-                        })
-                    }})
-    }
-
     // Uses the onStateChange function passed from App.js to change pages
     render() { 
         return (
                 <div className="PortfolioMenuWrapper">
-                    <Link to={this.state.link} onClick={this.state.onChange}>
+                    <DelayLink delay={250} to={this.state.link} clickAction={this.state.onChange} replace={false}>
                     <div className="PortfolioLogo">
                         {this.state.logo}
                     </div>
-                    </Link>
+                    </DelayLink>
                     <div className="PortfolioTitle">
                         {this.state.title}
                     </div>

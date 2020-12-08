@@ -20,9 +20,15 @@ svg {
     height: 100%;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
 /* Default background for the body when users first land on the page */
 body {
-    background: white;
+    background: linear-gradient(111.2deg, #6653C6 0%, #180A5C 100.5%);
 }
 
 /* Set the button and input style for the website */
@@ -37,7 +43,7 @@ button, input {
 /* Set the links for the website so that they don't change color or have any decorations */
 a, a:link, a:visited {
     text-decoration: none;
-    color: black;
+    color: white;
     width: 100%;
     height: 100%;
 }
@@ -45,7 +51,7 @@ a, a:link, a:visited {
 /* Set the color and the secondary font family for the headers for the text */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Amiri', serif;
-    color: black;
+    color: white;
     margin: 0;
     padding: 0;
     border: 0;
@@ -53,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Set the color for the paragraphs and divs (used for animation on landing page) */
 p, div {
-    color: black;
+    color: white;
     margin: 0;
     padding: 0;
     border: 0;
@@ -112,7 +118,6 @@ button {
 
 /* Div wrapper for the logo of the page */
 .PortfolioLogo {
-    color: black;
     text-align: center;
     width: 100%;
     padding: 1em;
@@ -129,7 +134,6 @@ button {
 /* Text for the menu based on which page user is on */
 .PortfolioTitle {
     text-align: center;
-    color: black;
     width: 100%;
     letter-spacing: 0.05em;
     padding: 1em;
@@ -140,7 +144,6 @@ button {
 
 /* Hamburger div or About page div based on where the user is located */
 .PortfolioNav {
-    color: black;
     text-align: center;
     width: 100%;
     text-transform:uppercase;
@@ -193,7 +196,6 @@ button {
 
 /* Set the font size and color for the text in the landing page */
 .LandingInteractionText, .LandingInteractionButton {
-    color: black;
     font-size: 2.5em;
 }
 
@@ -203,11 +205,18 @@ button {
     cursor: pointer;
 }
 
+/* Make the "Browse Work" button appear more like a button with animated box-shadow */
+.LandingButtonBG {
+    margin-top: 3em;
+    padding: 1em;
+    background-color: #AB1FAD;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
 /* Set the opacity for the text in the "Browse Work" button */
 .LandingNavigationButton {
-    padding-top: 2em;
-    color: black;
-    opacity: 0.5;
     cursor: pointer;
 }
 
@@ -256,14 +265,11 @@ button {
 .ProjectSubtitle {
     opacity: 1;
     font-size: 1.5em;
-    height: 1.5em;
 }
 
 /* Set the font size and opacity for the buttons of the text */
 .ProjectButtonText {
-    height: 1.5em;
-    margin-top: 1.5em;
-    opacity: 0.5;
+    opacity: 1;
     text-align: start;
     align-self: start;
     cursor: pointer;
@@ -396,6 +402,7 @@ button {
     height: 100%;
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
+    gap: 2em;
     opacity: 0.5;
 }
 
@@ -436,13 +443,16 @@ button {
     grid-template-columns: 4fr 3fr;
     gap: 1em;
     width: 100%;
+    align-items: center;
 }
 
 /* Set the image so that it does not take up more than 80% of the viewport height */
 .ProjDet-ImgFrame {
+    overflow: hidden;
     position: relative;
     width: 100%;
-    height: 80vh;
+    max-height: 80vh;
+    padding-top: 1em;
 }
 
 /* Add a caption at the very bottom right of the image */
@@ -454,7 +464,7 @@ button {
     align-items: center;
     justify-items: start;
     padding: 2em;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.75);
     width: 30vw;
 }
 
@@ -475,10 +485,10 @@ button {
 .AboutText {
     display: grid;
     width: 100%;
-    height: 100%;
     grid-template-columns: 1fr;
     gap: 1em;
     align-items: center;
+    align-self: start;
     justify-items: start;
 }
 
@@ -501,6 +511,7 @@ button {
     min-height: 100vh;
     grid-template-columns: 1fr;
     padding: 10vh 8vw;
+    padding-top: 20vh;
     align-items: center;
 }
 
@@ -511,9 +522,284 @@ button {
 }
 
 /* Modifies the CSS for the classes if it is in the tablet */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     body, html, div, img, p {
         font-size: 18px;
+    }
+
+    .PortfolioMenuWrapper {
+        padding: 2em 0;
+        gap: 0.5em;
+        grid-template-columns: 2fr 3fr 2fr;
+    }
+
+    .PortfolioTitle {
+        grid-column: 2/3;
+    }
+
+    .LandingWrapper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .LandingInteractionWrapper div {
+        display: grid;
+        grid-template-columns: minmax(2em, auto) minmax(100px, 1fr) minmax(2em, auto);
+        gap: 0.5em;
+    }
+
+    .LandingInteractionWrapper {
+        gap: 2em;
+    }
+
+    .LandingInteractionText, .LandingInteractionButton {
+        font-size: 1.5em;
+    }
+
+    .LandingNavigationButton {
+        font-size: 1em;
+    }
+
+    .LandingButtonBG {
+        padding: 0.5em;
+
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1.75em;
+    }
+
+    .SideCarouselWrapper {
+        display: none;
+    }
+
+    .ProjectElementWrapper, .ProjDet-TitleWrapper {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .ProjectSubtitle {
+        font-size: 1.2em;
+        line-height: 175%;
+        height: auto;
+    }
+
+    .ProjectButtonText {
+        margin-top: auto;
+        font-size: 1.2em;
+    }
+
+    .ProjDet-TitleWrapper {
+        height: auto;
+        gap: 0;
+    }
+
+    .ProjDet-Header {
+        padding-bottom: 0.5em;
+    }
+
+    .ProjDet-OverviewWrapper {
+        display: grid;
+        width: 100%;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    .ProjDet-OverviewInfo {
+        padding: 0;
+        gap: 1.5em;
+    }
+
+    .ProjDet-SectionDesc {
+        max-width: 100%;
+    }
+
+    .ProjDet-TableRow {
+        grid-template-columns: 1fr 1fr 3fr;
+    }
+
+    .ProjDet-TextImg {
+        display: grid;
+        grid-template-rows: auto 30vh;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .ProjDet-ImgCaption {
+        width: 100%;
+    }
+
+    .AboutWrapper {
+        grid-template-rows: auto 100vh;
+        grid-template-columns: 1fr;
+        padding: 10vh 2em;
+    }
+
+    .AboutResume, .AboutIFrame {
+        min-width: 50vw;
+        min-height: 100vh;
+        border: none;
+    }
+}
+
+/* Modifies the CSS for the classes if it is in the tablet */
+@media only screen and (max-width: 800px) {
+    body, html, div, img, p {
+        font-size: 16px;
+    }
+
+    .PortfolioMenuWrapper {
+        padding: 2em 0;
+        gap: 0.5em;
+        grid-template-columns: 2fr 3fr 2fr;
+    }
+
+    .PortfolioTitle {
+        grid-column: 2/3;
+    }
+
+    .LandingWrapper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .LandingInteractionWrapper div {
+        display: grid;
+        grid-template-columns: minmax(2em, auto) minmax(100px, 1fr) minmax(2em, auto);
+        gap: 0.5em;
+    }
+
+    .LandingInteractionWrapper {
+        gap: 2em;
+    }
+
+    .LandingInteractionText, .LandingInteractionButton {
+        font-size: 1.5em;
+    }
+
+    .LandingNavigationButton {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1.75em;
+    }
+
+    .SideCarouselWrapper {
+        display: none;
+    }
+
+    .ProjectElementWrapper, .ProjDet-TitleWrapper {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .ProjectSubtitle {
+        font-size: 1.2em;
+        line-height: 175%;
+        height: auto;
+    }
+
+    .ProjectButtonText {
+        margin-top: auto;
+        font-size: 1.2em;
+    }
+
+    .ProjDet-TitleWrapper {
+        height: auto;
+        gap: 0;
+    }
+
+    .ProjDet-Header {
+        padding-bottom: 0.5em;
+    }
+
+    .ProjDet-OverviewWrapper {
+        display: grid;
+        width: 100%;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    .ProjDet-OverviewInfo {
+        padding: 0;
+        gap: 1.5em;
+    }
+
+    .ProjDet-SectionDesc {
+        max-width: 100%;
+    }
+
+    .ProjDet-TableRow {
+        grid-template-columns: 1fr 1fr 3fr;
+    }
+
+    .ProjDet-TextImg {
+        display: grid;
+        grid-template-rows: auto 30vh;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .ProjDet-ImgCaption {
+        width: 100%;
+    }
+
+    .AboutWrapper {
+        grid-template-rows: auto 100vh;
+        grid-template-columns: 1fr;
+        padding: 10vh 2em;
+    }
+
+    .AboutResume, .AboutIFrame {
+        min-width: 50vw;
+        min-height: 100vh;
+        border: none;
+    }
+}
+
+/* Modifies the CSS for the classes if it is in the tablet */
+@media only screen and (max-width: 625px) {
+    body, html, div, img, p {
+        font-size: 14px;
     }
 
     .PortfolioMenuWrapper {

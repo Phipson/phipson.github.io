@@ -29,8 +29,8 @@ export default class PhipsonSVG extends Component {
 
         // Stick Notes on Affinity Diagram
         this.aff_loop_tl = new TimelineMax({paused: true, delay: 0.5, //repeat: -1, repeatDelay: 1, 
-                                            //onReverseComplete: () => {this.aff_init_tl.reverse()},
-                                            onComplete: () => {this.aff_loop_tl.restart(true); this.aff_loop_tl.play()}});
+                                            onReverseComplete: () => {this.aff_init_tl.reverse()}});
+                                            //onComplete: () => {this.aff_loop_tl.restart(true); this.aff_loop_tl.play()}});
 
         // Affinity Diagram Fade In
         this.aff_init_tl = new TimelineMax({paused: true, delay: 0,
@@ -144,10 +144,10 @@ export default class PhipsonSVG extends Component {
         this.aff_loop_tl.add(transformComponent($('#ArmR'), 0.45, '-=50', pivotDictionary["#ArmR"]), "+=0");
         this.aff_loop_tl.add(transformComponent($("#HandheldStickyR"), 0.45, '+=95', pivotDictionary["#HandheldStickyR"], 
                     {x: "-=95", y: "-=54"}), "-=0.45");
-        this.aff_loop_tl.add(transformComponent($('#ArmR'), 0.45, '+=50', pivotDictionary["#ArmR"]), "+=0.5");
-        this.aff_loop_tl.add(transformComponent($("#HandheldStickyR"), 0.45, '-=95', pivotDictionary["#HandheldStickyR"], 
-                    {x: "+=95", y: "+=54"}), "-=0.45");
-        this.aff_loop_tl.add(transformComponent($('#ArmR'), 0.45, '-=50', pivotDictionary["#ArmR"]), "+=0");
+        //this.aff_loop_tl.add(transformComponent($('#ArmR'), 0.45, '+=50', pivotDictionary["#ArmR"]), "+=0.5");
+        //this.aff_loop_tl.add(transformComponent($("#HandheldStickyR"), 0.45, '-=95', pivotDictionary["#HandheldStickyR"], 
+        //            {x: "+=95", y: "+=54"}), "-=0.45");
+        //this.aff_loop_tl.add(transformComponent($('#ArmR'), 0.45, '-=50', pivotDictionary["#ArmR"]), "+=0");
 
         // Show affinity diagram
         this.aff_init_tl.add(dissolveFlashIn(affinityQuery, 0.01, 0));
@@ -200,25 +200,6 @@ export default class PhipsonSVG extends Component {
      */
     playTimeline() {
         this.state.timelineEntryPoints[this.state.pageID].timeScale(1).play();
-        switch(this.state.pageID) {
-            case 0:
-                TweenMax.to($("body"), 0.25, {css:{background: "linear-gradient(111.2deg, #7C67E4 0%, #4D33CC 100.5%)"}, delay: 0.25});
-                TweenMax.to($(".LandingInteractionText").add(".LandingInteractionButton").add(".LandingNavigationButton"), 0.25, {css:{color: "#FFEE99"}, delay: 0.25});
-                TweenMax.to($("h1").add("h2").add("h3").add("h4").add("h5").add("h6").add("div"), 0.25, {css: {color: "white"}, delay: 0.25, onComplete: () => {this.props.onInit()}});
-                break;
-
-            case 1:
-                TweenMax.to($("body"), 0.25, {css:{background: "linear-gradient(111.2deg, #2258C3 0%, #1F3D7A 100.5%)"}, delay: 0.25});
-                TweenMax.to($(".LandingInteractionText").add(".LandingInteractionButton").add(".LandingNavigationButton"), 0.25, {css:{color: "#FF9999"}, delay: 0.25});
-                TweenMax.to($("h1").add("h2").add("h3").add("h4").add("h5").add("h6").add("div"), 0.25, {css: {color: "white"}, delay: 0.25, onComplete: () => {this.props.onInit()}});
-                break;
-
-            case 2:
-                TweenMax.to($("body"), 0.25, {css:{background: "linear-gradient(111.2deg, #26734C 0%, #244233 100.5%)"}, delay: 0.25});
-                TweenMax.to($(".LandingInteractionText").add(".LandingInteractionButton").add(".LandingNavigationButton"), 0.25, {css:{color: "#FFCC99"}, delay: 0.25});
-                TweenMax.to($("h1").add("h2").add("h3").add("h4").add("h5").add("h6").add("div"), 0.25, {css: {color: "white"}, delay: 0.25, onComplete: () => {this.props.onInit()}});
-                break;
-        }
     }
 
     /**
@@ -237,7 +218,6 @@ export default class PhipsonSVG extends Component {
                         break;
                     case 1:
                         this.aff_loop_tl.reverse();
-                        TweenMax.delayedCall(0.5, () => {this.aff_init_tl.reverse()});
                         break;
                     case 2:
                         this.swe_loop_tl.reverse();
@@ -246,7 +226,7 @@ export default class PhipsonSVG extends Component {
               }
 
               TweenMax.delayedCall(2, () => {this.playTimeline()});
-          });
+        });
     }
 
 

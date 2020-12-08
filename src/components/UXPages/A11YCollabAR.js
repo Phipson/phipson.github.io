@@ -1,10 +1,11 @@
-import { HashRouter } from 'react-router-dom';
 import React, {Component} from 'react';
 import '../../style.css';
 import $ from 'jquery';
 
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all';
+import sketch_1 from '../media/IS_Phone_Awareness_Cursor.jpg';
+import sketch_2 from '../media/IS_Voice_Memo_Prototype.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -154,7 +155,7 @@ export default class A11YCollabAR extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src=""/>
+                    <img src={sketch_1}/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             Extending Google Doc’s metaphors of mapping collaborators to animal avatars, we sonified changes for collaborators based on these animals.
@@ -172,7 +173,7 @@ export default class A11YCollabAR extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src=""/>
+                    <img src={sketch_2}/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             Initial sketches and code-based implementation of creating and generating voice memos using a specified template to encourage meaningful comments.
