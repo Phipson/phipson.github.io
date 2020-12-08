@@ -1,19 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.9601299d.chunk.css",
-    "main.js": "/static/js/main.2a45257f.chunk.js",
-    "main.js.map": "/static/js/main.2a45257f.chunk.js.map",
+    "main.css": "/static/css/main.51f875a1.chunk.css",
+    "main.js": "/static/js/main.7f0cb7a7.chunk.js",
+    "main.js.map": "/static/js/main.7f0cb7a7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ad38bdd0.js",
     "runtime-main.js.map": "/static/js/runtime-main.ad38bdd0.js.map",
-    "static/js/2.3cb73094.chunk.js": "/static/js/2.3cb73094.chunk.js",
-    "static/js/2.3cb73094.chunk.js.map": "/static/js/2.3cb73094.chunk.js.map",
+    "static/js/2.8626b34c.chunk.js": "/static/js/2.8626b34c.chunk.js",
+    "static/js/2.8626b34c.chunk.js.map": "/static/js/2.8626b34c.chunk.js.map",
     "static/js/3.121d807e.chunk.js": "/static/js/3.121d807e.chunk.js",
     "static/js/3.121d807e.chunk.js.map": "/static/js/3.121d807e.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.9601299d.chunk.css.map": "/static/css/main.9601299d.chunk.css.map",
-    "static/js/2.3cb73094.chunk.js.LICENSE.txt": "/static/js/2.3cb73094.chunk.js.LICENSE.txt",
+    "static/css/main.51f875a1.chunk.css.map": "/static/css/main.51f875a1.chunk.css.map",
+    "static/js/2.8626b34c.chunk.js.LICENSE.txt": "/static/js/2.8626b34c.chunk.js.LICENSE.txt",
+    "static/media/COVIDDashboardArch.d3501d3c.png": "/static/media/COVIDDashboardArch.d3501d3c.png",
+    "static/media/COVIDDashboardPrototype.712e79c9.png": "/static/media/COVIDDashboardPrototype.712e79c9.png",
+    "static/media/CaneControllerMS.f6ef013d.png": "/static/media/CaneControllerMS.f6ef013d.png",
     "static/media/IS_Phone_Awareness_Cursor.64723536.jpg": "/static/media/IS_Phone_Awareness_Cursor.64723536.jpg",
     "static/media/IS_Voice_Memo_Prototype.62c3922b.jpg": "/static/media/IS_Voice_Memo_Prototype.62c3922b.jpg",
+    "static/media/ScratchProgramming.1066ee89.png": "/static/media/ScratchProgramming.1066ee89.png",
+    "static/media/UCREDonationMap.6aa981cd.jpg": "/static/media/UCREDonationMap.6aa981cd.jpg",
     "static/media/UCRE_Affinity.69301792.jpg": "/static/media/UCRE_Affinity.69301792.jpg",
     "static/media/UCRE_HiFi_1.568b9288.jpg": "/static/media/UCRE_HiFi_1.568b9288.jpg",
     "static/media/UCRE_LoFi_1.fc798576.jpg": "/static/media/UCRE_LoFi_1.fc798576.jpg",
@@ -23,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ad38bdd0.js",
-    "static/js/2.3cb73094.chunk.js",
-    "static/css/main.9601299d.chunk.css",
-    "static/js/main.2a45257f.chunk.js"
+    "static/js/2.8626b34c.chunk.js",
+    "static/css/main.51f875a1.chunk.css",
+    "static/js/main.7f0cb7a7.chunk.js"
   ]
 }
