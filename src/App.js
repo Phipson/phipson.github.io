@@ -77,7 +77,6 @@ class App extends Component{
       case 1:
         gsap.to($(".ProjectCatalogueWrapper"), {css: {opacity: 0}, duration: 0.25,
         onComplete: () => {
-          gsap.to($(window), {scrollTo: {y: 0}, duration: 0.15, ease: "Power2.easeInOut"});
           this.fadeIntoNewState(newState, oldState)
         }});
         break;
@@ -154,8 +153,6 @@ class App extends Component{
       displayPage: displayPage,
       headerText: displayPage.name
     }), () => {
-      this.navChild.changeLogoButton("← Projects", () => {this.setSiteState(1)}, `/${LinkNames[this.state.pageID]}`)
-      this.navChild.changeTitleText(this.state.headerText);
       this.setSiteState(2)
     });
   }

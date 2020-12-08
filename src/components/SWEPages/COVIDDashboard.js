@@ -1,10 +1,12 @@
-import { HashRouter } from 'react-router-dom';
 import React, {Component} from 'react';
 import '../../style.css';
 import $ from 'jquery';
 
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all';
+
+import covid_proto from '../media/COVIDDashboardPrototype.png'
+import covid_arch from '../media/COVIDDashboardArch.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +17,8 @@ export default class COVIDDashboard extends Component {
     }
 
     componentDidMount() {
+        $(window).scrollTop(0);
+
         let classList = $(".ProjDet-Section").toArray();
 
         classList.forEach((element, i) => {
@@ -82,14 +86,14 @@ export default class COVIDDashboard extends Component {
                 </div>
             </div>
             <div className="ProjDet-Section">
-                <h4 className="ProjDet-Header ProjectWhiteText">PAPER PROTOTYPES</h4>
+                <h4 className="ProjDet-Header ProjectWhiteText">PROTOTYPES</h4>
                 <div className="ProjDet-SectionDesc">
                     <p className="ProjDet-p ProjectWhiteText">
-                    When examining a user-centered dashboard that would help travelers plan their trips, my initial focus was on map displays, which would sort data based on geographical location. To help users focus on states of interest, I added interactions for users to zoom in on specific geographic regions by clicking on the state of interest, causing the dashboard to display state-specific data.
+                    When examining a user-centered dashboard that would help travelers plan their trips, my initial focus was on map displays, which would sort data based on geographical location. To help users focus on states of interest, I added interactions for users to zoom in on specific geographic regions by clicking on the state of interest, causing the dashboard to display state-specific data. This was later actualized using ReactJS, which had a combination of free open-source dashbaord templates like Google Material UI's dashboard template; and free libraries for developing interactive charts and maps using D3.js and React Simple Maps.
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src=""/>
+                    <img src={covid_proto}/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">Initial Paper Prototype of Dashboard Interface</p>
                     </div>
@@ -122,28 +126,14 @@ export default class COVIDDashboard extends Component {
                 </div>
             </div>
             <div className="ProjDet-Section">
-                <h4 className="ProjDet-Header ProjectWhiteText">DESIGNING THE INFORMATION ARCHITECTURE</h4>
-                <div className="ProjDet-SectionDesc">
-                    <p className="ProjDet-p ProjectWhiteText">
-                        To integrate my design with the machine learning algorithm, I had to consider how to organize the information in a readable manner. To do so, I brainstormed and developed models for the type of data I wanted to display on the dashboard. From there, I sorted the data into a hierarchy based on the user stories I developed, focusing on their needs as travelers and trip planners.
-                    </p>
-                </div>
-                <div className="ProjDet-ImgFrame">
-                    <img src=""/>
-                    <div className="ProjDet-ImgCaption">
-                        <p className="ProjDet-p-mini ProjectWhiteText">Information Architecture of Dashboard Information</p>
-                    </div>
-                </div>
-            </div>
-            <div className="ProjDet-Section">
-                <h4 className="ProjDet-Header ProjectWhiteText">COMBINING DESIGN WITH MACHINE LEARNING</h4>
+                <h4 className="ProjDet-Header ProjectWhiteText">TRAINING THE NEURAL NETWORK</h4>
                 <div className="ProjDet-SectionDesc">
                     <p className="ProjDet-p ProjectWhiteText">
                     To provide users with trend forecasts, I used a Long-Short Term Memory (LSTM) model that took data from Carnegie Mellon University’s COVIDCast dataset as input and predicted the COVID cases per state for the following day. Referencing an existing model designed by [], I trained and tested the neural network on Jupyter Notebook.                    
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src=""/>
+                    <img src={covid_arch}/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             Design of Long-Short Term Memory (LSTM) model for predicting COVID Cases
@@ -151,6 +141,21 @@ export default class COVIDDashboard extends Component {
                     </div>
                 </div>
             </div>
+            <div className="ProjDet-Section">
+                <h4 className="ProjDet-Header ProjectWhiteText">DESIGNING THE SOFTWARE ARCHITECTURE</h4>
+                <div className="ProjDet-SectionDesc">
+                    <p className="ProjDet-p ProjectWhiteText">
+                        To integrate my design with the machine learning algorithm, I had to consider how to query from the trained model and update the view. To do so, I used ReactJS and its Model-View-Controller (MVC) design pattern, which allowed me to manage the underlying data as states that can be rendered onto graphs. I then ran the model on a Python Flask server, which the ReactJS app would query to fetch a prediction based on an array of COVID Cases for the past 3 consecutive days.
+                    </p>
+                </div>
+                <div className="ProjDet-ImgFrame">
+                    <img src=""/>
+                    <div className="ProjDet-ImgCaption">
+                        <p className="ProjDet-p-mini ProjectWhiteText">Software Architecture of the COVID-19 Dashboard</p>
+                    </div>
+                </div>
+            </div>
+            
             <div className="ProjDet-Section">
                 <div className="ProjDet-SectionDesc">
                     <p className="ProjDet-p ProjectWhiteText">

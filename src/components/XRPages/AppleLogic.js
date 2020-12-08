@@ -1,10 +1,13 @@
-import { HashRouter } from 'react-router-dom';
 import React, {Component} from 'react';
 import '../../style.css';
 import $ from 'jquery';
 
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all';
+
+import scratch_prog from '../media/ScratchProgramming.png';
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Holds a component for a project that will be clicked on to show the actual project page
 export default class AppleLogic extends Component {
@@ -13,6 +16,8 @@ export default class AppleLogic extends Component {
     }
 
     componentDidMount() {
+        $(window).scrollTop(0);
+
         let classList = $(".ProjDet-Section").toArray();
 
         classList.forEach((element, i) => {
@@ -119,8 +124,8 @@ export default class AppleLogic extends Component {
                         Drawing from real-world scenarios where users would interact with puzzles, legos, and blocks in real life, I decided to use a cubby as a menu, where users could reach into the cubby drawers and grab blocks out, thus generating the knowledge they wanted. The cubbies were also categorized by English parts of speech, to further abstract the underlying logical program.<br/><br/>
                         The following were some existing work and projects I referenced as inspiration for this project.
                     </p>
-                    {/* TODO: Make this a carousel */}
-                    <img src=""/>
+                    {/* FUTURE TODO: Make this a carousel */}
+                    <img src={scratch_prog}/>
                 </div>
             </div>
             <div className="ProjDet-Section">
@@ -130,7 +135,6 @@ export default class AppleLogic extends Component {
                         Consistent with our analogy of programming logic using legos, I decided to use hand gestures as a primary method of input for interacting with lego blocks. To do so, I created a library for the LeapMotion cameras to map 3D hand gestures with specific logic blocks, offering visual feedback to help users ‘code’.<br/><br/>
                         Due to the variable scale of the virtual environment, it may be difficult to directly attach logic into the virtual objects in the scene, as users may be limited by their physical surroundings. Hence, I also designed a 2D interface that was attached to the users's virtual hands, and enabled users to select, modify, and add logic to virtual objects while standing in one location.
                     </p>
-                    <img src=""/>
                 </div>
             </div>
             <div className="ProjDet-Section">

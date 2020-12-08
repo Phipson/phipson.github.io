@@ -5,6 +5,7 @@ import $ from 'jquery';
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all';
 
+import donation_map from '../media/UCREDonationMap.jpg'
 import aff_diagram from '../media/UCRE_Affinity.jpg'
 import storyboard from '../media/UCRE_Storyboards.png'
 import thinkaloud from '../media/UCRE_ThinkAloud.jpg'
@@ -20,6 +21,8 @@ export default class KSTUXResearch extends Component {
     }
 
     componentDidMount() {
+        $(window).scrollTop(0);
+
         let classList = $(".ProjDet-Section").toArray();
 
         classList.forEach((element, i) => {
@@ -100,7 +103,7 @@ export default class KSTUXResearch extends Component {
                     <p className="ProjDet-p ProjectWhiteText">
                     Due to the pandemic, KST is forced to undergo a transition from traditional brick-and-mortar artistry and physical performances to a platform that’s more dependent on web content and indirect creative expression. Data from their web analytics and theater show attendances have indicated that the majority of their past donors and attendees were recruited through word of mouth. However, due to the pandemic, such means of promoting their theater content on an online platform has been insufficient. Consequently, they have offered less workshops and community events to their virtual audience. 
                     </p>
-                    <img src=""/>
+                    <img src={donation_map}/>
                 </div>
             </div>
             <div className="ProjDet-Section">
@@ -113,16 +116,11 @@ export default class KSTUXResearch extends Component {
                 </div>
             </div>
             <div className="ProjDet-Section">
-                <div className="ProjDet-TableRow">
-                    <p className="ProjDet-p-mini ProjectWhiteText" style={{gridColumn: "1/3", justifySelf: "start"}}>
-                        Following our initial think-alouds, I conducted contextual inquiries with young adults to delve into how people accessed digital content, and how content creators made their work more discoverable. These insights were synthesized recursively through affinity diagramming, which we used to distill core themes that were later used for subsequent storyboarding. Our findings indicated that online users value personalized educational content, and only donate to creators if they believe that there are tangible benefits in their donation.
-                    </p>
-                    <p className="ProjDet-p-sub ProjectWhiteText" style={{gridColumnStart: 3}}>
-                    “The best perk I ever got from subscribing was a coaching session.”
+                <div className="ProjDet-SectionDesc">
+                    <p className="ProjDet-p ProjectWhiteText">
+                    Following our initial think-alouds, I conducted contextual inquiries with young adults to delve into how people accessed digital content, and how content creators made their work more discoverable. These insights were synthesized recursively through affinity diagramming, which we used to distill core themes that were later used for subsequent storyboarding. Our findings indicated that online users value personalized educational content, and only donate to creators if they believe that there are tangible benefits in their donation.
                     </p>
                 </div>
-            </div>
-            <div className="ProjDet-Section">
                 <div className="ProjDet-ImgFrame">
                     <img src={aff_diagram}/>
                     <div className="ProjDet-ImgCaption">
@@ -135,35 +133,25 @@ export default class KSTUXResearch extends Component {
             <div className="ProjDet-Section">
                 <div className="ProjDet-SectionDesc">
                     <p className="ProjDet-p ProjectWhiteText">
-                    With our new findings, we brainstormed and drafted 12 storyboards as a team through a Crazy 8’s session. In total, these storyboards spanned across 4 themes: educational content, fostering a digital community, accessing content on social media, and getting content through recommendations. I was responsible for developing and designing ideas for enhancing content discoverability and recommendations, to help potential theater attendees find new content based on existing preferences and interests. 
+                    With our new findings, we brainstormed and drafted 12 storyboards as a team through a Crazy 8’s session. I was responsible for developing and designing ideas for enhancing content discoverability and recommendations, to help potential theater attendees find new content based on existing preferences and interests. 
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
                     <img src={storyboard}/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
-                            After our Crazy 8's session, we compiled and 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="ProjDet-Section">
-                <div className="ProjDet-SectionDesc">
-                    <p className="ProjDet-p ProjectWhiteText">
-                    To evaluate and generate ideas with our storyboards, we conducted 4 speed-dating sessions with 4 young adults who have had prior theater experiences. In particular, I recruited and discussed all 12 storyboards with a college graduate who had prior experiences working at a theater in New Jersey. The findings we gathered from these sessions confirmed the educational value that theater can bring, as well as the importance of building a social community in performing arts to attract new audiences.
-                    </p>
-                </div>
-                <div className="ProjDet-ImgFrame">
-                    <img src=""/>
-                    <div className="ProjDet-ImgCaption">
-                        <p className="ProjDet-p-mini ProjectWhiteText">
-                            SPEED DATING CAPTIONING
+                            After our Crazy 8's session, we compiled a set of 12 storyboards that spanned across 4 themes: educational content, fostering a digital community, accessing content on social media, and getting content through recommendations.
                         </p>
                     </div>
                 </div>
             </div>
             <div className="ProjDet-Section">
                 <h4 className="ProjDet-Header ProjectWhiteText">KEY INSIGHTS</h4>
+                <div className="ProjDet-SectionDesc">
+                    <p className="ProjDet-p ProjectWhiteText">
+                    To evaluate and generate ideas with our storyboards, we conducted 4 speed-dating sessions with 4 young adults who have had prior theater experiences. The findings we gathered from these sessions confirmed the educational value that theater can bring, as well as the importance of building a social community in performing arts to attract new audiences. From these, we identified the following insights.
+                    </p>
+                </div>
                 <div className="ProjDet-Table">
                     <div className="ProjDet-TableRow">
                         <p className="ProjDet-p-sub ProjectWhiteText" style={{gridColumn: "1/3"}}>
@@ -211,14 +199,14 @@ export default class KSTUXResearch extends Component {
                 <h4 className="ProjDet-Header ProjectWhiteText">DESIGNING A MEMBER HUB</h4>
                 <div className="ProjDet-SectionDesc">
                     <p className="ProjDet-p ProjectWhiteText">
-                    Through our research process, we discovered that education and social interactions were central factors in attracting donors and subscribers to digital content. Drawing from these insights, I helped design and build a low-fidelity prototype on Figma that builds upon KST’s existing website for users to access premium theater content and educational content upon purchasing a subscription. In addition, we were also inspired by YouTube’s video-recommendation system, and integrated automated theater show recommendations into the member hub, to help users discover and explore new theater shows based on their existing interests.
+                        Through our research process, we discovered that education and social interactions were central factors in attracting donors and subscribers to digital content. Drawing from these insights, I helped design and build a low-fidelity prototype on Figma that builds upon KST’s existing website for users to access premium theater content and educational content upon purchasing a subscription. In addition, we were also inspired by YouTube’s video-recommendation system, and integrated automated theater show recommendations into the member hub, to help users discover and explore new theater shows based on their existing interests.
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
                     <img src={lowfi_1}/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
-                            FIGMA PROTOTYPE
+                            A Low-fidelity prototype of our proposed KST Member Hub. The prototype was designed on Figma, and can be accessed by clicking here.
                         </p>
                     </div>
                 </div>
@@ -233,38 +221,18 @@ export default class KSTUXResearch extends Component {
                     <img src={highfi_1}/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
-                            REVISED FIGMA PROTOTYPE
+                            From our user feedback, we decided to remove the Discord Chat feature and add a calendar instead, containing color-coded upcoming events. We then increased the fidelity of our prototype to present to the theater.
                         </p>
                     </div>
                 </div>
             </div>
+            <div className="ProjDet-Section"/>
             <div className="ProjDet-Section">
-                <h4 className="ProjDet-Header ProjectWhiteText">MY KEY TAKEAWAYS</h4>
-                <div className="ProjDet-Table">
-                    <div className="ProjDet-TableRow">
-                        <p className="ProjDet-p-sub ProjectWhiteText" style={{gridColumn: "1/3", justifySelf: "start"}}>
-                            Accessibility remains a significant problem even in 2D interfaces
-                        </p>
-                        <p className="ProjDet-p-mini ProjectWhiteText" style={{gridColumnStart: 3}}>
-                            Despite advances in tools for both audio and haptic feedback, it appears that these features still remain inaccessible when used in collaborative environment.                      
-                        </p>
-                    </div>
-                    <div className="ProjDet-TableRow">
-                        <p className="ProjDet-p-sub ProjectWhiteText" style={{gridColumn: "1/3", justifySelf: "start"}}>
-                            Design for audio and haptic feedback should work for sighted users as well
-                        </p>
-                        <p className="ProjDet-p-mini ProjectWhiteText" style={{gridColumnStart: 3}}>
-                            When interviewing and speaking with BVI users, I realized that there is a misconception that BVI users have exceptional hearing capabilities allowing them to receive and discern audio feedback very well. To surmount this, researchers should design these audio-driven interfaces as though sighted users would be using them as well.                      
-                        </p>
-                    </div>
-                    <div className="ProjDet-TableRow">
-                        <p className="ProjDet-p-sub ProjectWhiteText" style={{gridColumn: "1/3", justifySelf: "start"}}>
-                            Collaborative Awareness extends beyond multiple dimensions
-                        </p>
-                        <p className="ProjDet-p-mini ProjectWhiteText" style={{gridColumnStart: 3}}>
-                            Beyond just in-person and remote collaboration, collaborative awareness also differs depending on whether collaborators are working synchronously or asynchronously, and whether collaborators are sighted or also visually impaired. These different dimensions further add a level of complexity to accessibility.                       
-                        </p>
-                    </div>
+                <h4 className="ProjDet-Header ProjectWhiteText">Final Thoughts and Reflection</h4>
+                <div className="ProjDet-SectionDesc">
+                    <p className="ProjDet-p ProjectWhiteText">
+                        At the beginning of the project, I underappreciated the value of educational content in giving value to interested theater attendees. However, upon conducting contextual inquiries with Twitch streamers and other digital content creators, I realized that there was a large audience of online users who see value in financially supporting creators who offer personalized educational content. This was further reinforced by the storyboards that my teammates developed, which also comprised ideas for educating theater attendees about acting and theater in general. This experience helped me appreciate the process of conducting user research, and discovering unforeseen insights that have positively influenced the trajectory of our project.
+                    </p>
                 </div>
             </div>
         </div>);

@@ -4,6 +4,7 @@ import $ from 'jquery';
 
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all';
+import cane_vr from '../media/CaneControllerMS.png'
 import sketch_1 from '../media/IS_Phone_Awareness_Cursor.jpg';
 import sketch_2 from '../media/IS_Voice_Memo_Prototype.jpg';
 
@@ -16,6 +17,7 @@ export default class A11YCollabAR extends Component {
     }
 
     componentDidMount() {
+        $(window).scrollTop(0);
         let classList = $(".ProjDet-Section").toArray();
 
         classList.forEach((element, i) => {
@@ -122,8 +124,8 @@ export default class A11YCollabAR extends Component {
                     <p className="ProjDet-p ProjectWhiteText">
                         Examining literature related to collaboration, accessibility, augmented reality, and the intersection between these 3 domains, my subsequent research was inspired and motivated by these key papers. Not only did these findings propose new solutions that can be used in mixed reality, but also highlight areas for enhancing collaborative awareness through an audio-driven interface that is accessible for both BVI and visually capable users.
                     </p>
-                    {/* TODO: Make this a carousel */}
-                    <img src=""/>
+                    {/* FUTURE TODO: Make this a carousel */}
+                    <img src={cane_vr}/>
                 </div>
             </div>
             <div className="ProjDet-Section">
