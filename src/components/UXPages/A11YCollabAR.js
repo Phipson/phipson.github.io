@@ -5,6 +5,7 @@ import $ from 'jquery';
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all';
 import cane_vr from '../media/CaneControllerMS.png'
+import sketch_0 from '../media/A11Y_Collab_3DSpatialAudio.png';
 import sketch_1 from '../media/IS_Phone_Awareness_Cursor.jpg';
 import sketch_2 from '../media/IS_Voice_Memo_Prototype.jpg';
 
@@ -139,7 +140,7 @@ export default class A11YCollabAR extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src=""/>
+                    <img src={sketch_0}/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             The volume of accessible audio feedback changes based on relative positions between the collaborator’s cursor and the user’s cursor

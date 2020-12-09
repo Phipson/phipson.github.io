@@ -98,6 +98,7 @@ button {
 
 .LandingWrapper, .ProjectCatalogueWrapper, .ProjectDetailWrapper {
     opacity: 1;
+    overflow-x: hidden;
 }
 
 /* NAVIGATION BAR */
@@ -596,7 +597,7 @@ button {
     }
 
     .ProjectElementWrapper, .ProjDet-TitleWrapper {
-        grid-template-rows: auto 1fr;
+        grid-template-rows: 1fr auto;
         grid-template-columns: 1fr;
     }
 
@@ -611,8 +612,13 @@ button {
         font-size: 1.2em;
     }
 
+    .ProjectElementSVG {
+        width: 40vw;
+    }
+
     .ProjDet-TitleWrapper {
-        height: auto;
+        height: 100vh;
+        align-items: center;
         gap: 0;
     }
 
@@ -649,8 +655,16 @@ button {
         width: 100%;
     }
 
+    .ProjDet-TextImg img {
+        width: 100%;
+    }
+
     .ProjDet-ImgCaption {
         width: 100%;
+    }
+
+    .ProjDet-p {
+        font-size: 1em;
     }
 
     .AboutWrapper {
@@ -663,6 +677,10 @@ button {
         min-width: 50vw;
         min-height: 100vh;
         border: none;
+    }
+
+    .PortfolioHamburger {
+        width: 3.5vw;
     }
 }
 
@@ -919,6 +937,32 @@ button {
         width: 100%;
     }
 
+    .ProjDet-ImgFrame {
+        height: 30vh;
+    }
+
+    .LandingButtonBG {
+        width: 100%;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .LandingText div {
+        width: 100%;
+    }
+
+    .LandingButtonBG button {
+        font-size: 1.5em;
+    }
+
+    .ProjDet-ImgCaption {
+        width: 100%;
+    }
+    
+    .PortfolioHamburger {
+        width: 5vw;
+    }
+
     .AboutWrapper {
         grid-template-rows: auto 100vh;
         grid-template-columns: 1fr;
@@ -1047,10 +1091,6 @@ button {
         grid-template-rows: auto 30vh;
         grid-template-columns: 1fr;
         gap: 1em;
-        width: 100%;
-    }
-
-    .ProjDet-ImgCaption {
         width: 100%;
     }
 
