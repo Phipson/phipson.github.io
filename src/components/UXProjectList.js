@@ -4,6 +4,7 @@ import KSTUXResearch from './UXPages/KSTUXResearch';
 
 // Import the svgs to display next to the divs
 import UX_A11YCollabARSVG from './portfolioSVG/UX_A11YCollabARSVG';
+import UX_KSTSVG from './portfolioSVG/UX_KSTSVG';
 
 export default {
     a11ycollabar: {
@@ -15,9 +16,9 @@ export default {
     },
     kstuxresearch: {
         link: "kst_ux_research",
-        name: "Redesigning the Kelly Strayhorn Theater (KST) Membership Experience",
+        name: "Kelly Strayhorn Theater (KST) Member Hub",
         page: <KSTUXResearch/>,
-        img: <UX_A11YCollabARSVG/>,
+        img: <UX_KSTSVG/>,
         desc: "A case study improving the local Pittsburgh theater's donor acquisition and online viewership during COVID-19."
     }
 }
