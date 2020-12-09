@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 import '../../style.css';
-import $ from 'jquery';
-
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/all';
 
 import donation_map from '../media/UCREDonationMap.jpg'
 import aff_diagram from '../media/UCRE_Affinity.jpg'
@@ -12,48 +8,8 @@ import thinkaloud from '../media/UCRE_ThinkAloud.jpg'
 import lowfi_1 from '../media/UCRE_LoFi_1.jpg'
 import highfi_1 from '../media/UCRE_HiFi_1.jpg'
 
-gsap.registerPlugin(ScrollTrigger);
-
 // Holds a component for a project that will be clicked on to show the actual project page
 export default class KSTUXResearch extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
-        $(window).scrollTop(0);
-
-        let classList = $(".ProjDet-Section").toArray();
-
-        classList.forEach((element, i) => {
-            gsap.set($(element), {css: {opacity: 0}});
-
-            // Scroll animation to fade in the div element
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    start: "60% bottom",
-                    end: "40% center",
-                    //markers: true, // For debug only
-                    scrub: true,
-                }
-            })
-            .to($(element), {css: {opacity: 1}, duration: 0.35, ease: "Power2.easeInOut"});
-
-
-            // Scroll Animation to fade out the div element
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    start: "90% center",
-                    end: "90% top",
-                    //markers: true, // For debug only
-                    scrub: true,
-                }
-            })
-            .to($(element), {css: {opacity: 0}, duration: 0.35, ease: "Power2.easeInOut"});
-        })
-    }
 
     render() {
         return(<div>
@@ -103,7 +59,14 @@ export default class KSTUXResearch extends Component {
                     <p className="ProjDet-p ProjectWhiteText">
                     Due to the pandemic, KST is forced to undergo a transition from traditional brick-and-mortar artistry and physical performances to a platform that’s more dependent on web content and indirect creative expression. Data from their web analytics and theater show attendances have indicated that the majority of their past donors and attendees were recruited through word of mouth. However, due to the pandemic, such means of promoting their theater content on an online platform has been insufficient. Consequently, they have offered less workshops and community events to their virtual audience. 
                     </p>
-                    <img src={donation_map}/>
+                    <div style={{position: "relative"}}>
+                        <img src={donation_map} alt="Map generated in Tableau showing the distribution of donors outside of Pittsburgh"/>
+                        <div className="ProjDet-ImgCaption">
+                            <p className="ProjDet-p-mini ProjectWhiteText">
+                                Map generated in Tableau showing the distribution of donors outside of Pittsburgh
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="ProjDet-Section">
@@ -112,7 +75,7 @@ export default class KSTUXResearch extends Component {
                     <p className="ProjDet-p ProjectWhiteText">
                     To first examine the pain points theater attendees experienced when donating online, and to compare how other theaters have incentivized attendees to donate, we conducted 4 think-alouds on the Oregon Shakespeare Festival website. 
                     </p>
-                    <img src={thinkaloud}/>
+                    <img src={thinkaloud} alt="Example of usability findings from our think-alouds"/>
                 </div>
             </div>
             <div className="ProjDet-Section">
@@ -122,7 +85,7 @@ export default class KSTUXResearch extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={aff_diagram}/>
+                    <img src={aff_diagram} alt="Affinity diagram from contextual inquiries"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             Through affinity diagramming, we mapped out the journey users experienced as they discovered new content and decided whether to donate to creators or not.
@@ -137,7 +100,7 @@ export default class KSTUXResearch extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={storyboard}/>
+                    <img src={storyboard} alt="Storyboards that were generated during our Crazy 8s session"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             After our Crazy 8's session, we compiled a set of 12 storyboards that spanned across 4 themes: educational content, fostering a digital community, accessing content on social media, and getting content through recommendations.
@@ -203,7 +166,7 @@ export default class KSTUXResearch extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={lowfi_1}/>
+                    <img src={lowfi_1} alt="A screen of our low fidelity prototype designed on figma"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             A Low-fidelity prototype of our proposed KST Member Hub. The prototype was designed on Figma, and can be accessed by clicking here.
@@ -218,7 +181,7 @@ export default class KSTUXResearch extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={highfi_1}/>
+                    <img src={highfi_1} alt="Our improved high-fidelity prototype designed on figma"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             From our user feedback, we decided to remove the Discord Chat feature and add a calendar instead, containing color-coded upcoming events. We then increased the fidelity of our prototype to present to the theater.

@@ -1,54 +1,10 @@
 import React, {Component} from 'react';
 import '../../style.css';
-import $ from 'jquery';
-
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/all';
 
 import scratch_prog from '../media/ScratchProgramming.png';
 
-gsap.registerPlugin(ScrollTrigger);
-
 // Holds a component for a project that will be clicked on to show the actual project page
 export default class AppleLogic extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
-        $(window).scrollTop(0);
-
-        let classList = $(".ProjDet-Section").toArray();
-
-        classList.forEach((element, i) => {
-            gsap.set($(element), {css: {opacity: 0}});
-
-            // Scroll animation to fade in the div element
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    start: "60% bottom",
-                    end: "40% center",
-                    //markers: true, // For debug only
-                    scrub: true,
-                }
-            })
-            .to($(element), {css: {opacity: 1}, duration: 0.35, ease: "Power2.easeInOut"});
-
-
-            // Scroll Animation to fade out the div element
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    start: "90% center",
-                    end: "90% top",
-                    //markers: true, // For debug only
-                    scrub: true,
-                }
-            })
-            .to($(element), {css: {opacity: 0}, duration: 0.35, ease: "Power2.easeInOut"});
-        })
-    }
 
     render() {
         // TODO: OnClick switch to target site
@@ -125,7 +81,7 @@ export default class AppleLogic extends Component {
                         The following were some existing work and projects I referenced as inspiration for this project.
                     </p>
                     {/* FUTURE TODO: Make this a carousel */}
-                    <img src={scratch_prog}/>
+                    <img src={scratch_prog} alt="Photo of scratch programming, which inspired subsequent research and design prototypes"/>
                 </div>
             </div>
             <div className="ProjDet-Section">

@@ -1,55 +1,13 @@
 import React, {Component} from 'react';
 import '../../style.css';
-import $ from 'jquery';
 
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/all';
 import cane_vr from '../media/CaneControllerMS.png'
 import sketch_0 from '../media/A11Y_Collab_3DSpatialAudio.png';
 import sketch_1 from '../media/IS_Phone_Awareness_Cursor.jpg';
 import sketch_2 from '../media/IS_Voice_Memo_Prototype.jpg';
 
-gsap.registerPlugin(ScrollTrigger);
-
 // Holds a component for a project that will be clicked on to show the actual project page
 export default class A11YCollabAR extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
-        $(window).scrollTop(0);
-        let classList = $(".ProjDet-Section").toArray();
-
-        classList.forEach((element, i) => {
-            gsap.set($(element), {css: {opacity: 0}});
-
-            // Scroll animation to fade in the div element
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    start: "60% bottom",
-                    end: "40% center",
-                    //markers: true, // For debug only
-                    scrub: true,
-                }
-            })
-            .to($(element), {css: {opacity: 1}, duration: 0.35, ease: "Power2.easeInOut"});
-
-
-            // Scroll Animation to fade out the div element
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    start: "90% center",
-                    end: "90% top",
-                    //markers: true, // For debug only
-                    scrub: true,
-                }
-            })
-            .to($(element), {css: {opacity: 0}, duration: 0.35, ease: "Power2.easeInOut"});
-        })
-    }
 
     render() {
         return(<div>
@@ -126,7 +84,14 @@ export default class A11YCollabAR extends Component {
                         Examining literature related to collaboration, accessibility, augmented reality, and the intersection between these 3 domains, my subsequent research was inspired and motivated by these key papers. Not only did these findings propose new solutions that can be used in mixed reality, but also highlight areas for enhancing collaborative awareness through an audio-driven interface that is accessible for both BVI and visually capable users.
                     </p>
                     {/* FUTURE TODO: Make this a carousel */}
-                    <img src={cane_vr}/>
+                    <div style={{position: "relative"}}>
+                        <img src={cane_vr} alt="Example of related work that was referenced for research"/>
+                        <div className="ProjDet-ImgCaption">
+                            <p className="ProjDet-p-mini ProjectWhiteText">
+                                Paper of Cane Controller VR: a haptic feedback system for BVI users (Zhao et. al , 2018))
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="ProjDet-Section">
@@ -140,7 +105,7 @@ export default class A11YCollabAR extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={sketch_0}/>
+                    <img src={sketch_0} alt="Initial sketch of prototype with 3D spatial audio"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             The volume of accessible audio feedback changes based on relative positions between the collaborator’s cursor and the user’s cursor
@@ -158,7 +123,7 @@ export default class A11YCollabAR extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={sketch_1}/>
+                    <img src={sketch_1} alt="Sketch of sonifying different actions and updates from users"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             Extending Google Doc’s metaphors of mapping collaborators to animal avatars, we sonified changes for collaborators based on these animals.
@@ -176,7 +141,7 @@ export default class A11YCollabAR extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={sketch_2}/>
+                    <img src={sketch_2} alt="Sketch of user experience creating voice memos that can be read later on during asynchronous collaboration"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             Initial sketches and code-based implementation of creating and generating voice memos using a specified template to encourage meaningful comments.

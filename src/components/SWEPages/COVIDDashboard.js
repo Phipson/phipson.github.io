@@ -1,56 +1,13 @@
 import React, {Component} from 'react';
 import '../../style.css';
-import $ from 'jquery';
-
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/all';
 
 import covid_proto from '../media/COVIDDashboardPrototype.png'
 import covid_arch from '../media/COVIDDashboardArch.png'
-
-gsap.registerPlugin(ScrollTrigger);
+import covid_lime from '../media/COVIDDashboard_ExplainAI.png'
+import covid_sw from '../media/COVIDDashboard_SoftwareArch.png'
 
 // Holds a component for a project that will be clicked on to show the actual project page
 export default class COVIDDashboard extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
-        $(window).scrollTop(0);
-
-        let classList = $(".ProjDet-Section").toArray();
-
-        classList.forEach((element, i) => {
-            gsap.set($(element), {css: {opacity: 0}});
-
-            // Scroll animation to fade in the div element
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    start: "60% bottom",
-                    end: "40% center",
-                    //markers: true, // For debug only
-                    scrub: true,
-                }
-            })
-            .to($(element), {css: {opacity: 1}, duration: 0.35, ease: "Power2.easeInOut"});
-
-
-            // Scroll Animation to fade out the div element
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    start: "90% center",
-                    end: "90% top",
-                    //markers: true, // For debug only
-                    scrub: true,
-                }
-            })
-            .to($(element), {css: {opacity: 0}, duration: 0.35, ease: "Power2.easeInOut"});
-        })
-    }
-
     render() {
         // TODO: OnClick switch to target site
         return(<div>
@@ -93,7 +50,7 @@ export default class COVIDDashboard extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={covid_proto}/>
+                    <img src={covid_proto} alt="Prototype of COVID19 Dashboard made in Figma"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">Initial Paper Prototype of Dashboard Interface</p>
                     </div>
@@ -129,11 +86,11 @@ export default class COVIDDashboard extends Component {
                 <h4 className="ProjDet-Header ProjectWhiteText">TRAINING THE NEURAL NETWORK</h4>
                 <div className="ProjDet-SectionDesc">
                     <p className="ProjDet-p ProjectWhiteText">
-                    To provide users with trend forecasts, I used a Long-Short Term Memory (LSTM) model that took data from Carnegie Mellon University’s COVIDCast dataset as input and predicted the COVID cases per state for the following day. Referencing an existing model designed by [], I trained and tested the neural network on Jupyter Notebook.                    
+                    To provide users with trend forecasts, I used a Long-Short Term Memory (LSTM) model that took data from Carnegie Mellon University’s COVIDCast dataset as input and predicted the COVID cases per state for the following day. Referencing an existing model designed by Shastri et. al (2020), I trained and tested the neural network on Jupyter Notebook.                    
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src={covid_arch}/>
+                    <img src={covid_arch} alt="Architecture and pipeline of training and testing the LSTM model"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             Design of Long-Short Term Memory (LSTM) model for predicting COVID Cases
@@ -149,7 +106,7 @@ export default class COVIDDashboard extends Component {
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src=""/>
+                    <img src={covid_sw} alt="Software architecture of dashboard"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">Software Architecture of the COVID-19 Dashboard</p>
                     </div>
@@ -159,11 +116,11 @@ export default class COVIDDashboard extends Component {
             <div className="ProjDet-Section">
                 <div className="ProjDet-SectionDesc">
                     <p className="ProjDet-p ProjectWhiteText">
-                    To make this model interpretable, I used LIME, which is a surrogate model that interprets a given model by describing features and inputs from the dataset that is weighted more importantly in the neural network. This data can be visualized and communicated in textual form, helping users understand how the model made a certain forecast.                    
+                        To make this model interpretable, I used LIME, which is a surrogate model that interprets a given model by describing features and inputs from the dataset that is weighted more importantly in the neural network. This data can be visualized and communicated in textual form, helping users understand how the model made a certain forecast.                    
                     </p>
                 </div>
                 <div className="ProjDet-ImgFrame">
-                    <img src=""/>
+                    <img src={covid_lime} alt="Example of COVID-19 prediction with text explanation generated with LIME"/>
                     <div className="ProjDet-ImgCaption">
                         <p className="ProjDet-p-mini ProjectWhiteText">
                             Integration of LIME with LSTM for textual explanations of COVID cases predictions
