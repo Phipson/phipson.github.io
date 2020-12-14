@@ -5,6 +5,7 @@ import $ from 'jquery';
 import gsap from "gsap";
 
 import {Link} from 'react-router-dom';
+import SocialLinkBar from './SocialLinkBar';
 
 class NavigationMenuPage extends React.Component {
     constructor(props) {
@@ -72,6 +73,7 @@ class NavigationMenuPage extends React.Component {
                             About Me
                     </h3>
                     </Link>
+                    <SocialLinkBar/>
                 </div>
             );
         }

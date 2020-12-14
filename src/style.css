@@ -181,6 +181,11 @@ button {
     justify-items: start;
 }
 
+/* Set the SVG to be 100% of the Grid layout */
+.LandingSVG {
+    width: 100%;
+}
+
 /* Set the grid for the text for "I'm a [Mixed Reality Developer/UX Designer/Software Engineer]" */
 .LandingInteractionWrapper {
     display: grid;
@@ -525,6 +530,27 @@ button {
 .HamburgerMenuWrapper h3 {
     opacity: 0.5;
     cursor: pointer;
+}
+
+/* The div for setting the social media icons (for about page and hamburger menu) using flex row */
+.SocialBar {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+/* Setting the width of the link to be auto to fit the size of the nested svg */
+.SocialBar a {
+    width: auto;
+}
+
+/* Set the svg to be centered, with white fill, and with 0.5 opacity for animation on hover */
+.SocialBar a svg {
+    width: 3vw;
+    margin: auto auto;
+    fill: white;
+    opacity: 0.5;
 }
 
 /* Modifies the CSS for the classes if it is in the tablet */

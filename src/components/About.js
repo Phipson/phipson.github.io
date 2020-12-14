@@ -3,6 +3,7 @@ import "../style.css";
 
 import $ from 'jquery';
 import resume from './media/resumev3.pdf';
+import SocialLinkBar from './SocialLinkBar';
 
 class AboutPage extends React.Component {
     componentDidMount() {
@@ -24,6 +25,8 @@ class AboutPage extends React.Component {
                         <p className="ProjDet-p ProjectWhiteText">
                             If you are interested in working with me, or would like to reach out and speak with me, feel free to connect with me on LinkedIn or send me an email!
                         </p>
+                        <br/>
+                        <SocialLinkBar/>
                     </div>
                     <div className="AboutResume">
                         <iframe src={resume} className="AboutIFrame">
