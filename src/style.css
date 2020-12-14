@@ -843,6 +843,21 @@ button {
         min-height: 100vh;
         border: none;
     }
+
+    .SocialBar {
+        margin: auto auto;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .SocialBar a svg {
+        width: 7vw;
+        margin: auto 2em;
+        fill: white;
+        opacity: 0.5;
+    }
 }
 
 /* Modifies the CSS for the classes if it is in the tablet */
